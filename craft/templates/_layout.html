@@ -25,12 +25,12 @@
 		<header id="header">
 			<h1><a href="{{ siteUrl }}">{{ siteName }}</a></h1>
 
-			<nav>
+			<!-- <nav>
         <p>I am the nav dont forget me!</p>
-				<!-- <ul>
+				<ul>
 					<li><a href="{{ url('news') }}" {% if craft.request.firstSegment == 'news' %}class="active"{% endif %}>News</a></li>
-				</ul> -->
-			</nav>
+				</ul>
+			</nav> -->
 		</header>
 
 		<main id="content" role="main">
@@ -43,6 +43,7 @@
 		<footer id="footer">
       I will be the footer
 			Copyright {{ now.year }} {{ craft.request.serverName | ucfirst }}
+    </footer>
 	</div>
 </body>
 </html>

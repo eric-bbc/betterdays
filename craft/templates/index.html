@@ -21,19 +21,11 @@
 
 {% block content %}
 
-{% for asset in entry.heroImage %}
-  <img src="{{ asset.url }}" alt="">
-{% endfor %}
+  {% for asset in entry.heroImage %}
+  <div class="splash-container" style="background-image:url( {{ asset.url }} ); ">
 
-	<h1>{{ entry.title }}</h1>
+    <!-- <img class="homepage-splash" src="{{ asset.url }}" alt="background-splash"> -->
+  </div>
+  {% endfor %}
 
-
-	{{ entry.body }}
-
-	<h2>Recent News</h2>
-	<ul>
-		{% for entry in craft.entries.section('news').limit(5).find() %}
-			<li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-		{% endfor %}
-	</ul>
 {% endblock %}

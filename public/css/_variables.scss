@@ -1,0 +1,144 @@
+/* =========================================================================
+    Color
+========================================================================= */
+
+$color-black   : #000;
+
+$color-white   : #fff;
+
+$color-grey    : #808285;
+
+$color-red     : #a30000;
+
+$color-primary : $color-black;
+
+
+$color: (
+
+    'primary'         $color-black,
+
+    'warning'         $color-red,
+
+    'bullet'          transparent,
+
+    'bullet-selected' #000,
+
+    null
+
+);
+
+
+
+/* =========================================================================
+    Responsive
+========================================================================= */
+
+$breakpoint-x-small : 576px;
+$breakpoint-small   : 768px;
+$breakpoint-medium  : 992px;
+$breakpoint-large   : 1200px;
+$breakpoint-x-large : 1400px;
+
+$breakpoint-nav-bp  : $breakpoint-medium;
+
+
+$breakpoint-range: (
+
+    'x-small-down'  '(max-width: #{$breakpoint-x-small - 1})',
+    'x-small-up'    '(min-width: #{$breakpoint-x-small})',
+    'small-down'    '(max-width: #{$breakpoint-small - 1})',
+    'small-up'      '(min-width: #{$breakpoint-small})',
+    'medium-down'   '(max-width: #{$breakpoint-medium - 1})',
+    'medium-up'     '(min-width: #{$breakpoint-medium})',
+    'large-down'    '(max-width: #{$breakpoint-large - 1})',
+    'large-up'      '(min-width: #{$breakpoint-large})',
+    'x-large-down'  '(max-width: #{$breakpoint-x-large - 1})',
+    'x-large-up'    '(min-width: #{$breakpoint-x-large})',
+
+    'nav-bp-down'   '(max-width: #{$breakpoint-nav-bp - 1})',
+    'nav-bp-up'     '(min-width: #{$breakpoint-nav-bp})',
+
+    'x-small-small' '(min-width: #{$breakpoint-x-small}) and (max-width: #{$breakpoint-small - 1})',
+    'small-medium'  '(min-width: #{$breakpoint-small}) and (max-width: #{$breakpoint-medium - 1})',
+    'medium-large'  '(min-width: #{$breakpoint-medium}) and (max-width: #{$breakpoint-large - 1})',
+    'large-x-large' '(min-width: #{$breakpoint-large}) and (max-width: #{$breakpoint-x-large - 1})'
+
+    null
+
+);
+
+
+$breakpoint: (
+
+    'x-small' 576px,
+    'small'   768px,
+    'medium'  992px,
+    'large'   1200px,
+    'x-large' 1400px,
+
+    'nav'     768px,
+
+    null
+
+);
+
+
+
+
+
+/* =========================================================================
+    Z-Index
+========================================================================= */
+
+$z-index: (
+
+    'navbar'             200,
+
+    'fullscreen-overlay' 300,
+
+    'mini-cart'          400,
+
+    null
+
+
+);
+
+
+/* =========================================================================
+    Other
+========================================================================= */
+
+$navbar-banner-height-desktop: 25px;
+
+$navbar-logo-height-desktop: 55px;
+
+$navbar-nav-height-desktop: 65px;
+
+
+
+$navbar-banner-height-mobile: 20px;
+
+$navbar-nav-height-mobile: 55px;
+
+$navbar-nav-height-mobile-hp: 70px;
+
+
+
+$navbar-breadcrumbs-desktop: 50px;
+
+
+
+
+$navbar-height-desktop: $navbar-logo-height-desktop + $navbar-nav-height-desktop + $navbar-banner-height-desktop;
+
+$navbar-height-mobile: $navbar-nav-height-mobile + $navbar-banner-height-mobile;
+
+$navbar-height-mobile-hp: $navbar-nav-height-mobile-hp + $navbar-banner-height-mobile;
+
+
+
+$navbar-no-banner-height-desktop: $navbar-logo-height-desktop + $navbar-nav-height-desktop;
+
+$navbar-no-banner-height-mobile: $navbar-nav-height-mobile;
+
+$navbar-no-banner-height-mobile-hp: $navbar-nav-height-mobile-hp;
