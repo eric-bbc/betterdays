@@ -8,17 +8,26 @@
 
   <h1>INFO CENTRAL MY DU</h1>
 
-<div class="grid">
-  <div class="medium-up-one-half">e
-    {{ entry.body }}
-  </div>
+<div class="page-container">
+  <div class="grid">
+    <div class="col medium-up-five-twelfths info-body-container">
+        <div class="info-body">
+          {{ entry.body }}
+        </div>
+    </div>
 
-  <div class="medium-up-one-half">
+
+
+    <div class="col medium-up-seven-twelfths info-grid">
       {% for block in entry.infoPairs %}
-
+      <div class="info-grid-item medium-up-one-half">
+        <p class="info-header">{{ block.infoHeader }}</p>
+        <p class="info-detail">{{ block.infoDetail }}</p>
+      </div>
       {% endfor %}
-
+    </div>
   </div>
+
 </div>
 
 
