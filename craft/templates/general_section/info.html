@@ -8,23 +8,33 @@
 
   <h1>INFO CENTRAL MY DU</h1>
 
-<div class="page-container">
+<div class="page-container proxima-font">
   <div class="grid">
-    <div class="col medium-up-five-twelfths info-body-container">
+    <div class="col medium-up-one-third">
+      <div class="info-body-container">
         <div class="info-body">
           {{ entry.body }}
         </div>
+
+        <div class="contact-form">
+          <h3>CONTACT US</h3>
+
+        </div>
+      </div>
     </div>
 
 
 
-    <div class="col medium-up-seven-twelfths info-grid">
-      {% for block in entry.infoPairs %}
-      <div class="info-grid-item medium-up-one-half">
-        <p class="info-header">{{ block.infoHeader }}</p>
-        <p class="info-detail">{{ block.infoDetail }}</p>
+    <div class="col medium-up-two-thirds ">
+      <div class="info-grid">
+
+        {% for block in entry.infoPairs %}
+        <div class="info-grid-item medium-up-one-half">
+          <p class="info-header">{{ block.infoHeader }}</p>
+          <p class="info-detail">{{ block.infoDetail }}</p>
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 

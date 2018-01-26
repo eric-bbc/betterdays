@@ -1,7 +1,19 @@
 @font-face {
   font-family: 'Voltaire';
-  src: url("Voltaire.woff2") format("woff2"), url("Voltaire.woff") format("woff");
+  src: url("fonts/Voltaire.woff2") format("woff2"), url("fonts/Voltaire.woff") format("woff");
   font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova Cn Lt Semibold';
+  src: url("fonts/ProximaNovaCond-Semibold.woff2") format("woff2"), url("fonts/ProximaNovaCond-Semibold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Proxima Nova Cn Lt';
+  src: url("fonts/ProximaNovaCond-Light.woff2") format("woff2"), url("fonts/ProximaNovaCond-Light.woff") format("woff");
+  font-weight: 300;
   font-style: normal; }
 
 /* =========================================================================
@@ -60,7 +72,10 @@
 /* text nowrap ellipsis */
 body {
   background-color: #f5e7d5;
-  font-family: 'Voltaire'; }
+  font-family: "Voltaire"; }
+
+.proxima-font {
+  font-family: 'Proxima Nova Cn Lt'; }
 
 .page-container {
   width: 90%;
@@ -79,12 +94,18 @@ body {
   position: absolute;
   left: 0; }
 
-.info-body {
-  width: 70%; }
+.info-body-container {
+  border-right: 3px solid #CD5644;
+  box-sizing: border-box; }
+  .info-body-container .info-body {
+    width: 80%; }
+  .info-body-container .contact-form {
+    width: 100%;
+    border: 2px solid red; }
 
 .info-grid {
   display: inline-table;
-  border-left: 1px solid #CD5644; }
+  padding-left: 5rem; }
   .info-grid .info-grid-item {
     display: inline-table;
     padding-left: 2rem;
