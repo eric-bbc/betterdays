@@ -6,11 +6,9 @@
 
 {% block content %}
 
-  <h1>INFO CENTRAL MY DU</h1>
-
-<div class="page-container proxima-font">
+<div class="page-container">
   <div class="grid">
-    <div class="col medium-up-one-third">
+    <div class="col small-up-one-third">
       <div class="info-body-container">
         <div class="info-body">
           {{ entry.body }}
@@ -18,21 +16,21 @@
 
         <div class="contact-form">
           <h3>CONTACT US</h3>
-
+          {% include '/general_section/_contact-form.html' %}
         </div>
       </div>
     </div>
 
 
 
-    <div class="col medium-up-two-thirds ">
+    <div class="col small-up-two-thirds ">
       <div class="info-grid">
 
         {% for block in entry.infoPairs %}
-        <div class="info-grid-item medium-up-one-half">
-          <p class="info-header">{{ block.infoHeader }}</p>
-          <p class="info-detail">{{ block.infoDetail }}</p>
-        </div>
+          <div class="info-grid-item small-up-one-half">
+            <p class="info-header">{{ block.infoHeader }}</p>
+            <p class="info-detail">{{ block.infoDetail }}</p>
+          </div>
         {% endfor %}
       </div>
     </div>

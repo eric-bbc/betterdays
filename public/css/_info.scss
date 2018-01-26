@@ -1,0 +1,88 @@
+
+// info
+.info-body-container {
+  border-right: 3px solid $color-red;
+  margin-right: -2rem;
+  @include border-fix;
+
+  .info-body {
+    // padding: 4rem 0px;
+    width: 70%;
+    p {
+      padding: 1rem 0;
+    }
+  }
+
+  .contact-form {
+    width: 80%;
+    padding-top: 1rem;
+
+    input, textarea {
+      border: 2px solid $color-green;
+      background-color: $color-tan;
+      resize: none;
+    }
+
+    form {
+      display: flex;
+      padding: 2.5rem 0;
+      padding-bottom: 0px;
+    }
+  }
+}
+
+
+.info-grid {
+  display: inline-table;
+  padding-left: 5rem;
+
+  .info-grid-item {
+    display: inline-table;
+    padding-left: 2rem;
+    width: 45%;
+  }
+
+  .info-header {
+    text-transform: uppercase;
+  }
+  .info-detail{
+    position: relative;
+    top: -14px;
+  }
+}
+
+.contact-input{
+  // color: $color-green;
+
+  text-transform: uppercase;
+  margin: 10px 0px;
+  padding: 1rem 1rem;
+  width: 96%;
+  display: flex;
+  flex: auto;
+  box-sizing: border-box;
+  font-size: medium;
+  &::-webkit-input-placeholder {
+    color: $color-green;
+  }
+}
+
+.contact-submit {
+  border: 2px solid $color-red !important;
+  color: $color-red !important;
+}
+
+.contact-textarea {
+  text-transform: uppercase;
+  margin: 10px 0px;
+  padding: 1rem 1rem;
+  width: 96%;
+  height: 8.78rem;
+  display: flex;
+  flex: auto;
+  font-size: medium;
+  // box-sizing: border-box;
+  &::-webkit-input-placeholder {
+    color: $color-green;
+  }
+}
