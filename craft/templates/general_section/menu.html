@@ -1,11 +1,14 @@
-
-
 {% extends "_layout" %}
-
-
 
 {% block content %}
 
-  <h1> IM DAT MF MENU DOG</h1>
+  <div class="menu-container">
+  {% for asset in entry.menuImage %}
+
+  <embed src="{{ asset.url }}" class="menu-image" type='application/pdf'>
+
+
+  {% endfor %}
+</div>
 
 {% endblock %}

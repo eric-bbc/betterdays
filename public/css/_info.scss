@@ -1,6 +1,5 @@
 
 // info
-
 .mobile-info-tabs{
   display: none;
   @include screen('small-down'){
@@ -12,13 +11,9 @@
     span {
       cursor: pointer;
     }
+    font-size: 1.5rem;
     width: 50%;
   }
-
-}
-
-.no-display {
-  @include no-display;
 }
 
 .info-body-container {
@@ -37,22 +32,43 @@
       padding: 1rem 0;
     }
   }
+}
+.contact-form {
+  width: 80%;
+  padding-top: 1rem;
+  @include screen('small-down'){
+    display: none;
+  };
 
-  .contact-form {
-    width: 80%;
-    padding-top: 1rem;
+  input, textarea {
+    border: 2px solid $color-green;
+    background-color: $color-tan;
+    resize: none;
+  }
 
-    input, textarea {
-      border: 2px solid $color-green;
-      background-color: $color-tan;
-      resize: none;
-    }
+  form {
+    display: flex;
+    padding: 2.5rem 0;
+    padding-bottom: 0px;
+  }
+}
 
-    form {
-      display: flex;
-      padding: 2.5rem 0;
-      padding-bottom: 0px;
-    }
+.mobile-contact-form{
+  @extend .contact-form;
+  display: flow-root;
+  width: 100% !important;
+
+  .contact-input {
+    width: 100%;
+  }
+
+  form {
+    width: 100% !important;
+    display: flow-root;
+  }
+  textarea {
+    box-sizing: border-box;
+    width: 100%;
   }
 }
 
@@ -61,13 +77,18 @@
   display: inline-table;
   padding-left: 5rem;
   @include screen('small-down'){
-    // display: none;
+    padding-left: 0;
   };
 
   .info-grid-item {
     display: inline-table;
     padding-left: 2rem;
     width: 45%;
+    box-sizing: border-box;
+    @include screen('small-down'){
+      width: 100%;
+      padding-left: 0rem;
+    };
   }
 
   .info-header {
@@ -98,6 +119,9 @@
 .contact-submit {
   border: 2px solid $color-red !important;
   color: $color-red !important;
+  display: table-cell;
+  margin: 0 auto
+
 }
 
 .contact-textarea {
@@ -113,4 +137,11 @@
   &::-webkit-input-placeholder {
     color: $color-green;
   }
+}
+
+
+.no-display-mobile {
+  @include screen('small-down'){
+    display: none !important;
+  };
 }

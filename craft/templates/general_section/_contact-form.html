@@ -15,7 +15,7 @@
 
 <form method="post" action="" accept-charset="UTF-8" >
     {{ getCsrfInput() }}
-    <div class="small-up-one-half">
+    <div class="small-up-one-half small-down-one-whole">
     <input type="hidden" name="action" value="contactForm/sendMessage">
     <!-- <input type="hidden" name="redirect" value="contact/thanks"> -->
 
@@ -31,7 +31,7 @@
       <input class="contact-input proxima-bold contact-submit" type="submit" value="SUBMIT">
     </div>
 
-    <div class="small-up-one-half">
+    <div class="small-up-one-half small-down-one-whole">
       <textarea class="contact-textarea proxima-bold"  rows="10" cols="40" id="message" placeholder="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>
       {{ message is defined and message ? errorList(message.getErrors('message')) }}
     </div>

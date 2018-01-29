@@ -1,5 +1,3 @@
-
-
 {% extends "_layout" %}
 
 
@@ -8,7 +6,7 @@
 
 <div class="page-container">
 
-  <div class="mobile-info-tabs">
+  <div class="mobile-info-tabs proxima-bold">
     <div class="info-tab active"><span>INFO<span></div>
     <div class="info-tab"><span>ABOUT<span></div>
   </div>
@@ -29,11 +27,11 @@
 
 
 
-    <div class="col small-up-two-thirds ">
-      <div class="info-grid no-display">
+    <div class="col small-up-two-thirds small-down-one-whole">
+      <div class="info-grid no-display-mobile">
 
         {% for block in entry.infoPairs %}
-          <div class="info-grid-item small-up-one-half">
+          <div class="info-grid-item small-up-one-half small-down-one-whole">
             <p class="info-header">{{ block.infoHeader }}</p>
             <p class="info-detail">{{ block.infoDetail }}</p>
           </div>
