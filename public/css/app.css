@@ -72,7 +72,7 @@
 /* text nowrap ellipsis */
 body {
   background-color: #f5e7d5;
-  font-family: 'Proxima Nova Cn Lt Semibold'; }
+  font-family: 'Proxima Nova Cn Lt'; }
 
 .voltaire {
   font-family: 'Voltaire'; }
@@ -99,6 +99,10 @@ body {
   background-repeat: no-repeat;
   position: absolute;
   left: 0; }
+
+.active {
+  color: #CD5644;
+  text-decoration: underline; }
 
 /* ========================================================================
    Position
@@ -3987,10 +3991,27 @@ large-up-push-one-third
   .large-x-large-push-eleven-twelfths {
     left: 91.6666666667%; } }
 
+.mobile-info-tabs {
+  display: none; }
+  @media only screen and (max-width: 767px) {
+    .mobile-info-tabs {
+      display: inline-flex;
+      width: 100%; } }
+  .mobile-info-tabs .info-tab {
+    width: 50%; }
+    .mobile-info-tabs .info-tab span {
+      cursor: pointer; }
+
+.no-display {
+  display: none !important; }
+
 .info-body-container {
   border-right: 3px solid #CD5644;
   margin-right: -2rem;
   box-sizing: border-box; }
+  @media only screen and (max-width: 767px) {
+    .info-body-container {
+      border-right: none; } }
   .info-body-container .info-body {
     width: 70%; }
     .info-body-container .info-body p {

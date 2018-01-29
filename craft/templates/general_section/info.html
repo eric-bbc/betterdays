@@ -7,6 +7,12 @@
 {% block content %}
 
 <div class="page-container">
+
+  <div class="mobile-info-tabs">
+    <div class="info-tab active"><span>INFO<span></div>
+    <div class="info-tab"><span>ABOUT<span></div>
+  </div>
+
   <div class="grid">
     <div class="col small-up-one-third">
       <div class="info-body-container">
@@ -24,7 +30,7 @@
 
 
     <div class="col small-up-two-thirds ">
-      <div class="info-grid">
+      <div class="info-grid no-display">
 
         {% for block in entry.infoPairs %}
           <div class="info-grid-item small-up-one-half">
