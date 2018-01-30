@@ -1,5 +1,5 @@
 body {
-  background-color: $color-tan;
+  background-color: $color-tan;  
   // font-family: 'Voltaire';
   font-family: 'Proxima Nova Cn Lt'
 }
@@ -33,6 +33,16 @@ body {
   background-repeat: no-repeat;
   position: absolute;
   left: 0;
+}
+
+.button-red {
+  color: $color-red;
+  border: 1px solid $color-red;
+  background-color: $color-tan;
+  width: 50%;
+  font-size: 1rem;
+  padding: 0.5rem;
+  text-transform: uppercase;
 }
 
 .active {

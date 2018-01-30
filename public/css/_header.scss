@@ -1,0 +1,22 @@
+.navHeader {
+  width: 100%;
+  display: inline-flex;
+  // text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .navSection {
+    // border: 1px solid blue;
+
+  }
+
+  .desktop-logo {
+    width: 35%;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+
+}

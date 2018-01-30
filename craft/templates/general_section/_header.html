@@ -1,0 +1,24 @@
+
+{% block content %}
+
+  <div class="navHeader">
+    <div class="navSection small-up-one-third">
+      <h1><a class="voltaire" href="{{ siteUrl }}">{{ siteName }}</a></h1>
+    </div>
+    <div class="navSection small-up-one-third">
+      <div class="desktop-logo">
+        {% for image in craft.assets.kind('image') %}
+          {% if image.filename == 'BD_Logo_desk.png' %}
+            <img src="{{ image.url }}" alt="">
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    <div class="navSection small-up-one-third">
+      <button class="button-red proxima-font js-ot-toggle" type="button" name="button" >Make A Reservation</button>
+    </div>
+
+
+  </div>
+
+{% endblock %}
