@@ -9,7 +9,9 @@
       <div class="desktop-logo">
         {% for image in craft.assets.kind('image') %}
           {% if image.filename == 'BD_Logo_desk.png' %}
+          <a href="/">
             <img src="{{ image.url }}" alt="">
+          </a>
           {% endif %}
         {% endfor %}
       </div>

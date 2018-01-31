@@ -16,6 +16,8 @@
 	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
 	<link rel="home" href="{{ siteUrl }}" />
 
+
+  <link rel="stylesheet" href="/css/vendor/royalslider.css">
   <link href="/css/app.css" rel="stylesheet" type="text/css"  media="all" />
 
 </head>
@@ -41,12 +43,11 @@
 
       {% if craft.request.getUrl() == 'http://localhost/'%}
         <div class="ot-modal__homepage invisible">
-
       {% else %}
         <div class="ot-modal invisible">
       {% endif %}
-      <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=158041&domain=com&type=standard&theme=standard&lang=en-US&overlay=false&iframe=false'></script>
-    </div>
+          <script type='text/javascript' src='//www.opentable.com/widget/reservation/loader?rid=158041&domain=com&type=standard&theme=standard&lang=en-US&overlay=false&iframe=false'></script>
+        </div>
 
 			{% block content %}
 				<p>If you see me, you haven’t set your <code>{% verbatim %}{% block content %}…{% endblock %}{% endverbatim %}</code> yet.</p>

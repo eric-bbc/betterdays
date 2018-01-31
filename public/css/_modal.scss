@@ -1,5 +1,5 @@
 .ot-modal__homepage{
-  border: 2px solid red;
+  // border: 2px solid $color-red;
   margin: auto;
   position: absolute;
   margin-left: auto;
@@ -13,15 +13,16 @@
 }
 
 .ot-modal{
-  border: 2px solid red;
-  margin: auto;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  @include transition();
+  // border: 2px solid $color-red;
   z-index: 100;
-  width: 224px;
-  margin-top: auto;
-  top: 32%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(20,20,20, .8);
+  position: absolute;
+  #ot-widget-container0{
+    display: table;
+    margin: 0 auto;
+    margin-top: 21%;
+  }
 }
