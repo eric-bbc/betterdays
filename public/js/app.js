@@ -30,7 +30,7 @@ $(document).ready(function($) {
                                arrowsNav         : true,
                                keyboardNavEnabled: true,
                                imageScaleMode    : 'fit-if-smaller',
-                               controlNavigation : 'bullets',
+                               controlNavigation : 'none',
                                loop              : true,
                                addActiveClass    : true,
                                transitionType    : 'move',

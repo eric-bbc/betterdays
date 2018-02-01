@@ -4,27 +4,30 @@
 
 .gallery {
   color: red;
+  .royalSlider {
+    width: 100% !important;
+    height: 80vh;
+    background: $color-tan;
+    .rsOverflow {
+      background: $color-tan;
+    }
+    .rsSlide{
+      background: $color-tan;
+    }
+
+    .rsImg {
+      // border: 2px solid green;
+      position: absolute;
+      width: auto !important;
+      // height: auto;
+    }
+
+    .galleryImg{
+      // height: 75%;
+    }
+  }
 }
 
-.royalSlider {
-  width: 100%;
-  height: 80vh;
-
-  .rsSlide{
-    // border: 2px solid red;
-  }
-
-  .rsImg {
-    // border: 2px solid green;
-    position: absolute;
-    width: auto !important;
-    // height: auto;
-  }
-
-  .galleryImg{
-    // height: 75%;
-  }
-}
 
 .event-link {
   text-align: center;

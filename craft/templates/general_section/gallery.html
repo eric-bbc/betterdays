@@ -7,16 +7,18 @@
 {% block content %}
 
 
+<div class="gallery">
 
-  <div class="gallery-slider royalSlider ">
+  <div class="royalSlider rsDefault gallery-slider ">
     {% for image in entry.images %}
-      <img class="rsImg galleryImg" src="{{ image.url }}" alt="">
+    <img class="rsImg galleryImg" src="{{ image.url }}" alt="">
     {% endfor %}
   </div>
 
   <div class="event-link">
     <a href="#">BOOK AN EVENT</a>
   </div>
+</div>
 
 
 
