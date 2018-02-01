@@ -4167,11 +4167,19 @@ large-up-push-one-third
     .gallery .royalSlider .rsImg {
       position: absolute;
       width: auto !important; }
-    .gallery .royalSlider .rsArrowLeft .rsArrowIcn {
-      background: url(../section_assets/icons/leftArrow.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      padding-left: 21px; }
+    .gallery .royalSlider .rsArrow {
+      width: 80px !important; }
+      .gallery .royalSlider .rsArrow .rsArrowIcn {
+        width: 100%; }
+        .gallery .royalSlider .rsArrow .rsArrowIcn:hover {
+          opacity: 0.6; }
+    .gallery .royalSlider .rsArrowLeft {
+      left: -20px; }
+      .gallery .royalSlider .rsArrowLeft .rsArrowIcn {
+        background: url(../section_assets/icons/leftArrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-left: 21px; }
     .gallery .royalSlider .rsArrowRight {
       margin-right: 20px; }
       .gallery .royalSlider .rsArrowRight .rsArrowIcn {
@@ -4188,6 +4196,14 @@ large-up-push-one-third
   .event-link a {
     color: #CD5644;
     text-decoration: none; }
+  .event-link .arrow-span {
+    background: url(../section_assets/icons/rightArrow.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 9rem) 50%;
+    line-height: 1rem; }
+
+.artpage-grid-item {
+  border: 2px solid red; }
 
 /* v1.0.6 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */

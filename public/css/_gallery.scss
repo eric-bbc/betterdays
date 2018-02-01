@@ -23,7 +23,18 @@
       // height: 75%;
     }
 
+    .rsArrow {
+      width: 80px !important;
+      .rsArrowIcn {
+        width: 100%;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+
       .rsArrowLeft{
+        left: -20px;
         .rsArrowIcn {
           background: url(../section_assets/icons/leftArrow.png);
           background-repeat: no-repeat;
@@ -54,5 +65,15 @@
     a{
       color: $color-red;
       text-decoration: none;
+
     }
+
+  .arrow-span{
+    background: url(../section_assets/icons/rightArrow.png);
+    background-repeat: no-repeat;
+    // background-position: center;
+    background-position: calc(50% + 9rem) 50%;
+    line-height: 1rem;
+
+  }
 }
