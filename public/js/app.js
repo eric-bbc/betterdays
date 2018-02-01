@@ -46,7 +46,6 @@ $(document).ready(function($) {
                                }
                           }).data('royalSlider')
 
-                          console.log("right here");
 
     gallerySlider.ev.on('rsAfterContentSet', function(e, slideObject){
       var slide = slideObject.content

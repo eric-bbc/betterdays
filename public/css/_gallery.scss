@@ -14,17 +14,35 @@
     .rsSlide{
       background: $color-tan;
     }
-
     .rsImg {
-      // border: 2px solid green;
       position: absolute;
       width: auto !important;
-      // height: auto;
     }
 
     .galleryImg{
       // height: 75%;
     }
+
+      .rsArrowLeft{
+        .rsArrowIcn {
+          background: url(../section_assets/icons/leftArrow.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          padding-left: 21px;
+        }
+      }
+      .rsArrowRight{
+        margin-right: 20px;
+        .rsArrowIcn {
+          background: url(../section_assets/icons/rightArrow.png);
+          background-repeat: no-repeat;
+          background-position: center;
+          padding-right: 21px;
+          left: 0;
+        }
+      }
+
+
   }
 }
 

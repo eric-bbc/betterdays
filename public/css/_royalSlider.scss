@@ -309,7 +309,9 @@ img.rsImg {
 
 	position: absolute;
 	cursor: pointer;
-	background: url(./section_assets/rs-default.png);
+	background: url(./section_assets/icons/rs-default.png);
+
+  // background: url(../section_assets/icons/leftArrow.png);
 
 	background-color: #000;
 	background-color: rgba(0,0,0,0.75);
@@ -321,8 +323,9 @@ img.rsImg {
 	background-color: rgba(0,0,0,0.9);
 }
 
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn { background-position: -64px -64px; }
+// .rsDefault.rsHor .rsArrowLeft .rsArrowIcn { background-position: -64px -32px; }
+.rsDefault.rsHor .rsArrowLeft { background-position: -64px -32px; }
+.rsDefault.rsHor .rsArrowRight  { background-position: -64px -64px; }
 
 .rsDefault.rsVer .rsArrowLeft .rsArrowIcn { background-position: -96px -32px; }
 .rsDefault.rsVer .rsArrowRight .rsArrowIcn { background-position: -96px -64px; }

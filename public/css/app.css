@@ -4167,6 +4167,19 @@ large-up-push-one-third
     .gallery .royalSlider .rsImg {
       position: absolute;
       width: auto !important; }
+    .gallery .royalSlider .rsArrowLeft .rsArrowIcn {
+      background: url(../section_assets/icons/leftArrow.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      padding-left: 21px; }
+    .gallery .royalSlider .rsArrowRight {
+      margin-right: 20px; }
+      .gallery .royalSlider .rsArrowRight .rsArrowIcn {
+        background: url(../section_assets/icons/rightArrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-right: 21px;
+        left: 0; }
 
 .event-link {
   text-align: center;
@@ -4463,7 +4476,7 @@ img.rsImg {
   margin-left: -16px;
   position: absolute;
   cursor: pointer;
-  background: url(./section_assets/rs-default.png);
+  background: url(./section_assets/icons/rs-default.png);
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.75);
   *background-color: #000;
@@ -4472,10 +4485,10 @@ img.rsImg {
 .rsDefault .rsArrowIcn:hover {
   background-color: rgba(0, 0, 0, 0.9); }
 
-.rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
+.rsDefault.rsHor .rsArrowLeft {
   background-position: -64px -32px; }
 
-.rsDefault.rsHor .rsArrowRight .rsArrowIcn {
+.rsDefault.rsHor .rsArrowRight {
   background-position: -64px -64px; }
 
 .rsDefault.rsVer .rsArrowLeft .rsArrowIcn {
