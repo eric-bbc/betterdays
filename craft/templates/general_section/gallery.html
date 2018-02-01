@@ -8,13 +8,15 @@
 
 
 
-  <div class="royalSlider rsDefault">
+  <div class="gallery-slider royalSlider ">
     {% for image in entry.images %}
-      <img class="rsImg" src="{{ image.url }}" alt="">
+      <img class="rsImg galleryImg" src="{{ image.url }}" alt="">
     {% endfor %}
-
   </div>
 
+  <div class="event-link">
+    <a href="#">BOOK AN EVENT</a>
+  </div>
 
 
 

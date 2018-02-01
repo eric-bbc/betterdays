@@ -4160,3 +4160,14 @@ large-up-push-one-third
 .royalSlider {
   width: 100%;
   height: 80vh; }
+  .royalSlider .rsImg {
+    position: absolute;
+    width: auto !important; }
+
+.event-link {
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.5rem; }
+  .event-link a {
+    color: #CD5644;
+    text-decoration: none; }
