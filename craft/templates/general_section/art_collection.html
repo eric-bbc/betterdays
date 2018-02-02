@@ -6,15 +6,14 @@
 
 {% block content %}
 
-  <h1>ART GALLERY MF</h1>
 
 <div class="page-container">
   <div class="grid">
 
     {% for block in entry.artCollection %}
-      <div class="col small-up-one-quarter artpage-grid-item" >
+      <div class="col small-up-one-fifth artpage-grid-item" >
         {% set image = block.image.first() %}
-        <img class="" src="{{ image.url }}" alt="">
+        <img class="art-collection-image" src="{{ image.url }}" alt="">
 
       </div>
 

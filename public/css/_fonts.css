@@ -21,3 +21,19 @@
     font-weight: 300;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'museosanscondensed_100';
+    src: url('fonts/museosanscondensed_100.woff2') format('woff2'),
+        url('fonts/museosanscondensed_100.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MuseoSansCnd-500-webfont';
+    src: url('fonts/MuseoSansCnd-500-webfont.woff2') format('woff2'),
+        url('fonts/MuseoSansCnd-500-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

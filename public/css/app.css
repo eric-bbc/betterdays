@@ -16,6 +16,18 @@
   font-weight: 300;
   font-style: normal; }
 
+@font-face {
+  font-family: 'museosanscondensed_100';
+  src: url("fonts/museosanscondensed_100.woff2") format("woff2"), url("fonts/museosanscondensed_100.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'MuseoSansCnd-500-webfont';
+  src: url("fonts/MuseoSansCnd-500-webfont.woff2") format("woff2"), url("fonts/MuseoSansCnd-500-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /* =========================================================================
     Color
 ========================================================================= */
@@ -72,7 +84,7 @@
 /* text nowrap ellipsis */
 body {
   background-color: #f5e7d5;
-  font-family: 'Proxima Nova Cn Lt'; }
+  font-family: 'MuseoSansCnd-500-webfont'; }
 
 .voltaire {
   font-family: 'Voltaire'; }
@@ -82,6 +94,12 @@ body {
 
 .proxima-bold {
   font-family: 'Proxima Nova Cn Lt Semibold'; }
+
+.museo-100 {
+  font-family: 'museosanscondensed_100'; }
+
+.museo-500 {
+  font-family: 'MuseoSansCnd-500-webfont'; }
 
 .page-container {
   width: 90%;
@@ -4203,7 +4221,13 @@ large-up-push-one-third
     line-height: 1rem; }
 
 .artpage-grid-item {
-  border: 2px solid red; }
+  box-sizing: border-box;
+  height: 37em; }
+
+.art-collection-image {
+  border: 2px solid red;
+  width: 14rem;
+  height: auto; }
 
 /* v1.0.6 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */

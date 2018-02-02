@@ -1,8 +1,10 @@
 body {
   background-color: $color-tan;
-  // background-color: blue;  
+  // background-color: blue;
   // font-family: 'Voltaire';
-  font-family: 'Proxima Nova Cn Lt'
+  // font-family: 'Proxima Nova Cn Lt';
+  // font-family: 'museosanscondensed_100';
+  font-family: 'MuseoSansCnd-500-webfont';
 }
 
 .voltaire {
@@ -14,6 +16,14 @@ body {
 }
 .proxima-bold{
   font-family: 'Proxima Nova Cn Lt Semibold';
+}
+
+.museo-100 {
+  font-family: 'museosanscondensed_100'
+}
+
+.museo-500 {
+  font-family: 'MuseoSansCnd-500-webfont'
 }
 
 .page-container {
