@@ -4042,17 +4042,17 @@ large-up-push-one-third
     .info-body-container .info-body p {
       padding: 1rem 0; }
 
-.contact-form, .mobile-contact-form {
+.contact-form, .mobile-contact-form, .event-form {
   width: 80%;
   padding-top: 1rem; }
   @media only screen and (max-width: 767px) {
-    .contact-form, .mobile-contact-form {
+    .contact-form, .mobile-contact-form, .event-form {
       display: none; } }
-  .contact-form input, .mobile-contact-form input, .contact-form textarea, .mobile-contact-form textarea {
+  .contact-form input, .mobile-contact-form input, .event-form input, .contact-form textarea, .mobile-contact-form textarea, .event-form textarea {
     border: 2px solid #082f21;
     background-color: #f5e7d5;
     resize: none; }
-  .contact-form form, .mobile-contact-form form {
+  .contact-form form, .mobile-contact-form form, .event-form form {
     display: flex;
     padding: 2.5rem 0;
     padding-bottom: 0px; }
@@ -4060,7 +4060,7 @@ large-up-push-one-third
 .mobile-contact-form {
   display: flow-root;
   width: 100% !important; }
-  .mobile-contact-form .contact-input {
+  .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input {
     width: 100%; }
   .mobile-contact-form form {
     width: 100% !important;
@@ -4090,7 +4090,7 @@ large-up-push-one-third
     position: relative;
     top: -14px; }
 
-.contact-input {
+.contact-input, .event-form input {
   text-transform: uppercase;
   margin: 10px 0px;
   padding: 1rem 1rem;
@@ -4099,7 +4099,7 @@ large-up-push-one-third
   flex: auto;
   box-sizing: border-box;
   font-size: medium; }
-  .contact-input::-webkit-input-placeholder {
+  .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder {
     color: #082f21; }
 
 .contact-submit {
@@ -4124,6 +4124,11 @@ large-up-push-one-third
   .no-display-mobile {
     display: none !important; } }
 
+.event-form {
+  border: none; }
+  .event-form label {
+    display: none; }
+
 .menu-container {
   width: 100%; }
 
@@ -4145,6 +4150,9 @@ large-up-push-one-third
     margin: 0 auto; }
     .navHeader .desktop-logo img {
       width: 100%; }
+  @media only screen and (max-width: 767px) {
+    .navHeader .res-button {
+      width: 100%; } }
 
 .ot-modal__homepage {
   margin: auto;
@@ -4220,14 +4228,26 @@ large-up-push-one-third
     background-position: calc(50% + 9rem) 50%;
     line-height: 1rem; }
 
-.artpage-grid-item {
-  box-sizing: border-box;
-  height: 37em; }
-
-.art-collection-image {
+.art-collection-grid {
   border: 2px solid red;
-  width: 14rem;
-  height: auto; }
+  height: 83vh; }
+  .art-collection-grid .row {
+    height: 50%; }
+    .art-collection-grid .row:first-of-type {
+      border: 2px solid blue;
+      height: 40%; }
+      .art-collection-grid .row:first-of-type:nth-child(2n) {
+        position: relative;
+        top: 10rem; }
+  .art-collection-grid .artpage-grid-item {
+    box-sizing: border-box;
+    height: 22em; }
+    .art-collection-grid .artpage-grid-item:nth-child(2n) {
+      position: relative;
+      top: 14rem; }
+    .art-collection-grid .artpage-grid-item .art-collection-image {
+      width: 14rem;
+      height: auto; }
 
 /* v1.0.6 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */

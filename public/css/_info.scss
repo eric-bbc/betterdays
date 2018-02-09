@@ -33,6 +33,7 @@
     }
   }
 }
+
 .contact-form {
   width: 80%;
   padding-top: 1rem;
@@ -144,4 +145,15 @@
   @include screen('small-down'){
     display: none !important;
   };
+}
+
+.event-form{
+  @extend .contact-form;
+  border: none;
+  input{
+    @extend .contact-input;
+  }
+  label {
+    display: none;
+  }
 }

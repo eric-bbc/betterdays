@@ -8,18 +8,33 @@
 
 
 <div class="page-container">
-  <div class="grid">
+  <div class="grid art-collection-grid">
 
-    {% for block in entry.artCollection %}
-      <div class="col small-up-one-fifth artpage-grid-item" >
-        {% set image = block.image.first() %}
-        <img class="art-collection-image" src="{{ image.url }}" alt="">
+    <div class="row">
+      {% for block in entry.artCollection | slice(0, 5) %}
+        <div class="col small-up-one-fifth artpage-grid-item" >
+          {% set image = block.image.first() %}
+          <img class="art-collection-image" src="{{ image.url }}" alt="">
+        </div>
+      {% endfor %}
+    </div>
 
-      </div>
 
-    {% endfor %}
+    <div class="row">
+      {% for block in entry.artCollection | slice(5, 10) %}
+        <div class="col small-up-one-fifth artpage-grid-item" >
+          {% set image = block.image.first() %}
+          <img class="art-collection-image" src="{{ image.url }}" alt="">
+        </div>
+      {% endfor %}
+    </div>
+
+
+
   </div>
 </div>
+
+
 
 
 {% endblock %}

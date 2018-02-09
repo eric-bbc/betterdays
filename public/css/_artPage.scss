@@ -1,10 +1,38 @@
-.artpage-grid-item{
-  box-sizing: border-box;
-  height: 37em;
-}
 
-.art-collection-image {
+
+.art-collection-grid{
   border: 2px solid red;
-  width: 14rem;
-  height: auto;
+  height: 83vh;
+  .row{
+
+    // height: 26rem;
+    height: 50%;
+    &:first-of-type {
+      border: 2px solid blue;
+      height: 40%;
+      &:nth-child(2n){
+        // margin-top: 8rem;
+        // margin-bottom: -6rem;
+        position: relative;
+        top: 10rem;
+      }
+    }
+  }
+  .artpage-grid-item{
+    box-sizing: border-box;
+    height: 22em;
+
+    &:nth-child(2n){
+      // margin-top: 8rem;
+      // margin-bottom: -6rem;
+      position: relative;
+      top: 14rem;
+    }
+
+    .art-collection-image {
+      width: 14rem;
+      height: auto;
+      // border: 2px solid red;
+    }
+  }
 }

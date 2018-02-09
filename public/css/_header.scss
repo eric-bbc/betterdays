@@ -19,4 +19,10 @@
     }
   }
 
+  .res-button{
+    @include screen('small-down') {
+      width: 100%;
+    };
+  }
+
 }
