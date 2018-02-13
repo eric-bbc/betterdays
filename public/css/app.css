@@ -4060,7 +4060,7 @@ large-up-push-one-third
 .mobile-contact-form {
   display: flow-root;
   width: 100% !important; }
-  .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input {
+  .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
     width: 100%; }
   .mobile-contact-form form {
     width: 100% !important;
@@ -4090,7 +4090,7 @@ large-up-push-one-third
     position: relative;
     top: -14px; }
 
-.contact-input, .event-form input {
+.contact-input, .event-form input, .event-form .event-submit {
   text-transform: uppercase;
   margin: 10px 0px;
   padding: 1rem 1rem;
@@ -4099,10 +4099,10 @@ large-up-push-one-third
   flex: auto;
   box-sizing: border-box;
   font-size: medium; }
-  .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder {
+  .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder, .event-form .event-submit::-webkit-input-placeholder {
     color: #082f21; }
 
-.contact-submit {
+.contact-submit, .event-form .event-submit {
   border: 2px solid #CD5644 !important;
   color: #CD5644 !important;
   display: table-cell;
@@ -4123,11 +4123,6 @@ large-up-push-one-third
 @media only screen and (max-width: 767px) {
   .no-display-mobile {
     display: none !important; } }
-
-.event-form {
-  border: none; }
-  .event-form label {
-    display: none; }
 
 .menu-container {
   width: 100%; }
@@ -4923,3 +4918,33 @@ img.rsImg {
   object-fit: cover; }
   .mobile-lookbook-slider-wrapper .rsImg {
     margin-top: 0px !important; }
+
+.events-page-container {
+  width: 100%; }
+
+.event-form-container {
+  border-left: 2px solid #CD5644;
+  box-sizing: border-box; }
+  .event-form-container h1 {
+    padding-left: 7rem; }
+
+.event-form {
+  padding-left: 7rem;
+  border: none; }
+  .event-form .event-fieldset {
+    border: none !important; }
+  .event-form label {
+    display: none; }
+  .event-form .event-input {
+    width: 50%; }
+    .event-form .event-input__1, .event-form .event-input__3 {
+      float: left; }
+    .event-form .event-input__2, .event-form .event-input__4 {
+      float: right; }
+  .event-form .event-submit {
+    background-color: transparent;
+    margin-left: 1rem;
+    width: 92%; }
+  .event-form .success-message {
+    color: #CD5644 !important;
+    font-size: 2rem; }

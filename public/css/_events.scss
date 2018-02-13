@@ -1,0 +1,59 @@
+.events-page-container{
+  width: 100%;
+}
+
+.event-gallery-container {
+}
+
+.event-form-container{
+  border-left: 2px solid $color-red;
+  box-sizing: border-box;
+
+  h1{
+    padding-left: 7rem;
+  }
+}
+
+
+
+.event-form{
+
+  .event-fieldset{
+    border: none !important;
+  }
+
+  padding-left: 7rem;
+  @extend .contact-form;
+  border: none;
+  input{
+    @extend .contact-input;
+  }
+  label {
+    display: none;
+  }
+
+  .event-input {
+    width: 50%;
+    &__1,
+    &__3 {
+      float: left;
+    }
+    &__2,
+    &__4 {
+      float: right;
+    }
+  }
+
+  .event-submit{
+    @extend .contact-input;
+    @extend .contact-submit;
+    background-color: transparent;
+    margin-left: 1rem;
+    width: 92%;
+  }
+
+  .success-message{
+    color: $color-red !important;
+    font-size: 2rem;
+  }
+}

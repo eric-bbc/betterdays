@@ -121,8 +121,7 @@
   border: 2px solid $color-red !important;
   color: $color-red !important;
   display: table-cell;
-  margin: 0 auto
-
+  margin: 0 auto;
 }
 
 .contact-textarea {
@@ -145,15 +144,4 @@
   @include screen('small-down'){
     display: none !important;
   };
-}
-
-.event-form{
-  @extend .contact-form;
-  border: none;
-  input{
-    @extend .contact-input;
-  }
-  label {
-    display: none;
-  }
 }

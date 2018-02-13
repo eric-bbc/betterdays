@@ -76,39 +76,23 @@ $(document).ready(function($) {
           })
       }
 
-      console.log(slide.attr('slideIndex'));
-
     })
 
 
 
-   // $(".royalSlider").royalSlider({
-   //    arrowsNav         : true,
-   //    keyboardNavEnabled: true,
-   //    imageScaleMode    : 'fill',
-   //    controlNavigation : 'bullets',
-   //    loop              : true,
-   //    addActiveClass    : true,
-   //    transitionType    : 'move',
-   //    slidesSpacing     : 10,
-   //    controlsInside    : true,
-   //    easeInOut         : 'easeInOutSine',
-   //    arrowsNavAutoHide : false,
-   //    visibleNearby     : {
-   //      enabled: true,
-   //      centerArea: 0.30
-   //
-   //    }
-   // });
 });
 
+  /////////////////////////////////////////
+ //           FORM BUILDER              //
+/////////////////////////////////////////
 
+var $success = $('.success-message')
+var $length = $success.text().length
 
-
-
-
-
-
+if ( $length > 0 ){
+  $('.event-submit').css('display', 'none')
+  console.log('we he greatest');
+}
 
 
 
