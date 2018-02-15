@@ -1,31 +1,13 @@
 @font-face {
-  font-family: 'Voltaire';
-  src: url("fonts/Voltaire.woff2") format("woff2"), url("fonts/Voltaire.woff") format("woff");
+  font-family: 'Basis Grotesque';
+  src: url("fonts/BasisGrotesque-Regular.woff2") format("woff2"), url("fonts/BasisGrotesque-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
-  font-family: 'Proxima Nova Cn Lt Semibold';
-  src: url("fonts/ProximaNovaCond-Semibold.woff2") format("woff2"), url("fonts/ProximaNovaCond-Semibold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Proxima Nova Cn Lt';
-  src: url("fonts/ProximaNovaCond-Light.woff2") format("woff2"), url("fonts/ProximaNovaCond-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'museosanscondensed_100';
-  src: url("fonts/museosanscondensed_100.woff2") format("woff2"), url("fonts/museosanscondensed_100.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'MuseoSansCnd-500-webfont';
-  src: url("fonts/MuseoSansCnd-500-webfont.woff2") format("woff2"), url("fonts/MuseoSansCnd-500-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Basis Grotesque';
+  src: url("fonts/BasisGrotesque-Bold.woff2") format("woff2"), url("fonts/BasisGrotesque-Bold.woff") format("woff");
+  font-weight: bold;
   font-style: normal; }
 
 /* =========================================================================
@@ -83,40 +65,12 @@
 /* overflow auto */
 /* text nowrap ellipsis */
 body {
-  background-color: #f5e7d5;
-  font-family: 'MuseoSansCnd-500-webfont'; }
-
-.voltaire {
-  font-family: 'Voltaire'; }
-
-.proxima-font {
-  font-family: 'Proxima Nova Cn Lt'; }
-
-.proxima-bold {
-  font-family: 'Proxima Nova Cn Lt Semibold'; }
-
-.museo-100 {
-  font-family: 'museosanscondensed_100'; }
-
-.museo-500 {
-  font-family: 'MuseoSansCnd-500-webfont'; }
+  background-color: #fff;
+  font-family: 'Basis Grotesque'; }
 
 .page-container {
   width: 90%;
   margin: 0 auto; }
-
-.homepage-splash {
-  width: 100%;
-  position: absolute;
-  left: 0; }
-
-.splash-container {
-  width: 100%;
-  background-size: cover;
-  height: 80vh;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0; }
 
 .button-red {
   color: #CD5644;
@@ -4180,11 +4134,11 @@ large-up-push-one-third
   .gallery .royalSlider {
     width: 100% !important;
     height: 80vh;
-    background: #f5e7d5; }
+    background: #fff; }
     .gallery .royalSlider .rsOverflow {
-      background: #f5e7d5; }
+      background: #fff; }
     .gallery .royalSlider .rsSlide {
-      background: #f5e7d5; }
+      background: #fff; }
     .gallery .royalSlider .rsImg {
       position: absolute;
       width: auto !important; }
@@ -4213,18 +4167,22 @@ large-up-push-one-third
 .event-link {
   text-align: center;
   margin-top: 3rem;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  width: 45%; }
+  @media only screen and (max-width: 767px) {
+    .event-link {
+      width: 100%; } }
   .event-link a {
-    color: #CD5644;
+    color: #000;
     text-decoration: none; }
   .event-link .arrow-span {
-    background: url(../section_assets/icons/rightArrow.png);
+    background: url(../section_assets/icons/rightArrow_black.png);
     background-repeat: no-repeat;
     background-position: calc(50% + 9rem) 50%;
-    line-height: 1rem; }
+    line-height: 1rem;
+    background-size: 4rem; }
 
 .art-collection-grid {
-  border: 2px solid red;
   height: 83vh; }
   .art-collection-grid .row {
     height: 50%; }
@@ -4928,11 +4886,13 @@ img.rsImg {
     display: flex;
     box-sizing: border-box;
     padding: 0.8125rem; }
+  .event-gallery-image-section-container .floorplan-container {
+    height: 16rem; }
   .event-gallery-image-section-container .grid img:last-child {
-    border: 2px solid red; }
+    border: 2px solid #9b9b9b; }
 
 .event-form-container {
-  border-left: 2px solid #CD5644;
+  border-left: 2px solid #9b9b9b;
   box-sizing: border-box; }
   .event-form-container h1 {
     padding-left: 7rem; }
@@ -4959,3 +4919,56 @@ img.rsImg {
   .event-form .success-message {
     color: #CD5644 !important;
     font-size: 2rem; }
+
+.homepage-splash {
+  width: 100%;
+  position: absolute;
+  left: 0; }
+
+.splash-container {
+  width: 100%;
+  background-size: cover;
+  height: 80vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0; }
+
+.homepage-container {
+  color: #000; }
+  .homepage-container .homepage-slider {
+    width: 100% !important;
+    height: 80vh;
+    background: #fff; }
+    .homepage-container .homepage-slider .rsOverflow {
+      background: #fff; }
+    .homepage-container .homepage-slider .rsSlide {
+      background: #fff; }
+    .homepage-container .homepage-slider .rsImg {
+      position: absolute; }
+    .homepage-container .homepage-slider .rsArrow {
+      width: 80px !important; }
+      .homepage-container .homepage-slider .rsArrow .rsArrowIcn {
+        width: 100%; }
+        .homepage-container .homepage-slider .rsArrow .rsArrowIcn:hover {
+          opacity: 0.6; }
+    .homepage-container .homepage-slider .rsArrowLeft {
+      left: -20px; }
+      .homepage-container .homepage-slider .rsArrowLeft .rsArrowIcn {
+        background: url(../section_assets/icons/leftArrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-left: 21px; }
+    .homepage-container .homepage-slider .rsArrowRight {
+      margin-right: 20px; }
+      .homepage-container .homepage-slider .rsArrowRight .rsArrowIcn {
+        background: url(../section_assets/icons/rightArrow.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        padding-right: 21px;
+        left: 0; }
+    .homepage-container .homepage-slider .visibleNearby .rsSlide img {
+      opacity: 0.6; }
+
+.mobile-homepage-slider {
+  height: 100vh;
+  width: 100% !important; }

@@ -14,16 +14,23 @@
     padding: 0.8125rem;
   }
 
+  .floorplan-container{
+    height: 16rem;
+  }
+  .floorplan{
+
+  }
+
   .grid{
     & img:last-child{
-      border: 2px solid red;
+      border: 2px solid $color-grey;
     }
   }
 
 }
 
 .event-form-container{
-  border-left: 2px solid $color-red;
+  border-left: 2px solid $color-grey;
   box-sizing: border-box;
 
   h1{

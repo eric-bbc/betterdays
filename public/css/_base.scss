@@ -1,50 +1,14 @@
 body {
-  background-color: $color-tan;
-  // background-color: blue;
-  // font-family: 'Voltaire';
-  // font-family: 'Proxima Nova Cn Lt';
-  // font-family: 'museosanscondensed_100';
-  font-family: 'MuseoSansCnd-500-webfont';
+  background-color: #fff;
+  font-family: 'Basis Grotesque';
 }
 
-.voltaire {
-  font-family: 'Voltaire';
-}
-
-.proxima-font{
-  font-family: 'Proxima Nova Cn Lt';
-}
-.proxima-bold{
-  font-family: 'Proxima Nova Cn Lt Semibold';
-}
-
-.museo-100 {
-  font-family: 'museosanscondensed_100'
-}
-
-.museo-500 {
-  font-family: 'MuseoSansCnd-500-webfont'
-}
 
 .page-container {
   width: 90%;
   margin: 0 auto;
 }
 
-.homepage-splash {
-  width: 100%;
-  position: absolute;
-  left: 0;
-}
-
-.splash-container {
-  width: 100%;
-  background-size: cover;
-  height: 80vh;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-}
 
 .button-red {
   color: $color-red;

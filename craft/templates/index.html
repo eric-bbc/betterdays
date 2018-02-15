@@ -21,11 +21,25 @@
 
 {% block content %}
 
-  {% for asset in entry.heroImage %}
-  <div class="splash-container" style="background-image:url( {{ asset.url }} ); ">
+  <div class="homepage-container">
 
-    <!-- <img class="homepage-splash" src="{{ asset.url }}" alt="background-splash"> -->
+    <div class="royalSlider rsDefault homepage-slider small-down-display-none-imp">
+      {% for image in entry.images %}
+        <img class="rsImg" src="{{ image.url }}" alt="">
+      {% endfor %}
+    </div>
+
+
+    <div class="mobile-homepage-slider royalSlider  small-up-display-none-imp">
+      {% for image in entry.images %}
+        <img class="rsImg" src="{{ image.url }}" alt="">
+      {% endfor %}
+    </div>
+
+    <div class="event-link">
+      <div class="arrow-span">  <a href="/events">BOOK AN EVENT  </a></div>
+    </div>
+
   </div>
-  {% endfor %}
 
 {% endblock %}

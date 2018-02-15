@@ -24,59 +24,56 @@ $button.on('click', function (){
  //           ROYAL SLIDER              //
 /////////////////////////////////////////
 
-$(document).ready(function($) {
+var homepageSlider = $('.homepage-slider').royalSlider({
+                         arrowsNav         : true,
+                         keyboardNavEnabled: true,
+                         imageScaleMode    : 'fill',
+                         controlNavigation : 'none',
+                         loop              : true,
+                         addActiveClass    : true,
+                         transitionType    : 'move',
+                         slidesSpacing     : 40,
+                         controlsInside    : true,
+                         easeInOut         : 'easeInOutSine',
+                         arrowsNavAutoHide : false,
+                         imageAlignCenter  :false,
+                         startSlideId      : 1,
+                         visibleNearby     : {
+                           enabled: true,
+                           centerArea: 0.30
+                         }
+                    }).data('royalSlider')
 
-  var gallerySlider =  $('.gallery-slider').royalSlider({
-                               arrowsNav         : true,
-                               keyboardNavEnabled: true,
-                               imageScaleMode    : 'fit-if-smaller',
-                               controlNavigation : 'none',
-                               loop              : true,
-                               addActiveClass    : true,
-                               transitionType    : 'move',
-                               slidesSpacing     : 40,
-                               controlsInside    : true,
-                               easeInOut         : 'easeInOutSine',
-                               arrowsNavAutoHide : false,
-                               imageAlignCenter  :false,
-                               startSlideId      : 1,
-                               visibleNearby     : {
-                                 enabled: true,
-                                 centerArea: 0.30
-                               }
-                          }).data('royalSlider')
-
-
-    gallerySlider.ev.on('rsAfterContentSet', function(e, slideObject){
+    homepageSlider.ev.on('rsAfterContentSet', function(e, slideObject){
       var slide = slideObject.content
       var slideIndex = slideObject.id
       slide.attr('slideIndex', slideIndex)
 
-      if (slideIndex == 0){
-        slide.css({
-          top: 'auto',
-          bottom: '0',
-          width: 'auto',
-          height: '60%'
-          })
-      }
-      if (slideIndex == 1){
-        slide.css({
-          top: 'auto',
-          bottom: '0',
-          'min-height': '75%'
-          })
-      }
-      if (slideIndex == 3){
-        slide.css({
-          top: '10rem',
-          bottom: '0',
-          'min-height': '75%'
-          })
-      }
-
     })
-});
+
+    homepageSlider.ev.on('rsBeforeMove', function() {
+      console.log('up in hee');
+      var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
+      console.log('slide = ' + $activeSlideIndex);
+      var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
+      $leftSlide.css('opacity', '0.7')
+    })
+
+    $('.mobile-homepage-slider').royalSlider({
+      imageScaleMode    : 'fill',
+      controlNavigation : 'none',
+      navigateByClick   : false,
+      arrowsNav         : true,
+      arrowsNavAutoHide : false,
+      slidesSpacing     : 0,
+      loop              : true,
+      transitionType    : 'move',
+      addActiveClass    : true,
+      autoHeight        : false
+    }).data('royalSlider');
+
+
+
 
   /////////////////////////////////////////
  //           FORM BUILDER              //

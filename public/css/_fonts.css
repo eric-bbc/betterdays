@@ -1,39 +1,15 @@
 @font-face {
-    font-family: 'Voltaire';
-    src: url('fonts/Voltaire.woff2') format('woff2'),
-        url('fonts/Voltaire.woff') format('woff');
+    font-family: 'Basis Grotesque';
+    src: url('fonts/BasisGrotesque-Regular.woff2') format('woff2'),
+        url('fonts/BasisGrotesque-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Proxima Nova Cn Lt Semibold';
-    src: url('fonts/ProximaNovaCond-Semibold.woff2') format('woff2'),
-        url('fonts/ProximaNovaCond-Semibold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Proxima Nova Cn Lt';
-    src: url('fonts/ProximaNovaCond-Light.woff2') format('woff2'),
-        url('fonts/ProximaNovaCond-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'museosanscondensed_100';
-    src: url('fonts/museosanscondensed_100.woff2') format('woff2'),
-        url('fonts/museosanscondensed_100.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MuseoSansCnd-500-webfont';
-    src: url('fonts/MuseoSansCnd-500-webfont.woff2') format('woff2'),
-        url('fonts/MuseoSansCnd-500-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Basis Grotesque';
+    src: url('fonts/BasisGrotesque-Bold.woff2') format('woff2'),
+        url('fonts/BasisGrotesque-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
 }
