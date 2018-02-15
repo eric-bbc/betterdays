@@ -5,6 +5,23 @@
 .event-gallery-container {
 }
 
+.event-gallery-image-section-container{
+  margin: 0 3rem;
+
+  .event-image{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.8125rem;
+  }
+
+  .grid{
+    & img:last-child{
+      border: 2px solid red;
+    }
+  }
+
+}
+
 .event-form-container{
   border-left: 2px solid $color-red;
   box-sizing: border-box;
@@ -27,6 +44,7 @@
   border: none;
   input{
     @extend .contact-input;
+    font-family: inherit;
   }
   label {
     display: none;

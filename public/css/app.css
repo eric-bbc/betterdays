@@ -4922,6 +4922,15 @@ img.rsImg {
 .events-page-container {
   width: 100%; }
 
+.event-gallery-image-section-container {
+  margin: 0 3rem; }
+  .event-gallery-image-section-container .event-image {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0.8125rem; }
+  .event-gallery-image-section-container .grid img:last-child {
+    border: 2px solid red; }
+
 .event-form-container {
   border-left: 2px solid #CD5644;
   box-sizing: border-box; }
@@ -4933,6 +4942,8 @@ img.rsImg {
   border: none; }
   .event-form .event-fieldset {
     border: none !important; }
+  .event-form input {
+    font-family: inherit; }
   .event-form label {
     display: none; }
   .event-form .event-input {

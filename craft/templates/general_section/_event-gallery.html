@@ -1,6 +1,16 @@
 
 {% block content %}
 
-<h1>YEEEEEHAW</h1>
+<div class="event-gallery-image-section-container">
+  <h1>YEEEEEHAW</h1>
+
+  <div class="grid">
+    {% for image in entry.images %}
+    <img class="event-image col small-up-one-third" src="{{ image.url }}" alt="">
+    {% endfor %}
+  </div>
+
+</div>
+
 
 {% endblock %}

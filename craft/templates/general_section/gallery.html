@@ -11,7 +11,9 @@
 
   <div class="royalSlider rsDefault gallery-slider ">
     {% for image in entry.images %}
+      {% if loop.index < 6 %}
     <img class="rsImg galleryImg" src="{{ image.url }}" alt="">
+      {% endif %}
     {% endfor %}
   </div>
 

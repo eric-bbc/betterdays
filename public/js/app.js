@@ -68,7 +68,6 @@ $(document).ready(function($) {
           })
       }
       if (slideIndex == 3){
-        console.log("I AM NUMBER 3");
         slide.css({
           top: '10rem',
           bottom: '0',
@@ -77,21 +76,18 @@ $(document).ready(function($) {
       }
 
     })
-
-
-
 });
 
   /////////////////////////////////////////
  //           FORM BUILDER              //
 /////////////////////////////////////////
 
+// Hides Submit Button on Success
 var $success = $('.success-message')
 var $length = $success.text().length
 
 if ( $length > 0 ){
   $('.event-submit').css('display', 'none')
-  console.log('we he greatest');
 }
 
 
