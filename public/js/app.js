@@ -44,20 +44,20 @@ var homepageSlider = $('.homepage-slider').royalSlider({
                          }
                     }).data('royalSlider')
 
-    homepageSlider.ev.on('rsAfterContentSet', function(e, slideObject){
-      var slide = slideObject.content
-      var slideIndex = slideObject.id
-      slide.attr('slideIndex', slideIndex)
-
-    })
-
-    homepageSlider.ev.on('rsBeforeMove', function() {
-      console.log('up in hee');
-      var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
-      console.log('slide = ' + $activeSlideIndex);
-      var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
-      $leftSlide.css('opacity', '0.7')
-    })
+    // homepageSlider.ev.on('rsAfterContentSet', function(e, slideObject){
+    //   var slide = slideObject.content
+    //   var slideIndex = slideObject.id
+    //   slide.attr('slideIndex', slideIndex)
+    //
+    // })
+    //
+    // homepageSlider.ev.on('rsBeforeMove', function() {
+    //   console.log('up in hee');
+    //   var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
+    //   console.log('slide = ' + $activeSlideIndex);
+    //   var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
+    //   $leftSlide.css('opacity', '0.7')
+    // })
 
     $('.mobile-homepage-slider').royalSlider({
       imageScaleMode    : 'fill',
@@ -71,6 +71,49 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       addActiveClass    : true,
       autoHeight        : false
     }).data('royalSlider');
+
+  var eventGallerySlider =  $('.event-gallery-slider').royalSlider({
+      imageScaleMode    : 'fit',
+      controlNavigation : 'none',
+      navigateByClick   : false,
+      arrowsNav         : true,
+      arrowsNavAutoHide : false,
+      slidesSpacing     : 54,
+      loop              : true,
+      transitionType    : 'move',
+      addActiveClass    : true,
+      autoHeight        : false,
+      autoScaleSlider   : true,
+      easing            : 'easeOutSine',
+      visibleNearby     : {
+        enabled         :  true,
+        centerArea      : 0.4
+      },
+      fullscreen        : {
+        enabled         : true
+      }
+    }).data('royalSlider');
+
+    eventGallerySlider.ev.on('rsAfterContentSet', function() {
+      eventGallerySlider.enterFullscreen()
+    });
+
+    eventGallerySlider.ev.on('rsExitFullscreen', function() {
+      eventGallerySlider.enterFullscreen()
+    });
+
+    eventGallerySlider.next()
+    eventGallerySlider.next()
+
+    $('.event-image').on('click', function() {
+      $('.event-gallery-slider').toggleClass('invisible visible')
+      $('.event-gallery-slider').toggleClass('display-none display-block')
+    })
+
+    $('.rsFullscreenIcn').on('click', function(){
+      $('.event-gallery-slider').toggleClass('visible invisible')
+      $('.event-gallery-slider').toggleClass('display-block display-none')
+    })
 
 
 

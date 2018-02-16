@@ -6,14 +6,7 @@
 
   <div class="grid">
     {% for image in entry.images %}
-      {% if loop.index < 6 %}
         <img class="event-image col small-up-one-third" src="{{ image.url }}" alt="">
-      {% else %}
-      <div class="floorplan-container event-image col small-up-one-third">
-        <div class="floorplan" style="background-image: url( {{ image.url }} )" ></div>
-
-      </div>
-      {% endif %}
     {% endfor %}
   </div>
 

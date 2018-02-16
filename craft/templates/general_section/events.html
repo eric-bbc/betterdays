@@ -8,11 +8,18 @@
 {% set scripts = craft.formBuilder2.includeScripts(form) %}
 
 {% block content %}
+<div class=" event-gallery-slider royalSlider rsDefault invisible display-none">
+  {% for image in entry.images %}
+    <img class="rsImg" src="{{ image.url }}" alt="">
+  {% endfor %}
+</div>
 
   <div class="grid events-page-container">
     <div class="event-gallery-container col small-up-one-half">
       {% include '/general_section/_event-gallery.html' %}
     </div>
+
+
 
 
 

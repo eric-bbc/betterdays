@@ -5,6 +5,61 @@
 .event-gallery-container {
 }
 
+
+.event-gallery-slider{
+  z-index: 10;
+  position: absolute;
+  .rsOverflow,
+  .rsDefault,
+  .rsSlide {
+    background-color: $color-white;
+  }
+
+  .rsArrow {
+    width: 80px !important;
+    .rsArrowIcn {
+      width: 100%;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+    .rsArrowLeft{
+      .rsArrowIcn {
+        background-image: url(../section_assets/icons/leftArrow.png);
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0);
+        background-position: 0px 0px !important;
+      }
+    }
+    .rsArrowRight{
+      .rsArrowIcn {
+        background: url(../section_assets/icons/rightArrow.png);
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0);
+        background-position: -24px 0px !important;
+
+        padding-right: 21px;
+        left: 0;
+      }
+    }
+
+    .rsSlide {
+      opacity: 0.2;
+    }
+    .rsActiveSlide {
+      opacity: 1;
+
+    }
+
+
+}
+
+.rsOverflow, .royalSlider.rsFullscreen {
+  background-color: #fff;
+}
+
+
 .event-gallery-image-section-container{
   margin: 0 3rem;
 
@@ -12,6 +67,7 @@
     display: flex;
     box-sizing: border-box;
     padding: 0.8125rem;
+    cursor: pointer;
   }
 
   .floorplan-container{
@@ -23,7 +79,7 @@
 
   .grid{
     & img:last-child{
-      border: 2px solid $color-grey;
+      // border: 2px solid $color-grey;
     }
   }
 
@@ -32,7 +88,7 @@
 .event-form-container{
   border-left: 2px solid $color-grey;
   box-sizing: border-box;
-
+  height: 72vh;
   h1{
     padding-left: 7rem;
   }
