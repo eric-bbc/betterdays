@@ -44,20 +44,23 @@ var homepageSlider = $('.homepage-slider').royalSlider({
                          }
                     }).data('royalSlider')
 
-    // homepageSlider.ev.on('rsAfterContentSet', function(e, slideObject){
-    //   var slide = slideObject.content
-    //   var slideIndex = slideObject.id
-    //   slide.attr('slideIndex', slideIndex)
-    //
-    // })
-    //
-    // homepageSlider.ev.on('rsBeforeMove', function() {
-    //   console.log('up in hee');
-    //   var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
-    //   console.log('slide = ' + $activeSlideIndex);
-    //   var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
-    //   $leftSlide.css('opacity', '0.7')
-    // })
+      if ( location.pathname == '/' ) {
+        homepageSlider.ev.on('rsAfterContentSet', function(e, slideObject){
+          var slide = slideObject.content
+          var slideIndex = slideObject.id
+          slide.attr('slideIndex', slideIndex)
+
+        })
+
+        // homepageSlider.ev.on('rsBeforeMove', function() {
+        //   console.log('up in hee');
+        //   var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
+        //   console.log('slide = ' + $activeSlideIndex);
+        //   // var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
+        //   $leftSlide.css('opacity', '0.7')
+        // })
+      }
+
 
     $('.mobile-homepage-slider').royalSlider({
       imageScaleMode    : 'fill',
