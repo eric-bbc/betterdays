@@ -71,6 +71,9 @@ body {
 .page-container {
   width: 90%;
   margin: 0 auto; }
+  @media only screen and (max-width: 767px) {
+    .page-container {
+      min-height: 100vh; } }
 
 .button-red {
   color: #CD5644;
@@ -3984,27 +3987,36 @@ large-up-push-one-third
     .mobile-info-tabs .info-tab span {
       cursor: pointer; }
 
+.info-parent {
+  margin: 0 auto; }
+
 .info-body-container {
-  border-right: 3px solid #CD5644;
-  margin-right: -2rem;
   box-sizing: border-box; }
   @media only screen and (max-width: 767px) {
     .info-body-container {
       border-right: none; } }
   .info-body-container .info-body {
-    width: 70%; }
+    color: #9b9b9b;
+    width: 80%; }
+    @media only screen and (max-width: 767px) {
+      .info-body-container .info-body {
+        width: 100%; } }
     .info-body-container .info-body p {
       padding: 1rem 0; }
 
 .contact-form, .mobile-contact-form, .event-form {
   width: 80%;
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  color: #9b9b9b; }
+  .contact-form h3, .mobile-contact-form h3, .event-form h3 {
+    color: #000; }
   @media only screen and (max-width: 767px) {
     .contact-form, .mobile-contact-form, .event-form {
       display: none; } }
   .contact-form input, .mobile-contact-form input, .event-form input, .contact-form textarea, .mobile-contact-form textarea, .event-form textarea {
-    border: 2px solid #082f21;
-    background-color: #f5e7d5;
+    border: none;
+    background-color: #f4f4f4;
+    color: #9b9b9b;
     resize: none; }
   .contact-form form, .mobile-contact-form form, .event-form form {
     display: flex;
@@ -4012,10 +4024,10 @@ large-up-push-one-third
     padding-bottom: 0px; }
 
 .mobile-contact-form {
-  display: flow-root;
   width: 100% !important; }
   .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
-    width: 100%; }
+    width: 100%;
+    color: #9b9b9b; }
   .mobile-contact-form form {
     width: 100% !important;
     display: flow-root; }
@@ -4025,15 +4037,19 @@ large-up-push-one-third
 
 .info-grid {
   display: inline-table;
-  padding-left: 5rem; }
+  padding-left: 5rem;
+  border-left: 1px solid #9b9b9b;
+  box-sizing: border-box; }
   @media only screen and (max-width: 767px) {
     .info-grid {
-      padding-left: 0; } }
+      padding-left: 0;
+      border: none;
+      display: none; } }
   .info-grid .info-grid-item {
     display: inline-table;
     padding-left: 2rem;
-    width: 45%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    color: #9b9b9b; }
     @media only screen and (max-width: 767px) {
       .info-grid .info-grid-item {
         width: 100%;
@@ -4047,36 +4063,35 @@ large-up-push-one-third
 .contact-input, .event-form input, .event-form .event-submit {
   text-transform: uppercase;
   margin: 10px 0px;
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
   width: 96%;
-  display: flex;
-  flex: auto;
+  height: 25%;
   box-sizing: border-box;
-  font-size: medium; }
+  font-size: medium;
+  text-align: left; }
   .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder, .event-form .event-submit::-webkit-input-placeholder {
-    color: #082f21; }
+    color: #9b9b9b; }
 
 .contact-submit, .event-form .event-submit {
-  border: 2px solid #CD5644 !important;
-  color: #CD5644 !important;
-  display: table-cell;
-  margin: 0 auto; }
+  border: none !important;
+  color: #000 !important;
+  margin: 0 auto;
+  background-color: #fff !important; }
 
 .contact-textarea {
   text-transform: uppercase;
   margin: 10px 0px;
   padding: 1rem 1rem;
   width: 96%;
-  height: 8.78rem;
   display: flex;
   flex: auto;
   font-size: medium; }
   .contact-textarea::-webkit-input-placeholder {
-    color: #082f21; }
+    color: #9b9b9b; }
 
 @media only screen and (max-width: 767px) {
   .no-display-mobile {
-    display: none !important; } }
+    display: none; } }
 
 .menu-container {
   width: 100%; }
@@ -4927,14 +4942,17 @@ img.rsImg {
   border-left: 2px solid #9b9b9b;
   box-sizing: border-box;
   height: 72vh; }
-  .event-form-container h1 {
-    padding-left: 7rem; }
+
+.event-form-subcontainer {
+  display: flex;
+  padding-left: 7rem;
+  flex-direction: column; }
 
 .event-form {
-  padding-left: 7rem;
   border: none; }
   .event-form .event-fieldset {
-    border: none !important; }
+    border: none !important;
+    padding-left: 0; }
   .event-form input {
     font-family: inherit; }
   .event-form label {

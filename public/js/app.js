@@ -5,10 +5,19 @@ $( document ).ready(function() {
  //           mobile toggles            //
 /////////////////////////////////////////
   $('.info-tab').on('click', function(){
-    $('.info-tab').toggleClass(  "active" )
 
-    $('.info-grid').toggleClass('no-display-mobile')
-    $('.info-body-container').toggleClass('no-display-mobile')
+    var $self = $(this)
+    var $id = $self.attr('id')
+    $self.addClass( "active" )
+
+    $self.siblings().removeClass(  "active" )
+    // $self.siblings().forEach( function( sibling ){
+    //   console.log(sibling);
+    // })
+    $('.js-mobile-toggle').addClass('display-none')
+    $('.js-mobile-toggle').removeClass('display-block-imp')
+    $( '.js-' + $id ).removeClass('display-none')
+    $( '.js-' + $id ).addClass('display-block-imp')
   })
 
   /////////////////////////////////////////

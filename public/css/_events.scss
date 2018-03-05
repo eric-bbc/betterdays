@@ -90,19 +90,24 @@
   box-sizing: border-box;
   height: 72vh;
   h1{
-    padding-left: 7rem;
+    // padding-left: 7rem;
   }
 }
 
-
+.event-form-subcontainer{
+  display: flex;
+  padding-left: 7rem;
+  flex-direction: column;
+}
 
 .event-form{
 
   .event-fieldset{
     border: none !important;
+    padding-left: 0;
   }
 
-  padding-left: 7rem;
+  // padding-left: 7rem;
   @extend .contact-form;
   border: none;
   input{

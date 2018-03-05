@@ -7,28 +7,33 @@
 <div class="page-container">
 
   <div class="mobile-info-tabs proxima-bold">
-    <div class="info-tab active"><span>INFO<span></div>
-    <div class="info-tab"><span>ABOUT<span></div>
+    <div id="info" class="info-tab active"><span>Info<span></div>
+    <div id="about" class="info-tab"><span>About<span></div>
+    <div id="contact" class="info-tab"><span>Contact<span></div>
   </div>
 
-  <div class="grid">
-    <div class="col small-up-one-third">
-      <div class="info-body-container">
-        <div class="info-body">
-          {{ entry.body }}
+  <div class="grid info-parent">
+    <div class="col small-up-one-half">
+      <div class="contact-container">
+        <div class="info-body-container">
+
+          <div class="info-body js-info js-mobile-toggle">
+            {{ entry.body }}
+          </div>
+
+          <div class="contact-form">
+            <h3>CONTACT US</h3>
+            {% include '/general_section/_contact-form.html' %}
+          </div>
         </div>
 
-        <div class="contact-form">
-          <h3>CONTACT US</h3>
-          {% include '/general_section/_contact-form.html' %}
-        </div>
       </div>
     </div>
 
 
 
-    <div class="col small-up-two-thirds small-down-one-whole">
-      <div class="info-grid no-display-mobile">
+    <div class="col small-up-one-half small-down-one-whole">
+      <div class="info-grid js-about js-mobile-toggle">
 
         {% for block in entry.infoPairs %}
           <div class="info-grid-item small-up-one-half small-down-one-whole">
@@ -37,6 +42,10 @@
           </div>
         {% endfor %}
       </div>
+    </div>
+
+    <div class="mobile-contact-form small-down-one-whole display-none js-contact js-mobile-toggle">
+      {% include '/general_section/_contact-form.html' %}
     </div>
   </div>
 
