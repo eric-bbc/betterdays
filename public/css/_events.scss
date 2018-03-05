@@ -5,6 +5,26 @@
 .event-gallery-container {
 }
 
+.room-title{
+  padding: 0.8125rem;
+}
+
+.room-toggles{
+  padding: 0.8125rem;
+  a{
+    text-decoration: none;
+    color: $color-grey;
+    font-size: 1.5rem;
+    padding: 0 2rem;
+    padding-left: 0;
+    cursor: pointer;
+  }
+
+  .active{
+    text-decoration: underline;
+  }
+}
+
 
 .event-gallery-slider{
   z-index: 10;
@@ -46,9 +66,11 @@
 
     .rsSlide {
       opacity: 0.2;
+      @include transition(opacity 0.6s);
     }
     .rsActiveSlide {
       opacity: 1;
+      @include transition(opacity 0.6s)
 
     }
 
@@ -57,6 +79,8 @@
 
 .rsOverflow, .royalSlider.rsFullscreen {
   background-color: #fff;
+  opacity: 1;
+  // @include transition(opacity 0.6s);
 }
 
 
@@ -64,7 +88,6 @@
   margin: 0 3rem;
 
   .event-image{
-    display: flex;
     box-sizing: border-box;
     padding: 0.8125rem;
     cursor: pointer;
@@ -106,7 +129,6 @@
     border: none !important;
     padding-left: 0;
   }
-
   // padding-left: 7rem;
   @extend .contact-form;
   border: none;

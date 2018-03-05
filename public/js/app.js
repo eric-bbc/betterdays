@@ -18,6 +18,25 @@ $( document ).ready(function() {
   })
 
   /////////////////////////////////////////
+ //           Event Room toggles         //
+/////////////////////////////////////////
+$('.room-toggle').on('click', function(){
+  var $self = $(this)
+  var $id = $self.attr('id')
+  $self.addClass( "active" )
+  $self.siblings().removeClass(  "active" )
+  $('.room-title').text( $self.text() )
+
+  $('.js-room-gallery').addClass('display-none')
+  $( '.js-' + $id ).removeClass('display-none')
+  $( '.js-' + $id ).addClass('display-block')
+
+
+})
+
+
+
+  /////////////////////////////////////////
  //           OPENTABLE TOGGLE          //
 /////////////////////////////////////////
 var $button = $('.js-ot-toggle')
@@ -81,12 +100,13 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       autoHeight        : false
     }).data('royalSlider');
 
-  var eventGallerySlider =  $('.event-gallery-slider').royalSlider({
+   $('.event-gallery-slider').royalSlider({
       imageScaleMode    : 'fit',
       controlNavigation : 'none',
       navigateByClick   : false,
       arrowsNav         : true,
       arrowsNavAutoHide : false,
+      imageAlignCenter  : true,
       slidesSpacing     : 54,
       loop              : true,
       transitionType    : 'move',
@@ -103,25 +123,20 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       }
     }).data('royalSlider');
 
-    eventGallerySlider.ev.on('rsAfterContentSet', function() {
-      eventGallerySlider.enterFullscreen()
-    });
-
-    eventGallerySlider.ev.on('rsExitFullscreen', function() {
-      eventGallerySlider.enterFullscreen()
-    });
-
-    eventGallerySlider.next()
-    eventGallerySlider.next()
 
     $('.event-image').on('click', function() {
-      $('.event-gallery-slider').toggleClass('invisible visible')
-      $('.event-gallery-slider').toggleClass('display-none display-block')
+      var room = $(this).data('room')
+      var $rs = $('.' + room + '-room-rs')
+      $rs.data('royalSlider').enterFullscreen()
+      $rs.toggleClass('invisible visible')
+      $rs.toggleClass('display-none display-block')
     })
 
-    $('.rsFullscreenIcn').on('click', function(){
-      $('.event-gallery-slider').toggleClass('visible invisible')
-      $('.event-gallery-slider').toggleClass('display-block display-none')
+    $('.rsFullscreenBtn').on('click', function(){
+      var $openSlider = $(this).parent().parent()
+      $openSlider.toggleClass('visible invisible')
+      $openSlider.toggleClass('display-block display-none')
+
     })
 
 

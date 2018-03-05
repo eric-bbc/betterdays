@@ -8,8 +8,20 @@
 {% set scripts = craft.formBuilder2.includeScripts(form) %}
 
 {% block content %}
-<div class=" event-gallery-slider royalSlider rsDefault invisible display-none">
-  {% for image in entry.images %}
+<div class="event-gallery-slider main-room-rs royalSlider rsDefault invisible display-none">
+  {% for image in entry.mainRoomImages %}
+    <img class="rsImg" src="{{ image.url }}" alt="">
+  {% endfor %}
+</div>
+
+<div class="event-gallery-slider karaoke-room-rs royalSlider rsDefault invisible display-none">
+  {% for image in entry.karaokeImages %}
+    <img class="rsImg" src="{{ image.url }}" alt="">
+  {% endfor %}
+</div>
+
+<div class="event-gallery-slider club-room-rs royalSlider rsDefault invisible display-none">
+  {% for image in entry.clubRoomImages %}
     <img class="rsImg" src="{{ image.url }}" alt="">
   {% endfor %}
 </div>

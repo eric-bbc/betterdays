@@ -2,11 +2,31 @@
 {% block content %}
 
 <div class="event-gallery-image-section-container">
-  <h1>YEEEEEHAW</h1>
+  <h1 class="room-title">Main Room</h1>
 
-  <div class="grid">
-    {% for image in entry.images %}
-        <img class="event-image col small-up-one-third" src="{{ image.url }}" alt="">
+
+  <div class="room-toggles">
+    <a id="main" class="room-toggle active" href="#">Main Room</a>
+    <a id="karaoke" class="room-toggle" href="#">Karaoke Room</a>
+    <a id="club" class="room-toggle" href="#">The Club</a>
+
+  </div>
+
+  <div class="grid main-room-grid js-room-gallery js-main">
+    {% for image in entry.mainRoomImages %}
+        <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
+    {% endfor %}
+  </div>
+
+  <div class="grid karaoke-room-grid js-room-gallery display-none js-karaoke">
+    {% for image in entry.karaokeImages %}
+        <img class="event-image col small-up-one-third" data-room="karaoke"  src="{{ image.url }}" alt="">
+    {% endfor %}
+  </div>
+
+  <div class="grid club-room-grid js-room-gallery display-none js-club">
+    {% for image in entry.clubRoomImages %}
+        <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
     {% endfor %}
   </div>
 
