@@ -157,6 +157,15 @@
   }
 }
 
+.mobile-contact-form{
+  @include screen('small-up'){
+    display: none;
+  };
+  input{
+    padding: 1rem;
+  }
+}
+
 
 .no-display-mobile {
   @include screen('small-down'){

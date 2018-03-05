@@ -112,6 +112,7 @@
   border: none;
   input{
     @extend .contact-input;
+    padding: 1rem 1rem;
     font-family: inherit;
   }
   label {
@@ -120,13 +121,17 @@
 
   .event-input {
     width: 50%;
+    @extend .contact-input;
     &__1,
     &__3 {
       float: left;
     }
     &__2,
     &__4 {
-      float: right;
+      float: left;
+    }
+    &__7 {
+      // float: right;
     }
   }
 

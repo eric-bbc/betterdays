@@ -4025,7 +4025,7 @@ large-up-push-one-third
 
 .mobile-contact-form {
   width: 100% !important; }
-  .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
+  .mobile-contact-form .contact-input, .mobile-contact-form .event-form input, .event-form .mobile-contact-form input, .mobile-contact-form .event-form .event-input, .event-form .mobile-contact-form .event-input, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
     width: 100%;
     color: #9b9b9b; }
   .mobile-contact-form form {
@@ -4060,7 +4060,7 @@ large-up-push-one-third
     position: relative;
     top: -14px; }
 
-.contact-input, .event-form input, .event-form .event-submit {
+.contact-input, .event-form input, .event-form .event-input, .event-form .event-submit {
   text-transform: uppercase;
   margin: 10px 0px;
   padding: 0rem 1rem;
@@ -4069,7 +4069,7 @@ large-up-push-one-third
   box-sizing: border-box;
   font-size: medium;
   text-align: left; }
-  .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder, .event-form .event-submit::-webkit-input-placeholder {
+  .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder, .event-form .event-input::-webkit-input-placeholder, .event-form .event-submit::-webkit-input-placeholder {
     color: #9b9b9b; }
 
 .contact-submit, .event-form .event-submit {
@@ -4088,6 +4088,13 @@ large-up-push-one-third
   font-size: medium; }
   .contact-textarea::-webkit-input-placeholder {
     color: #9b9b9b; }
+
+@media only screen and (min-width: 768px) {
+  .mobile-contact-form {
+    display: none; } }
+
+.mobile-contact-form input {
+  padding: 1rem; }
 
 @media only screen and (max-width: 767px) {
   .no-display-mobile {
@@ -4954,6 +4961,7 @@ img.rsImg {
     border: none !important;
     padding-left: 0; }
   .event-form input {
+    padding: 1rem 1rem;
     font-family: inherit; }
   .event-form label {
     display: none; }
@@ -4962,7 +4970,7 @@ img.rsImg {
     .event-form .event-input__1, .event-form .event-input__3 {
       float: left; }
     .event-form .event-input__2, .event-form .event-input__4 {
-      float: right; }
+      float: left; }
   .event-form .event-submit {
     background-color: transparent;
     margin-left: 1rem;

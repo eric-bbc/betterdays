@@ -5,15 +5,12 @@ $( document ).ready(function() {
  //           mobile toggles            //
 /////////////////////////////////////////
   $('.info-tab').on('click', function(){
-
     var $self = $(this)
     var $id = $self.attr('id')
     $self.addClass( "active" )
 
     $self.siblings().removeClass(  "active" )
-    // $self.siblings().forEach( function( sibling ){
-    //   console.log(sibling);
-    // })
+
     $('.js-mobile-toggle').addClass('display-none')
     $('.js-mobile-toggle').removeClass('display-block-imp')
     $( '.js-' + $id ).removeClass('display-none')

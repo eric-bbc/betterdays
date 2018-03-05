@@ -39,7 +39,7 @@
           {# Fields #}
           {% for tab in tabs %}
           {% set fields = tab.getFields() %}
-          <fieldset class="event-fieldset {{ tab.name | camelCase(tab.name) }}">
+          <fieldset class=" event-fieldset {{ tab.name | camelCase(tab.name) }}">
             {% for field in fields %}
             {% set value = value is defined ? value : [] %}
             {% set input = craft.formBuilder2.getInputHtml(field, value) %}
