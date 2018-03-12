@@ -3,10 +3,27 @@
 }
 
 .event-gallery-container {
+
+
+  .desktop-gallery-container {
+    @include screen('small-down'){
+      display: none;
+    };
+  }
+
+  .mobile-gallery-container{
+    // display: none;
+    @include screen('small-up'){
+      // display: none;
+    };
+  }
 }
 
 .room-title{
   padding: 0.8125rem;
+  @include screen('small-down'){
+    display: none;
+  };
 }
 
 .room-toggles{
@@ -23,6 +40,9 @@
   .active{
     text-decoration: underline;
   }
+  @include screen('small-down'){
+    display: none;
+  };
 }
 
 
@@ -75,6 +95,18 @@
     }
 
 
+
+    .rsFullscreenIcn{
+      height: 32px;
+      width: 32px;
+      background-image: url(../section_assets/icons/grey_close.png);
+      background-repeat: no-repeat;
+      background-position: 0px 0px !important;
+      background-color: transparent;
+      background-size: contain;
+    }
+
+
 }
 
 .rsOverflow, .royalSlider.rsFullscreen {
@@ -111,20 +143,51 @@
 .event-form-container{
   border-left: 2px solid $color-grey;
   box-sizing: border-box;
-  height: 72vh;
-  h1{
-    // padding-left: 7rem;
+  // height: 72vh;
+  @include screen('small-down'){
+    border: none;
+  };
+
+  .mobile-view-gallery-toggle {
+    @include screen('small-up'){
+      display: none;
+    };
+  }
+
+}
+
+.mobile-event-form-container{
+  display: none;
+  @include screen('small-down'){
+    display: block !important;
+    .event-form{
+      display: block !important;
+      width: 100%;
+      padding: 0;
+      .event-fieldset{
+        width: 100%;
+      }
+      .event-input{
+        width: 100%;
+        input{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }
 
 .event-form-subcontainer{
   display: flex;
-  padding-left: 7rem;
+  // padding-left: 7rem;
+  padding-left: 10%;
   flex-direction: column;
+  @include screen('small-down'){
+    padding-left: 0;
+  };
 }
 
 .event-form{
-
   .event-fieldset{
     border: none !important;
     padding-left: 0;
@@ -136,6 +199,8 @@
     @extend .contact-input;
     padding: 1rem 1rem;
     font-family: inherit;
+    font-size: calc(12px + 3 * ((100vw - 320px) / 720));
+
   }
   label {
     display: none;

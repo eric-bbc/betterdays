@@ -30,8 +30,20 @@ $('.room-toggle').on('click', function(){
   $('.js-room-gallery').addClass('display-none')
   $( '.js-' + $id ).removeClass('display-none')
   $( '.js-' + $id ).addClass('display-block')
+})
 
+$('.js-event-gallery-toggle').on('click', function(){
+  $('.event-form-container').addClass('display-none')
+  $('.mobile-gallery-container').toggleClass('display-none display-block')
+  $('.js-event-form-toggle').toggleClass('display-none display-block')
+  $(this).addClass('display-none')
+})
 
+$('.js-event-form-toggle').on('click', function(){
+  $(this).addClass('display-none')
+  $('.mobile-view-gallery-toggle').toggleClass('display-block display-none')
+  $('.mobile-gallery-container').toggleClass('display-block display-none')
+  $('.event-form-container').toggleClass('display-block display-none')
 })
 
 
