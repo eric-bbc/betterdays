@@ -26,6 +26,7 @@ $('.room-toggle').on('click', function(){
   $self.addClass( "active" )
   $self.siblings().removeClass(  "active" )
   $('.room-title').text( $self.text() )
+  $('.room-title').text( $self.text() )
 
   $('.js-room-gallery').addClass('display-none')
   $( '.js-' + $id ).removeClass('display-none')
@@ -148,10 +149,71 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       var $openSlider = $(this).parent().parent()
       $openSlider.toggleClass('visible invisible')
       $openSlider.toggleClass('display-block display-none')
-
     })
 
 
+    $('.mobile-event-gallery-slider').royalSlider({
+      imageScaleMode    : 'fill',
+      imageAlignCenter  : true,
+      controlNavigation : 'none',
+      navigateByClick   : false,
+      // arrowsNav         : true,
+      // arrowsNavAutoHide : false,
+      slidesSpacing     : 100,
+      loop              : true,
+      transitionType    : 'move',
+      addActiveClass    : true,
+      autoHeight        : false
+     }).data('royalSlider');
+
+
+
+
+     /////////////////////////////////////////
+    //          MENU                       //
+   /////////////////////////////////////////
+
+   $('.menu-slider').royalSlider({
+     imageScaleMode    : 'fit',
+     imageAlignCenter  : true,
+     loop              : true,
+     transitionType    : 'move',
+     controlNavigation : 'none',
+
+     fullscreen        : {
+       enabled         : true
+     }
+   }).data('royalSlider')
+
+   $('.menu-card').on('click', function(){
+
+     //desktop
+     if ( $('html').hasClass('no-touchevents') ) {
+       var $this = $(this)
+       var index = $this.data('id')
+       var slider = $('.menu-slider').data('royal-slider')
+       slider.goTo(index)
+       $('.menu-slider').removeClass('display-none')
+     } else {
+       console.log("CELLPHONE");
+        $('.menu-slider').removeClass('display-none')
+        $("html, body").animate({
+                scrollTop: 0
+            }, 300);
+        $('html').css('overflow-y', 'hidden')
+
+     }
+
+   })
+
+   $('.menu-slider').find('.rsFullscreenBtn').on('click', function(){
+     $('.menu-slider').addClass('display-none')
+     if ( $('html').hasClass('touchevents') ) {
+       $('html, body').css('overflow', 'scroll')
+
+     }
+
+   })
 
 
   /////////////////////////////////////////

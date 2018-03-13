@@ -35,23 +35,32 @@
 
   <div class="mobile-gallery-container display-none">
 
-    <div class="grid main-room-grid js-room-gallery js-main">
+    <p class="room-title title-mobile">Main Room</p>
+
+    <div class="mobile-room-toggles">
+      <a id="main-mobile" class="room-toggle active" href="#">Main Room</a>
+      <a id="karaoke-mobile" class="room-toggle" href="#">Karaoke Room</a>
+      <a id="club-mobile" class="room-toggle" href="#">The Club</a>
+    </div>
+
+
+    <div class="mobile-event-gallery-slider royalSlider">
       {% for image in entry.mainRoomImages %}
-      <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
+        <img class="" data-room="main" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="grid karaoke-room-grid js-room-gallery display-none js-karaoke">
+    <!-- <div class="js-room-gallery display-none js-karaoke">
       {% for image in entry.karaokeImages %}
-      <img class="event-image col small-up-one-third" data-room="karaoke"  src="{{ image.url }}" alt="">
+        <img class="event-image col small-up-one-third" data-room="karaoke"  src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="grid club-room-grid js-room-gallery display-none js-club">
+    <div class="js-room-gallery display-none js-club">
       {% for image in entry.clubRoomImages %}
       <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}
-    </div>
+    </div> -->
 
   </div>
 

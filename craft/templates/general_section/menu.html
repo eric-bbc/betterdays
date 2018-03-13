@@ -2,13 +2,41 @@
 
 {% block content %}
 
+
+<div class="">
+
+  <div class="royalSlider rsDefault menu-slider display-none large-menu-container">
+
+    {% for asset in entry.menu %}
+      <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
+    {% endfor %}
+  </div>
+
+</div>
+
   <div class="menu-container">
-  {% for asset in entry.menuImage %}
 
-  <embed src="{{ asset.url }}" class="menu-image" type='application/pdf'>
+    <h1 class="menu-header">Menus</h1>
+
+    <div class="place-holder-container">
+      {% for block in entry.menuCover %}
+
+      {% set imageUrl = block.holderImage.first().url %}
 
 
-  {% endfor %}
+      <div class="menu-card"  data-id="{{ loop.index0 }}">
+        <div class="menu-cover" style="background-image: url( {{ imageUrl }} )" >  </div>
+        <!-- <img class="menu-cover"  src="{{ imageUrl }} " alt=""> -->
+
+        <h1>{{ block.menuTitle }}</h1>
+      </div>
+
+
+
+      {% endfor %}
+    </div>
+
+
 </div>
 
 {% endblock %}
