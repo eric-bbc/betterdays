@@ -228,6 +228,7 @@
 
   .event-input {
     width: 50%;
+    // display: flex;
     @extend .contact-input;
     &__1,
     &__3 {
@@ -240,15 +241,46 @@
     &__7 {
       // float: right;
     }
+    .arrow-span{
+      // background: url(../section_assets/icons/rightArrow_black.png);
+      // background-repeat: no-repeat;
+      // // background-position: calc(50% + 9rem) 50%;
+      // // background-position: calc(50% + 9rem) 50%;
+      // line-height: 1rem;
+      // background-size: 4rem;
+      // height: 1rem;
+      // display: block;
+      // width: 28%;
+      // position: relative;
+      // background-position-y: 4px;
+    }
+  }
+
+  .submit-parent{
+    display: flex;
   }
 
   .event-submit{
     @extend .contact-input;
     @extend .contact-submit;
+    display: inline-flex;
     background-color: transparent;
-    margin-left: 1rem;
     width: 92%;
-    text-align: center;
+    text-align: left;
+    margin-left: 0;
+
+    &::after{
+      content: "";
+      background: url(../section_assets/icons/rightArrow_black.png);
+      background-repeat: no-repeat;
+      background-size: 4rem;
+      height: 1rem;
+      display: inline-block;
+      width: 50%;
+      background-position-y: 5px;
+      background-position-x: 19px;
+    }
+
   }
 
   .success-message{

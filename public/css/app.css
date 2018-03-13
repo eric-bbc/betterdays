@@ -5101,11 +5101,24 @@ img.rsImg {
       float: left; }
     .event-form .event-input__2, .event-form .event-input__4 {
       float: left; }
+  .event-form .submit-parent {
+    display: flex; }
   .event-form .event-submit {
+    display: inline-flex;
     background-color: transparent;
-    margin-left: 1rem;
     width: 92%;
-    text-align: center; }
+    text-align: left;
+    margin-left: 0; }
+    .event-form .event-submit::after {
+      content: "";
+      background: url(../section_assets/icons/rightArrow_black.png);
+      background-repeat: no-repeat;
+      background-size: 4rem;
+      height: 1rem;
+      display: inline-block;
+      width: 50%;
+      background-position-y: 5px;
+      background-position-x: 19px; }
   .event-form .success-message {
     color: #CD5644 !important;
     font-size: 2rem; }

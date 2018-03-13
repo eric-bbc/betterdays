@@ -195,7 +195,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
        slider.goTo(index)
        $('.menu-slider').removeClass('display-none')
      } else {
-       console.log("CELLPHONE");
+
         $('.menu-slider').removeClass('display-none')
         $("html, body").animate({
                 scrollTop: 0
@@ -227,9 +227,6 @@ var $length = $success.text().length
 if ( $length > 0 ){
   $('.event-submit').css('display', 'none')
 }
-
-
-
 
 
 
