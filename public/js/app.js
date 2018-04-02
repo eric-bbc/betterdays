@@ -35,7 +35,7 @@ $('.room-toggle').on('click', function(){
 
 $('.js-event-gallery-toggle').on('click', function(){
   $('.event-form-container').addClass('display-none')
-  $('.mobile-gallery-container').toggleClass('display-none display-block')
+  $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
   $('.js-event-form-toggle').toggleClass('display-none display-block')
   $(this).addClass('display-none')
 })
@@ -156,10 +156,9 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       imageScaleMode    : 'fill',
       imageAlignCenter  : true,
       controlNavigation : 'none',
-      navigateByClick   : false,
-      // arrowsNav         : true,
-      // arrowsNavAutoHide : false,
-      slidesSpacing     : 100,
+      navigateByClick   : true,
+      arrowsNav         : true,
+      arrowsNavAutoHide : false,
       loop              : true,
       transitionType    : 'move',
       addActiveClass    : true,
