@@ -35,7 +35,7 @@ large-up-display-none-imp
 @mixin display-none-class($breakpoint: '') {
   .#{$breakpoint}-display-none{display:none;}
 }
-
+ 
 @each $item in $breakpoint-range {
   $item-key: nth($item, 1);
   @include screen($range: $item-key) {

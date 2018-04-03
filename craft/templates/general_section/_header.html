@@ -1,15 +1,19 @@
 
 {% block content %}
 
-  <div class="navHeader">
-    <div class="navSection small-up-one-third">
-      <h1><a class="voltaire" href="{{ siteUrl }}">{{ siteName }}</a></h1>
-
+  <div class="header-nav medium-down-display-none-imp">
+    <div class="desktop-nav-link-container small-up-three-eighths">
       {% for entry in navigation.navigationLinks %}
-        <a href="{{ entry.destination }}">{{ entry.displayName }}</a>
+        {% if loop.index == 2 %}
+          <a class="desktop-nav-link" href="{{ entry.destination }}" target="_blank">{{ entry.displayName }}</a>
+        {% else %}
+          <a class="desktop-nav-link" href="{{ entry.destination }}" >{{ entry.displayName }}</a>
+        {% endif %}
+
+
       {% endfor %}
     </div>
-    <div class="navSection small-up-one-third">
+    <div class="small-up-two-eighths">
       <div class="desktop-logo">
         {% for image in craft.assets.kind('image') %}
           {% if image.filename == 'BD_Logo_desk.png' %}
@@ -21,10 +25,40 @@
       </div>
 
     </div>
-    <div class="navSection small-up-one-third">
+    <div class="small-up-three-eighths header-newsletter-signup">
       <button class="button-red proxima-font js-ot-toggle res-button" type="button" name="button" >Make A Reservation</button>
     </div>
+  </div>
 
+  <div class="mobile-nav medium-up-display-none-imp">
+
+    <div class="burger  js-mobile-nav-toggle">
+      <!-- <img src="../section_assets/icons/burger.png" alt=""> -->
+    </div>
+
+
+    <div class="mobile-logo">
+      {% for image in craft.assets.kind('image') %}
+        {% if image.filename == 'BD_Logo_desk.png' %}
+        <a href="/">
+          <img src="{{ image.url }}" alt="">
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+  </div>
+
+  <div class="mobile-nav-link-container">
+    {% for entry in navigation.navigationLinks %}
+      {% if loop.index == 2 %}
+        <a class="mobile-nav-link" href="{{ entry.destination }}" target="_blank">{{ entry.displayName }}</a>
+      {% else %}
+        <a class="mobile-nav-link" href="{{ entry.destination }}" >{{ entry.displayName }}</a>
+      {% endif %}
+
+
+    {% endfor %}
 
   </div>
 

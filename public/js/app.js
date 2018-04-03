@@ -229,9 +229,13 @@ if ( $length > 0 ){
 
 
 
+///////////////////////////////////////////
+//          MOBILE NAV TOGGLE            //
+//////////////////////////////////////////
 
-
-
+$('.js-mobile-nav-toggle').on('touch click', function(){
+  $('.mobile-nav-link-container').toggleClass('open')
+})
 
 
 

@@ -7,6 +7,9 @@ body {
 
 #content {
   min-height: 80;
+  @include sceen('medium-down'){
+    padding-top:$navbar-nav-height-mobile
+  };
 }
 
 
