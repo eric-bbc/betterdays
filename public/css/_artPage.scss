@@ -49,7 +49,8 @@
       // margin-top: 8rem;
       // margin-bottom: -6rem;
       position: relative;
-      top: 14rem;
+      // top: 14rem;
+      top: 11rem;
     }
 
     .art-collection-image {
@@ -120,8 +121,17 @@
   justify-content: center;
   font-size: 0.8rem;
 
+  p{
+    padding-left: 3rem;
+  }
+
   .artpage-artist-name{
     font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .artpage-artist-title{
+    margin-bottom: -0.5rem;
   }
 
   .artpage-artist-website{

@@ -13,16 +13,49 @@
     margin-bottom: 1rem
   }
 
+  // .desktop-nav-link{
+  //   color: $color-grey;
+  //   text-decoration: none;
+  //   @include transition(all 400ms);
+  //   &:hover{
+  //     opacity: 0.7;
+  //     transform: translateY(-10px);
+  //   }
+  //   &.active{
+  //     font-weight: bold;
+  //   }
+  // }
   .desktop-nav-link{
     color: $color-grey;
     text-decoration: none;
+    position: relative;
     @include transition(all 400ms);
+    padding: 3px 0;
     &:hover{
       opacity: 0.7;
-      transform: translateY(-10px);
     }
     &.active{
       font-weight: bold;
+    }
+
+    &:before{
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-grey;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      @include transition(all 400ms);
+
+    }
+    &:hover:before{
+      visibility: visible;
+     -webkit-transform: scaleX(1);
+     transform: scaleX(1);
     }
   }
 

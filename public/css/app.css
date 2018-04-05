@@ -71,7 +71,7 @@ body {
   overflow-y: scroll; }
 
 #content {
-  min-height: 80; }
+  min-height: 100vh; }
   @media only screen and (max-width: 991px) {
     #content {
       padding-top: 75px; } }
@@ -4279,7 +4279,7 @@ large-up-push-one-third
     cursor: crosshair; }
     .art-collection-grid .artpage-grid-item:nth-child(2n) {
       position: relative;
-      top: 14rem; }
+      top: 11rem; }
     .art-collection-grid .artpage-grid-item .art-collection-image {
       width: 14rem;
       height: auto;
@@ -4333,8 +4333,13 @@ large-up-push-one-third
   flex-direction: column;
   justify-content: center;
   font-size: 0.8rem; }
+  .artist-info p {
+    padding-left: 3rem; }
   .artist-info .artpage-artist-name {
-    font-size: 1.5rem; }
+    font-size: 1.5rem;
+    font-weight: bold; }
+  .artist-info .artpage-artist-title {
+    margin-bottom: -0.5rem; }
   .artist-info .artpage-artist-website {
     color: #9b9b9b; }
 
@@ -5280,13 +5285,31 @@ img.rsImg {
   .header-nav .desktop-nav-link {
     color: #9b9b9b;
     text-decoration: none;
+    position: relative;
     -webkit-transition: all 400ms ease-in-out 0s;
-    transition: all 400ms ease-in-out 0s; }
+    transition: all 400ms ease-in-out 0s;
+    padding: 3px 0; }
     .header-nav .desktop-nav-link:hover {
-      opacity: 0.7;
-      transform: translateY(-10px); }
+      opacity: 0.7; }
     .header-nav .desktop-nav-link.active {
       font-weight: bold; }
+    .header-nav .desktop-nav-link:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #9b9b9b;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 400ms ease-in-out 0s;
+      transition: all 400ms ease-in-out 0s; }
+    .header-nav .desktop-nav-link:hover:before {
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1); }
   .header-nav .desktop-logo {
     width: 30%;
     min-width: 190px;
