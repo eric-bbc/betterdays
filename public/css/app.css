@@ -72,6 +72,9 @@ body {
 
 #content {
   min-height: 80; }
+  @media only screen and (max-width: 991px) {
+    #content {
+      padding-top: 55px; } }
 
 .page-container {
   width: 90%;
@@ -101,6 +104,15 @@ body {
 
 .position-absolute {
   position: absolute; }
+
+/* ========================================================================
+   Animations
+   ========================================================================= */
+.opacity-on {
+  opacity: 1; }
+
+.opacity-off {
+  opacity: 0; }
 
 /* ========================================================================
    Visual, Display, Box Model
@@ -4237,25 +4249,104 @@ large-up-push-one-third
     line-height: 1rem;
     background-size: 4rem; }
 
+.art-collection-container {
+  max-height: 100vh; }
+
 .art-collection-grid {
-  height: 83vh; }
+  height: 83vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; }
+  .art-collection-grid .section-container {
+    flex: 0 0 auto; }
   .art-collection-grid .row {
     height: 50%; }
     .art-collection-grid .row:first-of-type {
-      border: 2px solid blue;
       height: 40%; }
       .art-collection-grid .row:first-of-type:nth-child(2n) {
         position: relative;
         top: 10rem; }
+    .art-collection-grid .row.bottom {
+      margin-top: 5rem; }
   .art-collection-grid .artpage-grid-item {
     box-sizing: border-box;
-    height: 22em; }
+    height: 22em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative; }
     .art-collection-grid .artpage-grid-item:nth-child(2n) {
       position: relative;
       top: 14rem; }
     .art-collection-grid .artpage-grid-item .art-collection-image {
       width: 14rem;
-      height: auto; }
+      height: auto;
+      -webkit-transition: all 400ms ease-in-out 0s;
+      transition: all 400ms ease-in-out 0s; }
+      .art-collection-grid .artpage-grid-item .art-collection-image:hover {
+        opacity: 0.7;
+        -webkit-transition: all 400ms ease-in-out 0s;
+        transition: all 400ms ease-in-out 0s; }
+    .art-collection-grid .artpage-grid-item .artimage-overlay-copy {
+      position: absolute;
+      text-decoration: none;
+      color: #fff;
+      -webkit-transition: all 400ms ease-in-out 0s;
+      transition: all 400ms ease-in-out 0s; }
+
+.desktop-artwork-container {
+  color: #9b9b9b;
+  width: 100%;
+  display: flex;
+  margin-top: 5rem; }
+
+.artwork-image-container {
+  display: flex;
+  justify-content: flex-end; }
+  @media only screen and (max-width: 991px) {
+    .artwork-image-container {
+      justify-content: center; } }
+  .artwork-image-container .artwork-image {
+    max-height: 50rem; }
+
+.artist-info {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem; }
+  .artist-info .artpage-artist-name {
+    font-size: 1.5rem; }
+  .artist-info .artpage-artist-website {
+    color: #9b9b9b; }
+
+.mobile-artwork-container {
+  color: #9b9b9b;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem; }
+
+.prev-art-arrow {
+  height: 20px;
+  width: 75px;
+  background: url(../section_assets/icons/leftArrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 12px;
+  top: 50%; }
+
+.next-art-arrow {
+  height: 20px;
+  width: 75px;
+  background: url(../section_assets/icons/rightArrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+  top: 50%; }
 
 /* v1.0.6 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */
@@ -5177,12 +5268,12 @@ img.rsImg {
 .mobile-nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem;
+  padding: 0.8rem 0;
   position: fixed;
   top: 0;
   z-index: 1;
   background: #fff;
-  width: 92vw;
+  width: 100%;
   height: 55px; }
   .mobile-nav .burger {
     width: 40px;
@@ -5192,8 +5283,8 @@ img.rsImg {
     background-size: contain;
     background-position: center; }
   .mobile-nav .mobile-logo {
-    width: 30%;
-    max-width: 100px; }
+    max-width: 100px;
+    margin-right: 1rem; }
     .mobile-nav .mobile-logo img {
       width: 100%; }
 

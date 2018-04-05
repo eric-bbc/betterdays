@@ -1,13 +1,25 @@
 
+.art-collection-container{
+  max-height: 100vh;
+
+
+}
 
 .art-collection-grid{
   height: 83vh;
+
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  .section-container{
+      flex: 0 0 auto;
+  }
   .row{
 
     // height: 26rem;
     height: 50%;
     &:first-of-type {
-      border: 2px solid blue;
       height: 40%;
       &:nth-child(2n){
         // margin-top: 8rem;
@@ -16,10 +28,21 @@
         top: 10rem;
       }
     }
+
+    &.bottom{
+      margin-top: 5rem;
+    }
   }
+
+
   .artpage-grid-item{
     box-sizing: border-box;
     height: 22em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
 
     &:nth-child(2n){
       // margin-top: 8rem;
@@ -31,7 +54,85 @@
     .art-collection-image {
       width: 14rem;
       height: auto;
-      // border: 2px solid red;
+      @include transition(all 400ms);
+
+      &:hover{
+        opacity: 0.7;
+        @include transition(all 400ms);
+      }
+    }
+
+    .artimage-overlay-copy{
+      position: absolute;
+      text-decoration: none;
+      color: $color-white;
+      @include transition(all 400ms);
     }
   }
+}
+
+.desktop-artwork-container {
+  color: $color-grey;
+  width: 100%;
+  display: flex;
+  margin-top: 5rem;
+}
+
+.artwork-image-container{
+  display: flex;
+  justify-content: flex-end;
+
+  @include screen('medium-down'){
+    justify-content: center;
+  };
+  .artwork-image{
+    max-height: 50rem;
+  }
+}
+
+.artist-info{
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.8rem;
+
+  .artpage-artist-name{
+    font-size: 1.5rem;
+  }
+
+  .artpage-artist-website{
+    color: $color-grey;
+  }
+}
+
+.mobile-artwork-container {
+  color: $color-grey;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+.prev-art-arrow{
+  height: 20px;
+  width: 75px;
+  background: url(../section_assets/icons/leftArrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+
+}
+
+.next-art-arrow{
+    height: 20px;
+    width: 75px;
+    background: url(../section_assets/icons/rightArrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
 }

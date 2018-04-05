@@ -1,0 +1,84 @@
+
+
+{% extends "_layout" %}
+
+
+
+{% block content %}
+
+{% set prev = entry.prevSibling %}
+{% set next = entry.nextSibling %}
+
+
+<div class="grid desktop-artwork-container medium-down-display-none-imp">
+  <!-- <div class="artwork-image medium-up-one-half" style="background-image: url({{  entry.workImage.first().url  }});"></div> -->
+  {% if prev %}
+      <a class="prev-art-arrow" href="{{ prev.url }}"></a>
+  {% endif %}
+
+  <div class="artwork-image-container medium-up-one-half">
+    <img class="artwork-image" src="{{ entry.workImage.first().url }}" alt="">
+  </div>
+
+
+  <div class="artist-info medium-up-one-half">
+
+    <p class="artpage-artist-name">
+        {{ entry.artistName }}
+    </p>
+
+    <p class="artpage-artist-title">
+      {{ entry.title }}
+    </p>
+
+    <p class="artpage-artist-medium">
+      {{ entry.medium }}
+    </p>
+
+    <a class="artpage-artist-website" href="mailto:{{ entry.artistWebsite }}">
+      <p>
+        {{ entry.artistWebsite }}
+      </p>
+    </a>
+
+  </div>
+
+  {% if next %}
+      <a class="next-art-arrow" href="{{ next.url }}"></a>
+  {% endif %}
+
+</div>
+
+<div class="grid mobile-artwork-container medium-up-display-none-imp">
+  <div class="artwork-image-container medium-down-one-whole">
+    <img class="artwork-image" src="{{ entry.workImage.first().url }}" alt="">
+  </div>
+
+  <div class="artist-info medium-up-one-whole">
+
+    <p class="artpage-artist-name">
+        {{ entry.artistName }}
+    </p>
+
+    <p class="artpage-artist-title">
+      {{ entry.title }}
+    </p>
+
+    <p class="artpage-artist-medium">
+      {{ entry.medium }}
+    </p>
+
+    <a class="artpage-artist-website" href="{{ entry.artistWebsite }}">
+      <p>
+        {{ entry.artistWebsite }}
+      </p>
+    </a>
+
+  </div>
+
+</div>
+
+
+
+
+{% endblock %}

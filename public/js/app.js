@@ -238,6 +238,16 @@ $('.js-mobile-nav-toggle').on('touch click', function(){
 })
 
 
+///////////////////////////////////////////
+//          Art Collectio                //
+//////////////////////////////////////////
+
+$('.artpage-grid-item').on('mouseenter mouseleave', function(){
+  var $this = $(this)
+  var $copy = $this.find('.artimage-overlay-copy')
+  $copy.toggleClass('opacity-off opacity-on')
+})
+
 
 
 

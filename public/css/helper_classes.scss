@@ -10,6 +10,17 @@
   position: absolute;
 }
 
+/* ========================================================================
+   Animations
+   ========================================================================= */
+
+    .opacity-on{
+      opacity: 1;
+    }
+
+    .opacity-off{
+      opacity: 0;
+    }
 
 
 /* ========================================================================
@@ -35,7 +46,7 @@ large-up-display-none-imp
 @mixin display-none-class($breakpoint: '') {
   .#{$breakpoint}-display-none{display:none;}
 }
- 
+
 @each $item in $breakpoint-range {
   $item-key: nth($item, 1);
   @include screen($range: $item-key) {

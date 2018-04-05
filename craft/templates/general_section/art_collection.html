@@ -1,34 +1,73 @@
 
 
 {% extends "_layout" %}
-
-
-
 {% block content %}
 
+{% set totalLength = craft.entries.section('art') | length %}
+{% set halfLength = totalLength // 2 %}
+{% set remainder = totalLength - halfLength%}
 
-<div class="page-container">
+
+<div class="art-collection-container">
   <div class="grid art-collection-grid">
 
-    <div class="row">
-      {% for block in entry.artCollection | slice(0, 5) %}
-        <div class="col small-up-one-fifth artpage-grid-item" >
-          {% set image = block.image.first() %}
-          <img class="art-collection-image" src="{{ image.url }}" alt="">
-        </div>
-      {% endfor %}
-    </div>
+
+    <div class="section-container">
+
+      <div class="row">
+
+        {% for entry in craft.entries.section('art') | slice(0, remainder) %}
+          <div class="col artpage-grid-item" >
+            {% set image = entry.workImage.first() %}
+            <a href="{{ entry.url }}">
+              <img class="art-collection-image" src="{{ image.url }}" alt="">
+            </a>
+            <a class='artimage-overlay-copy opacity-off' href="{{ entry.url }}">
+              <p >Buy me!</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
 
 
-    <div class="row">
-      {% for block in entry.artCollection | slice(5, 10) %}
-        <div class="col small-up-one-fifth artpage-grid-item" >
-          {% set image = block.image.first() %}
-          <img class="art-collection-image" src="{{ image.url }}" alt="">
-        </div>
-      {% endfor %}
-    </div>
+      <div class="row bottom">
+        {% for entry in craft.entries.section('art') | slice(remainder, halfLength) %}
+          <div class="col {{ loop.index }} artpage-grid-item" >
+            {% set image = entry.workImage.first() %}
+            <a href="{{ entry.url }}">
+              <img class="art-collection-image" src="{{ image.url }}" alt="">
+            </a>
+            <a class='artimage-overlay-copy opacity-off' href="{{ entry.url }}">
+              <p >Buy me!</p>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
 
+    <!-- <div class="section-container">
+
+      <div class="row">
+        {% for entry in craft.entries.section('art') | slice(10, 5) %}
+          <div class="col top small-up-one-fifth artpage-grid-item" >
+            {% set image = entry.workImage.first() %}
+            <a href="{{ entry.url }}">
+              <img class="art-collection-image" src="{{ image.url }}" alt="">
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+
+
+      <div class="row">
+        {% for entry in craft.entries.section('art') | slice(15, 5) %}
+          <div class="col {{ loop.index }} bottom small-up-one-fifth artpage-grid-item" >
+            {% set image = entry.workImage.first() %}
+            <img class="art-collection-image" src="{{ image.url }}" alt="">
+          </div>
+        {% endfor %}
+      </div>
+  </div> -->
 
 
   </div>
