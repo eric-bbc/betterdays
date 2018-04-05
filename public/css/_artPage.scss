@@ -43,6 +43,7 @@
     align-items: center;
     padding: 0 2rem;
     position: relative;
+    cursor: crosshair;
 
     &:nth-child(2n){
       // margin-top: 8rem;
@@ -54,6 +55,8 @@
     .art-collection-image {
       width: 14rem;
       height: auto;
+      cursor: crosshair;
+
       @include transition(all 400ms);
 
       &:hover{
@@ -63,10 +66,30 @@
     }
 
     .artimage-overlay-copy{
+      display: inline-block;
+      text-align: center;
       position: absolute;
       text-decoration: none;
       color: $color-white;
+      width: 75%;
+      cursor: crosshair;
+
+
       @include transition(all 400ms);
+      p{
+        margin: auto;
+        &:after{
+          content: '';
+          background-image: url(../section_assets/icons/rightArrow_white.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          margin-left: 9px;
+          height: 10px;
+          width: 26%;
+          display: inline-block;
+        }
+      }
+
     }
   }
 }
@@ -135,4 +158,16 @@
     position: absolute;
     right: 0;
     top: 50%;
+}
+
+.art-collection-scroll-arrow{
+  height: 20px;
+  width: 75px;
+  background: url(../section_assets/icons/rightArrow.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 3rem;
+  top: 95%;
+  cursor: crosshair;
 }

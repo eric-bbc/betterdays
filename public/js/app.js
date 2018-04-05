@@ -1,6 +1,10 @@
 $( document ).ready(function() {
 
 
+   AOS.init(); // <-- Animate On Scroll\
+   console.log("INIT");
+
+
   /////////////////////////////////////////
  //           mobile toggles            //
 /////////////////////////////////////////
@@ -228,6 +232,26 @@ if ( $length > 0 ){
 }
 
 
+///////////////////////////////////////////
+//          DESKTOP NAV                  //
+//////////////////////////////////////////
+
+setActiveNav()
+
+function setActiveNav(){
+  var path = window.location.pathname
+  path = path.replace(/\/$/, '')
+  path = decodeURIComponent(path)
+  
+  $('.desktop-nav-link').each(function(){
+    var href = $(this).attr('href')
+
+    if (path.substring(0, href.length) == href){
+      $(this).addClass('active')
+    }
+  })
+}
+
 
 ///////////////////////////////////////////
 //          MOBILE NAV TOGGLE            //
@@ -248,6 +272,12 @@ $('.artpage-grid-item').on('mouseenter mouseleave', function(){
   $copy.toggleClass('opacity-off opacity-on')
 })
 
+
+$('.art-collection-scroll-arrow').on('click', function(){
+  var leftPos = $('.art-collection-grid').scrollLeft();
+  $('.art-collection-grid').animate({scrollLeft: leftPos + 600}, 800)
+
+})
 
 
 

@@ -16,6 +16,14 @@
   .desktop-nav-link{
     color: $color-grey;
     text-decoration: none;
+    @include transition(all 400ms);
+    &:hover{
+      opacity: 0.7;
+      transform: translateY(-10px);
+    }
+    &.active{
+      font-weight: bold;
+    }
   }
 
   .desktop-logo {

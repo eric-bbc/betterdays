@@ -8,7 +8,8 @@ body {
 #content {
   min-height: 80;
   @include screen('medium-down'){
-    padding-top:$navbar-nav-height-mobile
+    // padding-top:$navbar-nav-height-mobile
+    padding-top:75px;
   };
 }
 

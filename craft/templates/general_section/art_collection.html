@@ -13,11 +13,9 @@
 
 
     <div class="section-container">
-
       <div class="row">
-
         {% for entry in craft.entries.section('art') | slice(0, remainder) %}
-          <div class="col artpage-grid-item" >
+          <div class="col artpage-grid-item" data-aos="fade-left" >
             {% set image = entry.workImage.first() %}
             <a href="{{ entry.url }}">
               <img class="art-collection-image" src="{{ image.url }}" alt="">
@@ -32,45 +30,25 @@
 
       <div class="row bottom">
         {% for entry in craft.entries.section('art') | slice(remainder, halfLength) %}
-          <div class="col {{ loop.index }} artpage-grid-item" >
+          <div class="col {{ loop.index }} artpage-grid-item" data-aos="fade-right" >
             {% set image = entry.workImage.first() %}
             <a href="{{ entry.url }}">
               <img class="art-collection-image" src="{{ image.url }}" alt="">
             </a>
             <a class='artimage-overlay-copy opacity-off' href="{{ entry.url }}">
-              <p >Buy me!</p>
+              <p>Buy me!</p>
             </a>
           </div>
         {% endfor %}
       </div>
+    </div>
   </div>
 
-    <!-- <div class="section-container">
 
-      <div class="row">
-        {% for entry in craft.entries.section('art') | slice(10, 5) %}
-          <div class="col top small-up-one-fifth artpage-grid-item" >
-            {% set image = entry.workImage.first() %}
-            <a href="{{ entry.url }}">
-              <img class="art-collection-image" src="{{ image.url }}" alt="">
-            </a>
-          </div>
-        {% endfor %}
-      </div>
-
-
-      <div class="row">
-        {% for entry in craft.entries.section('art') | slice(15, 5) %}
-          <div class="col {{ loop.index }} bottom small-up-one-fifth artpage-grid-item" >
-            {% set image = entry.workImage.first() %}
-            <img class="art-collection-image" src="{{ image.url }}" alt="">
-          </div>
-        {% endfor %}
-      </div>
-  </div> -->
-
+  <div class="art-collection-scroll-arrow">
 
   </div>
+
 </div>
 
 
