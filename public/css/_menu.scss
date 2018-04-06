@@ -76,9 +76,24 @@
       background-repeat: no-repeat;
 
     }
-
-
   }
+}
+
+//MOBILE
 
 
+
+.mobile-menu-container{
+  display: flex;
+}
+
+.mobile-menu-slider{
+  // border: 2px solid red;
+}
+
+.mobile-menu-cover{
+  width: 100%;
+  height: 72vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -215,8 +215,22 @@ var homepageSlider = $('.homepage-slider').royalSlider({
        $('html, body').css('overflow', 'scroll')
 
      }
-
    })
+
+
+       // $('.mobile-menu-slider').royalSlider({
+       //   imageScaleMode    : 'fill',
+       //   controlNavigation : 'none',
+       //   navigateByClick   : false,
+       //   arrowsNav         : true,
+       //   arrowsNavAutoHide : false,
+       //   slidesSpacing     : '10px',
+       //   // slidesSpacing     : '0px',
+       //   loop              : true,
+       //   transitionType    : 'move',
+       //   addActiveClass    : true,
+       //   autoHeight        : false
+       // }).data('royalSlider');
 
 
   /////////////////////////////////////////
@@ -242,7 +256,7 @@ function setActiveNav(){
   var path = window.location.pathname
   path = path.replace(/\/$/, '')
   path = decodeURIComponent(path)
-  
+
   $('.desktop-nav-link').each(function(){
     var href = $(this).attr('href')
 

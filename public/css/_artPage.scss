@@ -1,16 +1,15 @@
 
 .art-collection-container{
   max-height: 100vh;
-
-
+  height: 100%;
 }
 
 .art-collection-grid{
-  height: 83vh;
-
+  height: 95vh;
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
+  overflow-y: hidden;
 
   .section-container{
       flex: 0 0 auto;

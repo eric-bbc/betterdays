@@ -3,7 +3,7 @@
 {% block content %}
 
 
-<div class="">
+<div class="medium-down-display-none-imp">
 
   <div class="royalSlider rsDefault menu-slider display-none large-menu-container">
 
@@ -14,7 +14,7 @@
 
 </div>
 
-  <div class="menu-container">
+  <div class="menu-container medium-down-display-none-imp">
 
     <h1 class="menu-header">Menus</h1>
 
@@ -36,6 +36,22 @@
       {% endfor %}
     </div>
 
+
+</div>
+
+
+<div class="mobile-menu-container">
+
+  <div class="royalSlider mobile-homepage-slider">
+    {% for block in entry.menuCover %}
+    {% set imageUrl = block.holderImage.first().url %}
+      <div class="mobile-menu-card"  data-id="{{ loop.index0 }}">
+        <div class="mobile-menu-cover" style="background-image: url( '{{ imageUrl }}' )" >  </div>
+        <h1>{{ block.menuTitle }}</h1>
+      </div>
+    {% endfor %}
+
+  </div>
 
 </div>
 

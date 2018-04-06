@@ -2,14 +2,16 @@ body {
   background-color: #fff;
   font-family: 'Basis Grotesque';
   min-height: 100vh;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 #content {
-  min-height: 100vh;
+  min-height: Calc(100% - #{143px});
   @include screen('medium-down'){
     // padding-top:$navbar-nav-height-mobile
     padding-top:75px;
+    text-align: center;
+
   };
 }
 
@@ -36,4 +38,9 @@ body {
 .active {
   color: $color-red;
   text-decoration: underline;
+}
+
+.mobile-page{
+  max-height: Calc(100vh - #{75px});
+  overflow-x: hidden;
 }
