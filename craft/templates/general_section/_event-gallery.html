@@ -56,13 +56,13 @@
     </div>
 
 
-    <div class="royalSlider mobile-event-gallery-slider ">
+    <div class="js-room-gallery royalSlider  mobile-event-gallery-slider js-main ">
       {% for image in entry.mainRoomImages %}
         <img class="mobile-event-slide-image" data-room="main" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <!-- <div class="js-room-gallery display-none js-karaoke">
+    <div class="js-room-gallery display-none js-karaoke">
       {% for image in entry.karaokeImages %}
         <img class="event-image col small-up-one-third" data-room="karaoke"  src="{{ image.url }}" alt="">
       {% endfor %}
@@ -72,7 +72,7 @@
       {% for image in entry.clubRoomImages %}
       <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}
-    </div> -->
+    </div>
 
   </div>
 
