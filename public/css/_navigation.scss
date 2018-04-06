@@ -133,7 +133,16 @@
     color: $color-grey;
     text-decoration: none;
     text-align: center;
-    height: 16%;
+    height: 13%;
 
+  }
+
+  .mobile-socials{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 18px;
+    a{
+      color: $color-grey;
+    }
   }
 }

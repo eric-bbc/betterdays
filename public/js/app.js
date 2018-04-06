@@ -2,7 +2,6 @@ $( document ).ready(function() {
 
 
    AOS.init(); // <-- Animate On Scroll\
-   console.log("INIT");
 
 
   /////////////////////////////////////////

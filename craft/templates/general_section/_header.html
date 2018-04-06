@@ -56,9 +56,13 @@
       {% else %}
         <a class="mobile-nav-link" href="{{ entry.destination }}" >{{ entry.displayName }}</a>
       {% endif %}
-
-
     {% endfor %}
+
+    <div class="mobile-socials">
+      <a href="{{ footer.facebook }}" target="_blank" > <span  class="fab fa-facebook-f"></span> </a>
+      <a href="{{ footer.instagram }}" target="_blank" > <span  class="fab fa-instagram"></span> </a>
+      <a href="{{ footer.twitter }}" target="_blank" > <span  class="fab fa-twitter-square"></span>  </a>
+    </div>
 
   </div>
 

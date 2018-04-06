@@ -82,3 +82,26 @@
 
   }
 }
+
+
+.mobile-gallery-container{
+  .royalSlider{
+    width: 100%;
+    // height: unset;
+    .rsOverflow{
+     width: 100% !important;
+     height: 100% !important;
+    }
+  }
+}
+.mobile-event-gallery-slider {
+  // width: 100% !important;
+  // height: unset !important;
+}
+
+.mobile-event-slide-image{
+  border: 2px solid red;
+  width: auto !important;
+  height: 100% !important;
+  margin-left: unset !important;
+}
