@@ -4135,7 +4135,12 @@ large-up-push-one-third
 
 .menu-slider {
   width: 100% !important;
-  height: 100% !important; }
+  height: 100% !important;
+  -webkit-transition: all 400ms ease-in-out 0s;
+  transition: all 400ms ease-in-out 0s; }
+  @media only screen and (max-width: 991px) {
+    .menu-slider {
+      top: 0; } }
   .menu-slider .rsSlide {
     opacity: 1 !important; }
   @media only screen and (max-width: 767px) {
@@ -4177,6 +4182,9 @@ large-up-push-one-third
 
 .mobile-menu-container {
   display: flex; }
+  .mobile-menu-container .mobile-homepage-slider {
+    display: flex;
+    justify-content: center; }
 
 .mobile-menu-cover {
   width: 100%;

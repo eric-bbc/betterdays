@@ -5,7 +5,7 @@
 
 <div class="medium-down-display-none-imp">
 
-  <div class="royalSlider rsDefault menu-slider display-none large-menu-container">
+  <div class="royalSlider rsDefault menu-slider display-none large-menu-container ">
 
     {% for asset in entry.menu %}
       <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
@@ -40,11 +40,12 @@
 </div>
 
 
-<div class="mobile-menu-container">
+<div class="mobile-menu-container medium-up-display-none-imp">
 
   <div class="royalSlider mobile-homepage-slider">
     {% for block in entry.menuCover %}
     {% set imageUrl = block.holderImage.first().url %}
+
       <div class="mobile-menu-card"  data-id="{{ loop.index0 }}">
         <div class="mobile-menu-cover" style="background-image: url( '{{ imageUrl }}' )" >  </div>
         <h1>{{ block.menuTitle }}</h1>
@@ -52,6 +53,15 @@
     {% endfor %}
 
   </div>
+
+
+  <div class="royalSlider rsDefault menu-slider display-none">
+
+    {% for asset in entry.menu %}
+      <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
+    {% endfor %}
+  </div>
+
 
 </div>
 

@@ -279,20 +279,20 @@
    Input Placeholder
    ========================================================================= */
 
-@mixin input-placeholder {
-  &::-webkit-input-placeholder {
-  @content
-  }
-  &:-moz-placeholder {
-  @content
-  }
-  &::-moz-placeholder {
-  @content
-  }
-  &:-ms-input-placeholder {
-  @content
-  }
-}
+// @mixin input-placeholder {
+//   &::-webkit-input-placeholder {
+//   @content
+//   }
+//   &:-moz-placeholder {
+//   @content
+//   }
+//   &::-moz-placeholder {
+//   @content
+//   }
+//   &:-ms-input-placeholder {
+//   @content
+//   }
+// }
 
 
 
@@ -302,6 +302,9 @@
 
 
 /* invisible */
+
+
+
 @mixin invisible{
   opacity: 0;
   visibility: hidden;

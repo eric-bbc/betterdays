@@ -32,6 +32,8 @@ eg:
 large-up-display-none-imp
 */
 
+
+
 @mixin display-none-imp-class($breakpoint: '') {
   .#{$breakpoint}-display-none-imp{display:none !important;}
 }
@@ -53,7 +55,7 @@ large-up-display-none-imp
     @include display-none-class('#{$item-key}');
   }
 }
-
+  
 
 .display-block{
   display: block;

@@ -14,7 +14,12 @@
 .menu-slider{
   width: 100% !important;
   height: 100% !important;
+  @include transition(all 400ms);
   @extend .event-gallery-slider;
+
+  @include screen('medium-down'){
+    top: 0;
+  };
   .rsSlide {
     opacity: 1 !important;
   }
@@ -85,6 +90,10 @@
 
 .mobile-menu-container{
   display: flex;
+  .mobile-homepage-slider{
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .mobile-menu-slider{

@@ -188,8 +188,19 @@ var homepageSlider = $('.homepage-slider').royalSlider({
      }
    }).data('royalSlider')
 
-   $('.menu-card').on('click', function(){
+   // $('.mobile-menu-slider').royalSlider({
+   //   imageScaleMode    : 'fit',
+   //   imageAlignCenter  : true,
+   //   loop              : true,
+   //   transitionType    : 'move',
+   //   controlNavigation : 'none',
+   //
+   //   fullscreen        : {
+   //     enabled         : true
+   //   }
+   // }).data('royalSlider')
 
+   $('.menu-card').on('click', function(){
      //desktop
      if ( $('html').hasClass('no-touchevents') ) {
        var $this = $(this)
@@ -198,12 +209,27 @@ var homepageSlider = $('.homepage-slider').royalSlider({
        slider.goTo(index)
        $('.menu-slider').removeClass('display-none')
      } else {
-
         $('.menu-slider').removeClass('display-none')
         $("html, body").animate({
                 scrollTop: 0
             }, 300);
         $('html').css('overflow-y', 'hidden')
+     }
+   })
+
+
+   $('.mobile-menu-card').on('click', function(){
+     console.log("clicked");
+     //mobile
+     if ( $('html').hasClass('touchevents') ) {
+       var $this = $(this)
+       var index = $this.data('id')
+       var slider = $('.menu-slider').last().data('royal-slider')
+       slider.goTo(index)
+       $('.menu-slider').removeClass('display-none')
+     } else {
+
+
 
      }
 
@@ -211,9 +237,11 @@ var homepageSlider = $('.homepage-slider').royalSlider({
 
    $('.menu-slider').find('.rsFullscreenBtn').on('click', function(){
      $('.menu-slider').addClass('display-none')
-     if ( $('html').hasClass('touchevents') ) {
-       $('html, body').css('overflow', 'scroll')
 
+
+
+     if ( $('html').hasClass('touchevents') ) {
+       // $('html, body').css('overflow', 'scroll')
      }
    })
 
