@@ -144,6 +144,18 @@
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
+
+  .artwork-image-container{
+    .artwork-image{
+      max-height: 26rem;
+    }
+  }
+  .artist-info{
+    margin-left: unset;
+    p{
+      padding-left: unset;
+    }
+  }
 }
 
 .prev-art-arrow{

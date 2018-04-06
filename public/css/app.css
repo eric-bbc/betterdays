@@ -69,6 +69,9 @@ body {
   font-family: 'Basis Grotesque';
   min-height: 100vh;
   overflow-y: hidden; }
+  @media only screen and (max-width: 991px) {
+    body {
+      overflow-y: unset; } }
 
 #content {
   min-height: Calc(100% - 143px); }
@@ -4396,6 +4399,12 @@ large-up-push-one-third
   display: flex;
   flex-direction: column;
   margin-top: 5rem; }
+  .mobile-artwork-container .artwork-image-container .artwork-image {
+    max-height: 26rem; }
+  .mobile-artwork-container .artist-info {
+    margin-left: unset; }
+    .mobile-artwork-container .artist-info p {
+      padding-left: unset; }
 
 .prev-art-arrow {
   height: 20px;

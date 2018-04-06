@@ -238,8 +238,6 @@ var homepageSlider = $('.homepage-slider').royalSlider({
    $('.menu-slider').find('.rsFullscreenBtn').on('click', function(){
      $('.menu-slider').addClass('display-none')
 
-
-
      if ( $('html').hasClass('touchevents') ) {
        // $('html, body').css('overflow', 'scroll')
      }

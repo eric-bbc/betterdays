@@ -3,6 +3,9 @@ body {
   font-family: 'Basis Grotesque';
   min-height: 100vh;
   overflow-y: hidden;
+  @include screen('medium-down'){
+    overflow-y: unset;
+  };
 }
 
 #content {
