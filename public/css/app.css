@@ -4235,11 +4235,22 @@ large-up-push-one-third
   width: 100vw;
   height: 100vh;
   background-color: rgba(20, 20, 20, 0.8);
-  position: absolute; }
-  .ot-modal #ot-widget-container0 {
-    display: table;
-    margin: 0 auto;
-    margin-top: 21%; }
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .ot-modal .modal-newsletter-form {
+    background: white;
+    width: 46%; }
+    .ot-modal .modal-newsletter-form #mc_embed_signup_scroll {
+      display: flex;
+      flex-direction: column;
+      padding-right: unset; }
+    .ot-modal .modal-newsletter-form .mc-modal-form {
+      border: 2px solid red;
+      width: 90%;
+      margin: 3rem auto; }
 
 .slider-container {
   width: 100vw; }

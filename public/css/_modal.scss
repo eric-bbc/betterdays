@@ -20,9 +20,26 @@
   height: 100vh;
   background-color: rgba(20,20,20, .8);
   position: absolute;
-  #ot-widget-container0{
-    display: table;
-    margin: 0 auto;
-    margin-top: 21%;
+  top: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal-newsletter-form{
+    background: white;
+    width: 46%;
+
+    #mc_embed_signup_scroll{
+      display: flex;
+      flex-direction: column;
+      padding-right: unset;
+    }
+
+    .mc-modal-form{
+      border: 2px solid red;
+      width: 90%;
+      margin: 3rem auto;
+    }
   }
 }
