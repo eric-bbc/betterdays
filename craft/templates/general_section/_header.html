@@ -25,10 +25,16 @@
       </div>
 
     </div>
+
     <div class="small-up-three-eighths header-newsletter-signup">
-      <button class="button-red proxima-font js-ot-toggle res-button" type="button" name="button" >Make A Reservation</button>
+
+
+      {% include '/general_section/_header_newsletter_form.html' %}
+
+
     </div>
   </div>
+
 
   <div class="mobile-nav medium-up-display-none-imp">
 
@@ -61,7 +67,10 @@
     <div class="mobile-socials">
       <a href="{{ footer.facebook }}" target="_blank" > <span  class="fab fa-facebook-f"></span> </a>
       <a href="{{ footer.instagram }}" target="_blank" > <span  class="fab fa-instagram"></span> </a>
-      <a href="{{ footer.twitter }}" target="_blank" > <span  class="fab fa-twitter-square"></span>  </a>
+    </div>
+
+    <div class="mobile-nav-newsletter-signup">
+      {% include '/general_section/_header_newsletter_form.html' %}
     </div>
 
   </div>

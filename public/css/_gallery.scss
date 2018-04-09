@@ -36,7 +36,7 @@
       .rsArrowLeft{
         left: -20px;
         .rsArrowIcn {
-          background: url(../section_assets/icons/leftArrow.png);
+          background: url(../section_assets/images/icons/leftArrow.png);
           background-repeat: no-repeat;
           background-position: center;
           padding-left: 21px;
@@ -45,7 +45,7 @@
       .rsArrowRight{
         margin-right: 20px;
         .rsArrowIcn {
-          background: url(../section_assets/icons/rightArrow.png);
+          background: url(../section_assets/images/icons/rightArrow.png);
           background-repeat: no-repeat;
           background-position: center;
           padding-right: 21px;
@@ -73,7 +73,7 @@
     }
 
   .arrow-span{
-    background: url(../section_assets/icons/rightArrow_black.png);
+    background: url(../section_assets/images/icons/rightArrow_black.png);
     background-repeat: no-repeat;
     // background-position: center;
     background-position: calc(50% + 9rem) 50%;

@@ -79,7 +79,7 @@
   }
     .rsArrowLeft{
       .rsArrowIcn {
-        background-image: url(../section_assets/icons/leftArrow.png);
+        background-image: url(../section_assets/images/icons/leftArrow.png);
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, 0.0);
         background-position: 0px 0px !important;
@@ -87,7 +87,7 @@
     }
     .rsArrowRight{
       .rsArrowIcn {
-        background: url(../section_assets/icons/rightArrow.png);
+        background: url(../section_assets/images/icons/rightArrow.png);
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, 0.0);
         background-position: -24px 0px !important;
@@ -112,7 +112,7 @@
     .rsFullscreenIcn{
       height: 32px;
       width: 32px;
-      background-image: url(../section_assets/icons/grey_close.png);
+      background-image: url(../section_assets/images/icons/grey_close.png);
       background-repeat: no-repeat;
       background-position: 0px 0px !important;
       background-color: transparent;
@@ -135,7 +135,7 @@
 //   .rsArrowLeft{
 //     left: -20px;
 //     .rsArrowIcn {
-//       background: url(../section_assets/icons/leftArrow.png);
+//       background: url(../section_assets/images/icons/leftArrow.png);
 //       background-repeat: no-repeat;
 //       background-position: center;
 //       padding-left: 21px;
@@ -144,7 +144,7 @@
 //   .rsArrowRight{
 //     margin-right: 20px;
 //     .rsArrowIcn {
-//       background: url(../section_assets/icons/rightArrow.png);
+//       background: url(../section_assets/images/icons/rightArrow.png);
 //       background-repeat: no-repeat;
 //       background-position: center;
 //       padding-right: 21px;
@@ -302,7 +302,7 @@
 
     &::after{
       content: "";
-      background: url(../section_assets/icons/rightArrow_black.png);
+      background: url(../section_assets/images/icons/rightArrow_black.png);
       background-repeat: no-repeat;
       background-size: 4rem;
       height: 1rem;

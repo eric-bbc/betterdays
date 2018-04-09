@@ -80,7 +80,7 @@
         margin: auto;
         &:after{
           content: '';
-          background-image: url(../section_assets/icons/rightArrow_white.png);
+          background-image: url(../section_assets/images/icons/rightArrow_white.png);
           background-repeat: no-repeat;
           background-size: contain;
           margin-left: 9px;
@@ -161,7 +161,7 @@
 .prev-art-arrow{
   height: 20px;
   width: 75px;
-  background: url(../section_assets/icons/leftArrow.png);
+  background: url(../section_assets/images/icons/leftArrow.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
@@ -173,7 +173,7 @@
 .next-art-arrow{
     height: 20px;
     width: 75px;
-    background: url(../section_assets/icons/rightArrow.png);
+    background: url(../section_assets/images/icons/rightArrow.png);
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
@@ -184,7 +184,7 @@
 .art-collection-scroll-arrow{
   height: 20px;
   width: 75px;
-  background: url(../section_assets/icons/rightArrow.png);
+  background: url(../section_assets/images/icons/rightArrow.png);
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;

@@ -31,6 +31,8 @@ $('.room-toggle').on('click', function(){
   $('.room-title').text( $self.text() )
   $('.room-title').text( $self.text() )
 
+  
+
   $('.js-room-gallery').addClass('display-none')
   $( '.js-' + $id ).removeClass('display-none')
   $( '.js-' + $id ).addClass('display-block')
