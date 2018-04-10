@@ -308,6 +308,7 @@
 @mixin invisible{
   opacity: 0;
   visibility: hidden;
+  @include transition(all 400ms);
 }
 
 
@@ -315,6 +316,7 @@
 @mixin visible{
   opacity: 1;
   visibility: visible;
+  @include transition(all 400ms);
 }
 
 

@@ -31,7 +31,7 @@ $('.room-toggle').on('click', function(){
   $('.room-title').text( $self.text() )
   $('.room-title').text( $self.text() )
 
-  
+
 
   $('.js-room-gallery').addClass('display-none')
   $( '.js-' + $id ).removeClass('display-none')
@@ -58,10 +58,10 @@ $('.js-event-form-toggle').on('click', function(){
   /////////////////////////////////////////
  //           OPENTABLE TOGGLE          //
 /////////////////////////////////////////
-var $button = $('.js-ot-toggle')
+var $button = $('.js-modal-close')
 
 $button.on('click', function (){
-  $('.ot-modal__homepage, .ot-modal ').toggleClass('invisible visible')
+  $('.ot-modal__homepage, .ot-modal ').toggleClass('visible invisible')
 } )
 
   /////////////////////////////////////////
