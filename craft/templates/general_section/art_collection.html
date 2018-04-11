@@ -17,11 +17,11 @@
         {% for entry in craft.entries.section('art') | slice(0, remainder) %}
           <div class="col artpage-grid-item" data-aos="fade-left" >
             {% set image = entry.workImage.first() %}
-            <a href="{{ entry.url }}">
+            <a class="artpage-image-container" href="{{ entry.url }}">
               <img class="art-collection-image" src="{{ image.url }}" alt="">
             </a>
             <a class='artimage-overlay-copy opacity-off' href="{{ entry.url }}">
-              <p >Inquire</p>
+              <p>Inquire</p>
             </a>
           </div>
         {% endfor %}
@@ -32,7 +32,7 @@
         {% for entry in craft.entries.section('art') | slice(remainder, halfLength) %}
           <div class="col {{ loop.index }} artpage-grid-item" data-aos="fade-right" >
             {% set image = entry.workImage.first() %}
-            <a href="{{ entry.url }}">
+            <a class="artpage-image-container" href="{{ entry.url }}">
               <img class="art-collection-image" src="{{ image.url }}" alt="">
             </a>
             <a class='artimage-overlay-copy opacity-off' href="{{ entry.url }}">

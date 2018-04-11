@@ -35,6 +35,7 @@
 
 
   .artpage-grid-item{
+    border: 2px solid red;
     box-sizing: border-box;
     height: 22em;
     display: flex;
@@ -43,19 +44,23 @@
     padding: 0 2rem;
     position: relative;
     cursor: crosshair;
+    border: 2px solid red;
+
 
     &:nth-child(2n){
-      // margin-top: 8rem;
-      // margin-bottom: -6rem;
       position: relative;
-      // top: 14rem;
       top: 11rem;
+    }
+
+    .artpage-image-container{
+      border: 2px solid red;
     }
 
     .art-collection-image {
       width: 14rem;
       height: auto;
       cursor: crosshair;
+      border: 2px solid red !important;
 
       @include transition(all 400ms);
 

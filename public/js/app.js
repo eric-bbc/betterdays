@@ -21,7 +21,7 @@ $( document ).ready(function() {
   })
 
   /////////////////////////////////////////
- //           Event Room toggles         //
+ //           Event Room toggles        //
 /////////////////////////////////////////
 $('.room-toggle').on('click', function(){
   var $self = $(this)
@@ -58,11 +58,7 @@ $('.js-event-form-toggle').on('click', function(){
   /////////////////////////////////////////
  //           OPENTABLE TOGGLE          //
 /////////////////////////////////////////
-// var $button = $('.js-modal-close')
-//
-// $button.on('click', function (){
-//   $('.ot-modal__homepage, .ot-modal ').toggleClass('visible invisible')
-// } )
+
 
   /////////////////////////////////////////
  //           ROYAL SLIDER              //
@@ -274,8 +270,8 @@ if ( $length > 0 ){
 }
 
 
-///////////////////////////////////////////
-//          DESKTOP NAV                  //
+  //////////////////////////////////////////
+ //         DESKTOP NAV                  //
 //////////////////////////////////////////
 
 setActiveNav()
@@ -295,8 +291,8 @@ function setActiveNav(){
 }
 
 
-///////////////////////////////////////////
-//          MOBILE NAV TOGGLE            //
+  //////////////////////////////////////////
+ //         MOBILE NAV TOGGLE            //
 //////////////////////////////////////////
 
 $('.js-mobile-nav-toggle').on('touch click', function(){
@@ -304,8 +300,8 @@ $('.js-mobile-nav-toggle').on('touch click', function(){
 })
 
 
-///////////////////////////////////////////
-//          Art Collection                //
+  //////////////////////////////////////////
+ //        Art Collection                //
 //////////////////////////////////////////
 
 $('.artpage-grid-item').on('mouseenter mouseleave', function(){
@@ -318,26 +314,32 @@ $('.artpage-grid-item').on('mouseenter mouseleave', function(){
 $('.art-collection-scroll-arrow').on('click', function(){
   var leftPos = $('.art-collection-grid').scrollLeft();
   $('.art-collection-grid').animate({scrollLeft: leftPos + 600}, 800)
-
 })
 
 
-///////////////////////////////////////////
-//         Modal Logic                   //
+ ///////////////////////////////////////////
+ //        Modal Logic                   //
 //////////////////////////////////////////
-console.log("right here");
-if (!Cookie.get('site_visited')) {
-  console.log("No COOKIES HER!");
-  $('.ot-modal').toggleClass('invisible visible')
 
-    Cookie('site_visited', 'true', {
-         expires: 7,
-         path: ''
+var $button = $('.js-modal-close')
+
+$button.on('click', function (){
+  $('.ot-modal__homepage, .ot-modal ').toggleClass('visible invisible')
+} )
+
+
+
+
+
+setTimeout(function(){
+  if (!$.cookie('site_visited')) {
+    $('.ot-modal').toggleClass('invisible visible');
+    $.cookie('site_visited', 'true', {
+      expires: 7,
+      path: '/'
     });
-} else {
-  console.log("thar be cookies in this bitch");
-
-}
+  }
+}, 2000)
 
 
 
