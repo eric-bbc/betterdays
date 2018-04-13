@@ -39,18 +39,23 @@ $('.room-toggle').on('click', function(){
 })
 
 $('.js-event-gallery-toggle').on('click', function(){
-  $('.event-form-container').addClass('display-none')
+
+  $('.event-form-container').toggleClass('display-block display-none')
   $(window).trigger('resize');
   $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
+  $('.mobile-gallery-container').toggleClass('display-none display-block')
   $('.js-event-form-toggle').toggleClass('display-none display-block')
   $(this).addClass('display-none')
 })
 
 $('.js-event-form-toggle').on('click', function(){
+
   $(this).addClass('display-none')
   $('.mobile-view-gallery-toggle').toggleClass('display-block display-none')
   $('.mobile-gallery-container').toggleClass('display-block display-none')
   $('.event-form-container').toggleClass('display-block display-none')
+  $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
+
 })
 
 

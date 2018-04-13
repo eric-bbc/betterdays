@@ -45,16 +45,18 @@
     </div>
   </div>
 
-  <div class="mobile-gallery-container js-rs-hide">
+  <div class="mobile-gallery-container js-rs-hide display-none">
 
-    <p class="room-title title-mobile">Main Room</p>
+    <div class="mobile-toggle-container">
+      <p class="room-title title-mobile">Main Room</p>
 
-    <div class="mobile-room-toggles">
-      <a id="main-mobile" class="room-toggle active" href="#">Main Room</a>
-      <a id="karaoke-mobile" class="room-toggle" href="#">Karaoke Room</a>
-      <a id="club-mobile" class="room-toggle" href="#">The Club</a>
+      <div class="mobile-room-toggles">
+        <a id="main-mobile" class="room-toggle active" href="#">Main Room</a>
+        <a id="karaoke-mobile" class="room-toggle" href="#">Karaoke Room</a>
+        <a id="club-mobile" class="room-toggle" href="#">The Club</a>
+      </div>
+
     </div>
-
 
     <div class="js-room-gallery royalSlider  mobile-event-gallery-slider js-main-mobile ">
       {% for image in entry.mainRoomImages %}

@@ -10,6 +10,10 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
+  @include screen('medium-down'){
+    overflow-y: auto;
+    height: unset;
+  };
 
   .section-container{
       flex: 0 0 auto;
@@ -29,13 +33,14 @@
     }
 
     &.bottom{
-      margin-top: 5rem;
+      // margin-top: 5rem;
+      // border: 2px solid red;
     }
   }
 
 
   .artpage-grid-item{
-    border: 2px solid red;
+
     box-sizing: border-box;
     height: 22em;
     display: flex;
@@ -44,7 +49,6 @@
     padding: 0 2rem;
     position: relative;
     cursor: crosshair;
-    border: 2px solid red;
 
 
     &:nth-child(2n){
@@ -53,14 +57,14 @@
     }
 
     .artpage-image-container{
-      border: 2px solid red;
+
     }
 
     .art-collection-image {
       width: 14rem;
       height: auto;
       cursor: crosshair;
-      border: 2px solid red !important;
+
 
       @include transition(all 400ms);
 
@@ -80,7 +84,7 @@
       cursor: crosshair;
 
 
-      @include transition(all 400ms);
+      @include transition(all 200ms);
       p{
         margin: auto;
         &:after{

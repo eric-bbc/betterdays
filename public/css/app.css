@@ -501,6 +501,27 @@ large-up-display-none-imp
   position: relative;
   padding-top: 100%; }
 
+/*------------------------------------*\
+    #SECTION ANIMATION LOAD
+\*------------------------------------*/
+@media only screen and (min-width: 992px) {
+  .will-fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(0.9); } }
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1); } }
+
+@media only screen and (min-width: 992px) {
+  .will-fade-in--active {
+    animation: fadeIn 1.2s;
+    animation-fill-mode: forwards;
+    transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; } }
+
 /* =========================================================================
   Grid Basic
 ========================================================================= */
@@ -4313,7 +4334,8 @@ large-up-push-one-third
       color: #9b9b9b;
       border: none;
       font-weight: bold;
-      font-size: 1rem; }
+      font-size: 1rem;
+      background-color: #fff; }
     .ot-modal .modal-newsletter-form .modal-newsletter-arrow {
       width: 25%; }
 
@@ -4381,7 +4403,8 @@ large-up-push-one-third
 
 .mobile-event-slide-image {
   width: auto !important;
-  height: 100% !important; }
+  height: 100% !important;
+  margin-left: 0px !important; }
 
 .art-collection-container {
   max-height: 100vh;
@@ -4393,6 +4416,10 @@ large-up-push-one-third
   flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden; }
+  @media only screen and (max-width: 991px) {
+    .art-collection-grid {
+      overflow-y: auto;
+      height: unset; } }
   .art-collection-grid .section-container {
     flex: 0 0 auto; }
   .art-collection-grid .row {
@@ -4402,8 +4429,6 @@ large-up-push-one-third
       .art-collection-grid .row:first-of-type:nth-child(2n) {
         position: relative;
         top: 10rem; }
-    .art-collection-grid .row.bottom {
-      margin-top: 5rem; }
   .art-collection-grid .artpage-grid-item {
     box-sizing: border-box;
     height: 22em;
@@ -4434,8 +4459,8 @@ large-up-push-one-third
       color: #fff;
       width: 75%;
       cursor: crosshair;
-      -webkit-transition: all 400ms ease-in-out 0s;
-      transition: all 400ms ease-in-out 0s; }
+      -webkit-transition: all 200ms ease-in-out 0s;
+      transition: all 200ms ease-in-out 0s; }
       .art-collection-grid .artpage-grid-item .artimage-overlay-copy p {
         margin: auto; }
         .art-collection-grid .artpage-grid-item .artimage-overlay-copy p:after {
@@ -5219,13 +5244,17 @@ img.rsImg {
   height: auto; }
 
 .room-title {
+  color: #9b9b9b;
   padding: 0.8125rem; }
   @media only screen and (max-width: 767px) {
     .room-title {
-      display: none; } }
+      display: none;
+      padding: unset; } }
 
 .title-mobile {
-  display: block; }
+  display: block;
+  color: #9b9b9b;
+  font-size: 27px; }
 
 .room-toggles {
   padding: 0.8125rem; }
@@ -5241,6 +5270,24 @@ img.rsImg {
   @media only screen and (max-width: 767px) {
     .room-toggles {
       display: none; } }
+
+.mobile-view-form-toggle, .mobile-view-gallery-toggle {
+  color: #9b9b9b;
+  padding-left: 22px; }
+
+.mobile-toggle-container {
+  padding-left: 22px; }
+
+.mobile-room-toggles .room-toggle {
+  color: #9b9b9b;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 1rem; }
+  .mobile-room-toggles .room-toggle:first-child {
+    padding-left: unset; }
+  .mobile-room-toggles .room-toggle.active {
+    text-decoration: underline; }
 
 .event-gallery-slider, .menu-slider {
   z-index: 10;
@@ -5342,7 +5389,8 @@ img.rsImg {
     .event-form-subcontainer {
       padding-left: 0; } }
   .event-form-subcontainer .event-form-header {
-    padding: 0.8125rem; }
+    padding: 0.8125rem;
+    color: #9b9b9b; }
 
 .event-form {
   border: none;

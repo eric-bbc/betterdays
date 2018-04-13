@@ -55,7 +55,7 @@ large-up-display-none-imp
     @include display-none-class('#{$item-key}');
   }
 }
-  
+
 
 .display-block{
   display: block;
@@ -333,4 +333,35 @@ large-up-display-none-imp
 
 .square-canvas{
   @include ratio( 1 / 1 );
+}
+
+/*------------------------------------*\
+    #SECTION ANIMATION LOAD
+\*------------------------------------*/
+
+  .will-fade-in{
+        @include screen('medium-up'){
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(20px) scale(0.9);
+      }
+  }
+
+
+@keyframes fadeIn {
+
+    100%{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+.will-fade-in--active{
+      @include screen('medium-up'){
+        animation: fadeIn 1.2s;
+        animation-fill-mode: forwards;
+        transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+    }
 }
