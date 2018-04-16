@@ -5,7 +5,7 @@
 
 <div class="medium-down-display-none-imp">
 
-  <div class="royalSlider rsDefault menu-slider display-none large-menu-container ">
+  <div class="royalSlider rsDefault menu-slider display-none large-menu-container will-fade-in">
 
     {% for asset in entry.menu %}
       <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
@@ -55,7 +55,7 @@
   </div>
 
 
-  <div class="royalSlider rsDefault menu-slider display-none">
+  <div class="royalSlider rsDefault menu-slider display-none will-fade-in">
 
     {% for asset in entry.menu %}
       <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">

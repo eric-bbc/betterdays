@@ -27,6 +27,7 @@ $('.room-toggle').on('click', function(){
   var $self = $(this)
   var $id = $self.attr('id')
   $self.addClass( "active" )
+  $self.addClass( "will-fade-in--active" )
   $self.siblings().removeClass(  "active" )
   $('.room-title').text( $self.text() )
   $('.room-title').text( $self.text() )
@@ -36,14 +37,17 @@ $('.room-toggle').on('click', function(){
   $('.js-room-gallery').addClass('display-none')
   $( '.js-' + $id ).removeClass('display-none')
   $( '.js-' + $id ).addClass('display-block')
+  $( '.js-' + $id ).addClass('will-fade-in--active')
 })
 
 $('.js-event-gallery-toggle').on('click', function(){
-
+  console.log("clickethed");
   $('.event-form-container').toggleClass('display-block display-none')
   $(window).trigger('resize');
   $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
   $('.mobile-gallery-container').toggleClass('display-none display-block')
+  $('.mobile-gallery-container').addClass('will-fade-in--active')
+  $('.js-main-mobile').addClass('will-fade-in--active')
   $('.js-event-form-toggle').toggleClass('display-none display-block')
   $(this).addClass('display-none')
 })
@@ -54,11 +58,14 @@ $('.js-event-form-toggle').on('click', function(){
   $('.mobile-view-gallery-toggle').toggleClass('display-block display-none')
   $('.mobile-gallery-container').toggleClass('display-block display-none')
   $('.event-form-container').toggleClass('display-block display-none')
+  $('.event-form-container').addClass('will-fade-in--active')
   $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
 
 })
 
-
+if ( window.location.pathnam = "/events"){
+  $('.event-form-container').addClass('will-fade-in--active')
+}
 
   /////////////////////////////////////////
  //           OPENTABLE TOGGLE          //
@@ -150,6 +157,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       $rs.data('royalSlider').enterFullscreen()
       $rs.toggleClass('invisible visible')
       $rs.toggleClass('display-none display-block')
+      $rs.addClass('will-fade-in--active')
     })
 
     $('.rsFullscreenBtn').on('click', function(){
@@ -210,7 +218,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
        var index = $this.data('id')
        var slider = $('.menu-slider').data('royal-slider')
        slider.goTo(index)
-       $('.menu-slider').removeClass('display-none')
+       $('.menu-slider').removeClass('display-none').addClass('will-fade-in--active-fast')
      } else {
         $('.menu-slider').removeClass('display-none')
         $("html, body").animate({
@@ -240,6 +248,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
 
    $('.menu-slider').find('.rsFullscreenBtn').on('click', function(){
      $('.menu-slider').addClass('display-none')
+     $('.menu-slider').removeClass('will-fade-in--active-fast')
 
      if ( $('html').hasClass('touchevents') ) {
        // $('html, body').css('overflow', 'scroll')
@@ -347,6 +356,19 @@ setTimeout(function(){
 }, 2000)
 
 
+function animated() {
+    // $('.art-collection-scroll-arrow').animate({top: '95%', right: '1px'},750).animate({top: '96%', right: '8px'},750,animated);
+    $('.art-collection-scroll-arrow').animate({top: '95.6%',right: '1px'},750).animate({top: '95%', right: '20px'},750,animated);
+}
+
+if (window.location.pathname == "/art-collection") {
+  $('.artpage-grid-item').addClass('will-fade-in--active')
+
+
+  setTimeout(function(){
+    animated()
+  }, 1500)
+}
 
 
 

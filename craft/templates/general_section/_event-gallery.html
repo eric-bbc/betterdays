@@ -14,38 +14,38 @@
 
   <div class="desktop-gallery-container">
 
-    <div class="grid main-room-grid js-room-gallery js-main">
+    <div class="grid main-room-grid js-room-gallery js-main will-fade-in will-fade-in--active">
       {% for image in entry.mainRoomImages %}
         {% if loop.index < 4 %}
-          <img class="event-image col small-up-one-third"  data-aos="fade-right" data-room="main" src="{{ image.url }}" alt="">
+          <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
         {% else %}
-          <img class="event-image col small-up-one-third"  data-aos="fade-left" data-room="main" src="{{ image.url }}" alt="">
+          <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
         {% endif %}
       {% endfor %}
     </div>
 
-    <div class="grid karaoke-room-grid js-room-gallery display-none js-karaoke">
+    <div class="grid karaoke-room-grid js-room-gallery display-none js-karaoke will-fade-in">
       {% for image in entry.karaokeImages %}
               {% if loop.index < 4 %}
-                <img class="event-image col small-up-one-third"  data-aos="fade-right" data-room="karaoke" src="{{ image.url }}" alt="">
+                <img class="event-image col small-up-one-third" data-room="karaoke" src="{{ image.url }}" alt="">
               {% else %}
-                <img class="event-image col small-up-one-third"  data-aos="fade-left" data-room="karaoke" src="{{ image.url }}" alt="">
+                <img class="event-image col small-up-one-third" data-room="karaoke" src="{{ image.url }}" alt="">
               {% endif %}
       {% endfor %}
     </div>
 
-    <div class="grid club-room-grid js-room-gallery display-none js-club">
+    <div class="grid club-room-grid js-room-gallery display-none js-club will-fade-in">
       {% for image in entry.clubRoomImages %}
       {% if loop.index < 4 %}
-        <img class="event-image col small-up-one-third"  data-aos="fade-right" data-room="club" src="{{ image.url }}" alt="">
+        <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
       {% else %}
-        <img class="event-image col small-up-one-third"  data-aos="fade-left" data-room="club" src="{{ image.url }}" alt="">
+        <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
       {% endif %}
       {% endfor %}
     </div>
   </div>
 
-  <div class="mobile-gallery-container js-rs-hide display-none">
+  <div class="mobile-gallery-container js-rs-hide display-none will-fade-in">
 
     <div class="mobile-toggle-container">
       <p class="room-title title-mobile">Main Room</p>
@@ -58,19 +58,19 @@
 
     </div>
 
-    <div class="js-room-gallery royalSlider  mobile-event-gallery-slider js-main-mobile ">
+    <div class="js-room-gallery royalSlider  mobile-event-gallery-slider js-main-mobile will-fade-in">
       {% for image in entry.mainRoomImages %}
         <img class="mobile-event-slide-image" data-room="main" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-karaoke-mobile">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-karaoke-mobile will-fade-in ">
       {% for image in entry.karaokeImages %}
         <img class="mobile-event-slide-image" data-room="karaoke"  src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-club-mobile">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-club-mobile will-fade-in">
       {% for image in entry.clubRoomImages %}
       <img class="emobile-event-slide-image" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}

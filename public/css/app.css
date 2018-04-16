@@ -504,11 +504,9 @@ large-up-display-none-imp
 /*------------------------------------*\
     #SECTION ANIMATION LOAD
 \*------------------------------------*/
-@media only screen and (min-width: 992px) {
-  .will-fade-in {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px) scale(0.9); } }
+.will-fade-in {
+  opacity: 0;
+  visibility: hidden; }
 
 @keyframes fadeIn {
   100% {
@@ -516,11 +514,15 @@ large-up-display-none-imp
     visibility: visible;
     transform: translateY(0) scale(1); } }
 
-@media only screen and (min-width: 992px) {
-  .will-fade-in--active {
-    animation: fadeIn 1.2s;
-    animation-fill-mode: forwards;
-    transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; } }
+.will-fade-in--active {
+  animation: fadeIn 1.2s;
+  animation-fill-mode: forwards;
+  transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; }
+
+.will-fade-in--active-fast {
+  animation: fadeIn 0.3s;
+  animation-fill-mode: forwards;
+  transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; }
 
 /* =========================================================================
   Grid Basic
@@ -5562,7 +5564,7 @@ img.rsImg {
   transition: transform 400ms ease-in-out 0s;
   transform: translateX(-100%); }
   .mobile-nav-link-container.open {
-    transform: translateX(-1px); }
+    transform: translateX(-8px); }
   .mobile-nav-link-container .mobile-nav-link {
     width: 100%;
     font-size: 28px;

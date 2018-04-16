@@ -340,11 +340,11 @@ large-up-display-none-imp
 \*------------------------------------*/
 
   .will-fade-in{
-        @include screen('medium-up'){
+        // @include screen('medium-up'){
           opacity: 0;
           visibility: hidden;
-          transform: translateY(20px) scale(0.9);
-      }
+      //     transform: translateY(20px) scale(0.9);
+      // }
   }
 
 
@@ -359,9 +359,14 @@ large-up-display-none-imp
 
 
 .will-fade-in--active{
-      @include screen('medium-up'){
+      // @include screen('medium-up'){
         animation: fadeIn 1.2s;
         animation-fill-mode: forwards;
         transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
-    }
+    // }
+}
+.will-fade-in--active-fast{
+        animation: fadeIn 0.3s;
+        animation-fill-mode: forwards;
+        transition: transform 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.8s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
 }
