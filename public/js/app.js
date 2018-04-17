@@ -41,7 +41,6 @@ $('.room-toggle').on('click', function(){
 })
 
 $('.js-event-gallery-toggle').on('click', function(){
-  console.log("clickethed");
   $('.event-form-container').toggleClass('display-block display-none')
   $(window).trigger('resize');
   $('.mobile-gallery-container').toggleClass('js-rs-hide js-rs-show')
@@ -92,7 +91,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
                          startSlideId      : 1,
                          visibleNearby     : {
                            enabled: true,
-                           centerArea: 0.30
+                           centerArea: 0.
                          }
                     }).data('royalSlider')
 
@@ -120,11 +119,16 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       navigateByClick   : false,
       arrowsNav         : true,
       arrowsNavAutoHide : false,
-      slidesSpacing     : 0,
+      slidesSpacing     : 8,
       loop              : true,
       transitionType    : 'move',
       addActiveClass    : true,
-      autoHeight        : false
+      autoHeight        : false,
+      visibleNearby     : {
+        enabled         :  true,
+        centerArea      : 0.9,
+        center          : false
+      },
     }).data('royalSlider');
 
    $('.event-gallery-slider').royalSlider({
@@ -146,7 +150,8 @@ var homepageSlider = $('.homepage-slider').royalSlider({
         centerArea      : 0.4
       },
       fullscreen        : {
-        enabled         : true
+        enabled         : true,
+        nativeFS        :true
       }
     }).data('royalSlider');
 
@@ -157,7 +162,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       $rs.data('royalSlider').enterFullscreen()
       $rs.toggleClass('invisible visible')
       $rs.toggleClass('display-none display-block')
-      $rs.addClass('will-fade-in--active')
+      $('')
     })
 
     $('.rsFullscreenBtn').on('click', function(){
@@ -203,7 +208,6 @@ var homepageSlider = $('.homepage-slider').royalSlider({
    $('.menu-card').on('click', function(){
      //desktop
      if ( $('html').hasClass('no-touchevents') ) {
-       console.log('here');
        var $this = $(this)
        var index = $this.data('id')
        var slider = $('.menu-slider').data('royal-slider')
@@ -364,13 +368,42 @@ function animated() {
 // }
 
 if (window.location.pathname == "/art-collection") {
-  $('.artpage-grid-item').addClass('will-fade-in--active')
+  $('.top-item').each(function(i){
+    var self = $(this)
+    setTimeout(function(){
+      self.addClass('will-fade-in--active')
+    }, 200 * i)
+  })
+  $('.bottom-item').each(function(i){
+    var self = $(this)
+    setTimeout(function(){
+      self.addClass('will-fade-in--active')
+    }, 200 * i)
+  })
 
   // addFades()
   setTimeout(function(){
     animated()
   }, 1500)
 }
+
+
+if (window.location.pathname.includes('events') && $('html').hasClass('touchevents') ){
+
+  $('.event-form').on('submit', function(){
+    $('.mobile-success-message').toggleClass("display-none display-block")
+  })
+}
+
+if (window.location.pathname.includes('info')) {
+  $('.contact-submit-container').on('mouseenter', function(){
+  $(this).children().first().animate({right: '20px'},750).animate({right: '1px'},750,animated);
+  $(this).children().last().animate({left: '20px'},750).animate({left: '1px'},750,animated);
+
+  })
+}
+
+
 
 
 

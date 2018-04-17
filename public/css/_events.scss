@@ -298,7 +298,7 @@
 
     &::after{
       content: "";
-      background: url(../section_assets/images/icons/rightArrow_black.png);
+      background: url(../section_assets/images/icons/rightArrow.png);
       background-repeat: no-repeat;
       background-size: 4rem;
       height: 1rem;
@@ -315,3 +315,10 @@
     font-size: 2rem;
   }
 }
+
+// .rsFullscreen{
+//   .rsImg{
+//       @include invisible;
+//     @include transition(all 400ms);
+//   }
+// }

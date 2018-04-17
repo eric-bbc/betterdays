@@ -66,19 +66,21 @@
 
   @include screen('small-down'){
     width: 100%;
+    margin-top: 2rem;
   };
     a{
-      color: $color-black;
+      color: $color-grey;
       text-decoration: none;
     }
 
   .arrow-span{
-    background: url(../section_assets/images/icons/rightArrow_black.png);
+    background: url(../section_assets/images/icons/rightArrow.png);
     background-repeat: no-repeat;
     // background-position: center;
-    background-position: calc(50% + 9rem) 50%;
+    background-position: calc(50% + 8.7rem) 50%;
     line-height: 1rem;
     background-size: 4rem;
+    margin-left: -5rem;
 
   }
 }

@@ -120,6 +120,9 @@
   }
 }
 
+
+
+
 .contact-input{
 
   text-transform: uppercase;
@@ -144,14 +147,19 @@
   line-height: 1rem;
   background-size: 4rem;
 }
+.contact-submit-container{
+  padding-top: 1rem;
+}
 
 .contact-submit {
+  position: relative;
   border: none !important;
   color: $color-grey !important;
   margin: 0 auto;
   background-color: $color-white !important;
   width: 47%;
   font-weight: bold;
+  cursor: pointer;
   &:after{
     content: '';
     background: url(../section_assets/images/icons/rightArrow_black.png);
@@ -163,6 +171,7 @@
 }
 
 .contact-submit-arrow{
+  position: relative;
   background-color: #fff !important;
   width: 68px;
 }

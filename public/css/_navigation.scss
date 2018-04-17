@@ -93,6 +93,20 @@
   };
 }
 
+.nav-newsletter-input-2{
+  padding: 3px 0;
+  border: none;
+  border-bottom: 1px solid $color-grey;
+  width: 100%;
+  color: $color-grey;
+  font-size: 1rem;
+
+  @include input-placeholder{
+    padding: 3px 0;
+  };
+
+}
+
 .mobile-nav-newsletter-signup{
   position: relative;
   top: 2rem;

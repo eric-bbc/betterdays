@@ -28,8 +28,11 @@
       <input class="contact-input proxima-bold" id="subject" type="text" name="subject" placeholder="Subject" value="{% if message is defined %}{{ message.subject }}{% endif %}">
       {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
-      <input class="contact-input proxima-bold contact-submit" type="submit" value="SUBMIT">
-      <input type="image" src="{{ submitArrow.url }}" value="Subscribe" name="subscribe"  class="contact-submit-arrow">
+      <div class="contact-submit-container">
+        <input class="contact-input proxima-bold contact-submit" type="submit" value="SUBMIT">
+        <input type="image" src="{{ submitArrow.url }}" value="Subscribe" name="subscribe"  class="contact-submit-arrow">
+
+      </div>
 
      </div>
 
