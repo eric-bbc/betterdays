@@ -199,33 +199,18 @@ var homepageSlider = $('.homepage-slider').royalSlider({
      }
    }).data('royalSlider')
 
-   // $('.mobile-menu-slider').royalSlider({
-   //   imageScaleMode    : 'fit',
-   //   imageAlignCenter  : true,
-   //   loop              : true,
-   //   transitionType    : 'move',
-   //   controlNavigation : 'none',
-   //
-   //   fullscreen        : {
-   //     enabled         : true
-   //   }
-   // }).data('royalSlider')
 
    $('.menu-card').on('click', function(){
      //desktop
      if ( $('html').hasClass('no-touchevents') ) {
+       console.log('here');
        var $this = $(this)
        var index = $this.data('id')
        var slider = $('.menu-slider').data('royal-slider')
        slider.goTo(index)
        $('.menu-slider').removeClass('display-none').addClass('will-fade-in--active-fast')
-     } else {
-        $('.menu-slider').removeClass('display-none')
-        $("html, body").animate({
-                scrollTop: 0
-            }, 300);
-        $('html').css('overflow-y', 'hidden')
      }
+
    })
 
 
@@ -238,12 +223,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
        var slider = $('.menu-slider').last().data('royal-slider')
        slider.goTo(index)
        $('.menu-slider').removeClass('display-none')
-     } else {
-
-
-
      }
-
    })
 
    $('.menu-slider').find('.rsFullscreenBtn').on('click', function(){
@@ -357,14 +337,36 @@ setTimeout(function(){
 
 
 function animated() {
-    // $('.art-collection-scroll-arrow').animate({top: '95%', right: '1px'},750).animate({top: '96%', right: '8px'},750,animated);
     $('.art-collection-scroll-arrow').animate({top: '95.6%',right: '1px'},750).animate({top: '95%', right: '20px'},750,animated);
 }
+
+// function addFades() {       FIX ME!!!!!!!
+//   var $lazy = $(".will-fade-in");
+//   var activeClass = "will-fade-in--active";
+// var threshold = 3;
+//
+//   $(window).on("scroll", function(){
+//
+//     $lazy.each(function(index, item){
+//
+//         var pos = $(item).scrollLeft();
+//         var scrollLeft = $(window).scrollLeft();
+//         console.log(pos);
+//         console.log(scrollLeft);
+//
+//         if( (scrollLeft + threshold) >= pos && !$(item).hasClass(activeClass) ){
+//             $(item).addClass(activeClass)
+//         }
+//
+//     });
+//
+// });
+// }
 
 if (window.location.pathname == "/art-collection") {
   $('.artpage-grid-item').addClass('will-fade-in--active')
 
-
+  // addFades()
   setTimeout(function(){
     animated()
   }, 1500)

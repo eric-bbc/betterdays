@@ -1,3 +1,4 @@
+{% set submitArrow = icons.rightArrowGrey.first() %}
 
 {% block content %}
 
@@ -28,7 +29,9 @@
       {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
       <input class="contact-input proxima-bold contact-submit" type="submit" value="SUBMIT">
-    </div>
+      <input type="image" src="{{ submitArrow.url }}" value="Subscribe" name="subscribe"  class="contact-submit-arrow">
+
+     </div>
 
     <div class="small-up-one-half small-down-one-whole">
       <textarea class="contact-textarea proxima-bold"  rows="10" cols="40" id="message" placeholder="message" name="message">{% if message is defined %}{{ message.message }}{% endif %}</textarea>

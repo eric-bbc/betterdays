@@ -136,12 +136,35 @@
     color: $color-grey;
   }
 }
+.arrow-span{
+  background: url(../section_assets/images/icons/rightArrow_black.png);
+  background-repeat: no-repeat;
+  // background-position: center;
+  background-position: calc(50% + 9rem) 50%;
+  line-height: 1rem;
+  background-size: 4rem;
+}
 
 .contact-submit {
   border: none !important;
-  color: $color-black !important;
+  color: $color-grey !important;
   margin: 0 auto;
   background-color: $color-white !important;
+  width: 47%;
+  font-weight: bold;
+  &:after{
+    content: '';
+    background: url(../section_assets/images/icons/rightArrow_black.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 9rem) 50%;
+    line-height: 1rem;
+    background-size: 4rem;
+  }
+}
+
+.contact-submit-arrow{
+  background-color: #fff !important;
+  width: 68px;
 }
 
 .contact-textarea {
@@ -164,8 +187,21 @@
   input{
     padding: 1rem;
   }
+  .contact-submit{
+    width: 33%;
+  }
 }
 
+.mobile-contact-submit-arrow{
+  background: #fff !important;
+  width: 68px;
+  margin: 0 auto;
+  margin-left: -6rem;
+}
+
+.mobile-contact-submit-container{
+  display: flex;
+}
 
 .no-display-mobile {
   @include screen('small-down'){

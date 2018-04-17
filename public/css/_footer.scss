@@ -8,6 +8,14 @@
   background: #fff;
 }
 
+.icon-container{
+  width: 47%;
+  max-height: 2rem;
+  img{
+    height: 100%;
+  }
+}
+
 .footer-content{
   font-size: 12px;
   color: $color-grey;

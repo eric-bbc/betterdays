@@ -30,7 +30,7 @@
 
       <div class="row bottom">
         {% for entry in craft.entries.section('art') | slice(remainder, halfLength) %}
-          <div class="col {{ loop.index }} artpage-grid-item will-fade-in" >
+          <div class="col artpage-grid-item  will-fade-in" >
             {% set image = entry.workImage.first() %}
             <a class="artpage-image-container" href="{{ entry.url }}">
               <img class="art-collection-image" src="{{ image.url }}" alt="">

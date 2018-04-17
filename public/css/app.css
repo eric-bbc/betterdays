@@ -4123,11 +4123,31 @@ large-up-push-one-third
   .contact-input::-webkit-input-placeholder, .event-form input::-webkit-input-placeholder, .event-form .event-submit::-webkit-input-placeholder {
     color: #9b9b9b; }
 
+.arrow-span {
+  background: url(../section_assets/images/icons/rightArrow_black.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 9rem) 50%;
+  line-height: 1rem;
+  background-size: 4rem; }
+
 .contact-submit, .event-form .event-submit {
   border: none !important;
-  color: #000 !important;
+  color: #9b9b9b !important;
   margin: 0 auto;
-  background-color: #fff !important; }
+  background-color: #fff !important;
+  width: 47%;
+  font-weight: bold; }
+  .contact-submit:after, .event-form .event-submit:after {
+    content: '';
+    background: url(../section_assets/images/icons/rightArrow_black.png);
+    background-repeat: no-repeat;
+    background-position: calc(50% + 9rem) 50%;
+    line-height: 1rem;
+    background-size: 4rem; }
+
+.contact-submit-arrow {
+  background-color: #fff !important;
+  width: 68px; }
 
 .contact-textarea {
   text-transform: uppercase;
@@ -4146,6 +4166,18 @@ large-up-push-one-third
 
 .mobile-contact-form input {
   padding: 1rem; }
+
+.mobile-contact-form .contact-submit, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
+  width: 33%; }
+
+.mobile-contact-submit-arrow {
+  background: #fff !important;
+  width: 68px;
+  margin: 0 auto;
+  margin-left: -6rem; }
+
+.mobile-contact-submit-container {
+  display: flex; }
 
 @media only screen and (max-width: 767px) {
   .no-display-mobile {
@@ -4229,6 +4261,12 @@ large-up-push-one-third
   position: absolute;
   bottom: 0;
   background: #fff; }
+
+.icon-container {
+  width: 47%;
+  max-height: 2rem; }
+  .icon-container img {
+    height: 100%; }
 
 .footer-content {
   font-size: 12px;
