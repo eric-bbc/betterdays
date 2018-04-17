@@ -17,7 +17,7 @@
   color: $color-black;
   .homepage-slider {
     width: 100% !important;
-    height: 75vh;
+    height: 80vh;
     background: $color-white;
     .rsOverflow {
       background: $color-white;
@@ -26,8 +26,8 @@
       background: $color-white;
     }
     .rsImg {
-      // position: absolute;
-      // width: auto !important;
+      opacity: 0.1;
+      // @include transition(all 200ms);
     }
 
     .galleryImg{
@@ -50,7 +50,7 @@
           background: url(../section_assets/images/icons/leftArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-left: 21px;
+          padding-left: 100px;
         }
       }
       .rsArrowRight{
@@ -60,7 +60,7 @@
           background-repeat: no-repeat;
           background-position: center;
           padding-right: 21px;
-          left: 0;
+          left: -27px;
         }
       }
 

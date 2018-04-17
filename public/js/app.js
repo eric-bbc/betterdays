@@ -83,7 +83,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
                          loop              : true,
                          addActiveClass    : true,
                          transitionType    : 'move',
-                         slidesSpacing     : 40,
+                         slidesSpacing     : 18,
                          controlsInside    : true,
                          easeInOut         : 'easeInOutSine',
                          arrowsNavAutoHide : false,
@@ -91,7 +91,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
                          startSlideId      : 1,
                          visibleNearby     : {
                            enabled: true,
-                           centerArea: 0.
+                           centerArea: 0.27
                          }
                     }).data('royalSlider')
 
@@ -103,13 +103,40 @@ var homepageSlider = $('.homepage-slider').royalSlider({
 
         })
 
-        // homepageSlider.ev.on('rsBeforeMove', function() {
-        //   console.log('up in hee');
-        //   var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
-        //   console.log('slide = ' + $activeSlideIndex);
-        //   // var $leftSlide = $(`[slideindex=${$activeSlideIndex - 2}]`)
-        //   $leftSlide.css('opacity', '0.7')
-        // })
+        homepageSlider.ev.on('rsAfterSlideChange', function() {
+          var $activeSlide = $('.rsActiveSlide img')
+          var $activeSlideIndex = $('.rsActiveSlide img').attr('slideindex')
+          var activeIndexNum = parseInt($activeSlideIndex)
+
+          var rightIndex = activeIndexNum + 1
+          var leftIndex = activeIndexNum - 1
+
+          var lengthCheck = $('.homepage-slider').find('.rsImg').length
+
+
+          if (rightIndex > lengthCheck) {
+            rightIndex = 0
+          }
+
+          if (leftIndex < 0) {
+            leftIndex = lengthCheck - 1
+          }
+
+          var $rightInSlide = $('[slideindex=' + rightIndex + ']');
+          var $leftInSlide = $('[slideindex=' + leftIndex + ']');
+
+          $('.rsImg').css('opacity', '0.1')
+
+
+          $activeSlide.css('opacity', '1')
+          $rightInSlide.css('opacity', '1')
+          $leftInSlide.css('opacity', '1')
+
+
+          // $rightOutSlide.css('opacity', '0.2')
+          // $leftOutSlide.css('opacity', '0.2')
+
+        })
       }
 
 
