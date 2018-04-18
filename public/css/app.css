@@ -96,7 +96,6 @@ body {
   text-transform: uppercase; }
 
 .active {
-  color: #CD5644;
   text-decoration: underline; }
 
 .mobile-page {
@@ -4027,7 +4026,8 @@ large-up-push-one-third
     left: 91.6666666667%; } }
 
 .mobile-info-tabs {
-  display: none; }
+  display: none;
+  color: #9b9b9b; }
   @media only screen and (max-width: 767px) {
     .mobile-info-tabs {
       display: inline-flex;
@@ -4060,7 +4060,9 @@ large-up-push-one-third
   padding-top: 1rem;
   color: #9b9b9b; }
   .contact-form h3, .mobile-contact-form h3, .event-form h3 {
-    color: #000; }
+    color: #9b9b9b;
+    text-transform: capitalize;
+    font-weight: normal; }
   @media only screen and (max-width: 767px) {
     .contact-form, .mobile-contact-form, .event-form {
       display: none; } }
@@ -4068,7 +4070,8 @@ large-up-push-one-third
     border: none;
     background-color: #f4f4f4;
     color: #9b9b9b;
-    resize: none; }
+    resize: none;
+    text-transform: capitalize; }
   .contact-form form, .mobile-contact-form form, .event-form form {
     display: flex;
     padding: 2.5rem 0;
@@ -4106,10 +4109,12 @@ large-up-push-one-third
         width: 100%;
         padding-left: 0rem; } }
   .info-grid .info-header {
-    text-transform: uppercase; }
+    text-transform: capitalize;
+    font-weight: bold; }
   .info-grid .info-detail {
     position: relative;
-    top: -14px; }
+    top: -10px;
+    line-height: 21px; }
 
 .contact-input, .event-form input, .event-form .event-submit {
   text-transform: uppercase;
@@ -4141,7 +4146,8 @@ large-up-push-one-third
   background-color: #fff !important;
   width: 47%;
   font-weight: bold;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: capitalize; }
   .contact-submit:after, .event-form .event-submit:after {
     content: '';
     background: url(../section_assets/images/icons/rightArrow_black.png);
@@ -4183,7 +4189,8 @@ large-up-push-one-third
   margin-left: -6rem; }
 
 .mobile-contact-submit-container {
-  display: flex; }
+  display: flex;
+  margin-top: 3rem; }
 
 @media only screen and (max-width: 767px) {
   .no-display-mobile {
@@ -4191,7 +4198,12 @@ large-up-push-one-third
 
 .menu-container {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  color: #9b9b9b;
+  font-size: 12px;
+  font-weight: normal; }
+  .menu-container h1 {
+    font-weight: normal; }
 
 .large-menu-container {
   width: 100vw;
@@ -4248,10 +4260,22 @@ large-up-push-one-third
       background-repeat: no-repeat; }
 
 .mobile-menu-container {
-  display: flex; }
+  color: #9b9b9b; }
+  .mobile-menu-container .menu-header {
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-top: 2px;
+    padding-left: 8px; }
   .mobile-menu-container .mobile-homepage-slider {
     display: flex;
     justify-content: center; }
+  .mobile-menu-container .mobile-homepage-slider {
+    height: calc(100vh - 75px); }
+  .mobile-menu-container .menu-title {
+    font-size: 18px;
+    text-align: center; }
 
 .mobile-menu-cover {
   width: 100%;
@@ -4266,16 +4290,18 @@ large-up-push-one-third
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
-  background: #fff; }
+  background: transparent; }
 
 .icon-container {
   width: 47%;
   max-height: 2rem; }
   .icon-container img {
-    height: 100%; }
+    height: 100%;
+    position: absolute;
+    bottom: 3px; }
 
 .footer-content {
-  font-size: 16px;
+  font-size: 12px;
   color: #9b9b9b;
   width: 50%;
   display: flex;
@@ -4493,6 +4519,9 @@ large-up-push-one-third
     .art-collection-grid .artpage-grid-item:nth-child(2n) {
       position: relative;
       top: 11rem; }
+      @media only screen and (max-width: 991px) {
+        .art-collection-grid .artpage-grid-item:nth-child(2n) {
+          top: 5rem; } }
     .art-collection-grid .artpage-grid-item .art-collection-image {
       width: 14rem;
       height: auto;
@@ -4634,7 +4663,8 @@ large-up-push-one-third
   position: relative;
   overflow: hidden;
   float: left;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+  background-color: #fff !important; }
 
 .rsVisibleNearbyWrap {
   width: 100%;
@@ -4842,7 +4872,7 @@ img.rsImg {
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
-  background: #151515;
+  background: #FFF;
   color: #FFF; }
 
 /***************
@@ -5149,8 +5179,8 @@ img.rsImg {
 *
 ****************/
 .rsDefault .rsFullscreenBtn {
-  right: 0;
-  top: 0;
+  right: 16px;
+  top: 22px;
   width: 44px;
   height: 44px;
   z-index: 22;
@@ -5349,7 +5379,7 @@ img.rsImg {
   .menu-slider .rsDefault,
   .event-gallery-slider .rsSlide,
   .menu-slider .rsSlide {
-    background-color: #fff; }
+    background-color: #fff !important; }
   .event-gallery-slider .rsArrow, .menu-slider .rsArrow {
     width: 80px !important; }
     .event-gallery-slider .rsArrow .rsArrowIcn, .menu-slider .rsArrow .rsArrowIcn {
@@ -5498,7 +5528,7 @@ img.rsImg {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-bottom: 1.5rem;
+  padding-bottom: 1rem;
   font-size: 22px; }
   .header-nav .desktop-nav-link-container {
     display: flex;
@@ -5536,7 +5566,7 @@ img.rsImg {
     width: 30%;
     min-width: 190px;
     margin: 0 auto;
-    margin-top: 2.5rem; }
+    margin-top: 2rem; }
     .header-nav .desktop-logo img {
       width: 100%; }
   .header-nav .header-newsletter-signup {
@@ -5663,7 +5693,7 @@ img.rsImg {
   color: #000; }
   .homepage-container .homepage-slider {
     width: 100% !important;
-    height: 80vh;
+    height: 74vh;
     background: #fff; }
     .homepage-container .homepage-slider .rsOverflow {
       background: #fff; }
@@ -5683,14 +5713,14 @@ img.rsImg {
         background: url(../section_assets/images/icons/leftArrow.png);
         background-repeat: no-repeat;
         background-position: center;
-        padding-left: 100px; }
+        padding-left: 44px; }
     .homepage-container .homepage-slider .rsArrowRight {
       margin-right: 20px; }
       .homepage-container .homepage-slider .rsArrowRight .rsArrowIcn {
         background: url(../section_assets/images/icons/rightArrow.png);
         background-repeat: no-repeat;
         background-position: center;
-        padding-right: 21px;
+        padding-right: 75px;
         left: -27px; }
     .homepage-container .homepage-slider .visibleNearby .rsSlide img {
       opacity: 0.6; }

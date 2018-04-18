@@ -1,6 +1,13 @@
 .menu-container {
   width: 100%;
   text-align: center;
+  color: $color-grey;
+  font-size: 12px;
+  font-weight: normal;
+  h1{
+    font-weight: normal;
+  }
+
 }
 
 .large-menu-container{
@@ -89,16 +96,35 @@
 
 
 .mobile-menu-container{
-  display: flex;
+  // display: flex;
+  color: $color-grey;
+  .menu-header{
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    padding-top: 2px;
+    padding-left: 8px;
+  }
   .mobile-homepage-slider{
     display: flex;
     justify-content: center;
+  }
+  .mobile-homepage-slider{
+    height: calc(100vh - #{75px});
+  }
+
+  .menu-title{
+    font-size: 18px;
+    text-align: center;
   }
 }
 
 .mobile-menu-slider{
   // border: 2px solid red;
 }
+
+
 
 .mobile-menu-cover{
   width: 100%;

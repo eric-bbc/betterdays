@@ -54,6 +54,9 @@
     &:nth-child(2n){
       position: relative;
       top: 11rem;
+      @include screen('medium-down'){
+        top: 5rem;
+      };
     }
 
     .artpage-image-container{

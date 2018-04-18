@@ -2,6 +2,7 @@
 // info
 .mobile-info-tabs{
   display: none;
+  color: $color-grey;
   @include screen('small-down'){
     display: inline-flex;
     width: 100%;
@@ -47,7 +48,9 @@
   padding-top: 1rem;
   color: $color-grey;
   h3{
-    color: $color-black;
+    color: $color-grey;
+    text-transform: capitalize ;
+    font-weight: normal;
   }
   @include screen('small-down'){
     display: none;
@@ -58,6 +61,7 @@
     background-color: $color-lt-grey;
     color: $color-grey;
     resize: none;
+    text-transform: capitalize;
   }
 
   form {
@@ -112,11 +116,13 @@
   }
 
   .info-header {
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: bold;
   }
   .info-detail{
     position: relative;
-    top: -14px;
+    top: -10px;
+    line-height: 21px;
   }
 }
 
@@ -142,7 +148,6 @@
 .arrow-span{
   background: url(../section_assets/images/icons/rightArrow_black.png);
   background-repeat: no-repeat;
-  // background-position: center;
   background-position: calc(50% + 9rem) 50%;
   line-height: 1rem;
   background-size: 4rem;
@@ -160,6 +165,7 @@
   width: 47%;
   font-weight: bold;
   cursor: pointer;
+  text-transform: capitalize;
   &:after{
     content: '';
     background: url(../section_assets/images/icons/rightArrow_black.png);
@@ -210,6 +216,7 @@
 
 .mobile-contact-submit-container{
   display: flex;
+  margin-top: 3rem;
 }
 
 .no-display-mobile {

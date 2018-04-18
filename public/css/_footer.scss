@@ -5,7 +5,7 @@
   justify-content: flex-end;
   position: absolute;
   bottom: 0;
-  background: #fff;
+  background: transparent;
 }
 
 .icon-container{
@@ -13,11 +13,14 @@
   max-height: 2rem;
   img{
     height: 100%;
+    position: absolute;
+    bottom: 3px;
+
   }
 }
 
 .footer-content{
-  font-size: 16px;
+  font-size: 12px;
   color: $color-grey;
   width: 50%;
   display: flex;

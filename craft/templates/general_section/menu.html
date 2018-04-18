@@ -41,6 +41,7 @@
 
 
 <div class="mobile-menu-container medium-up-display-none-imp">
+  <p class="menu-header">Our Menus</p>
 
   <div class="royalSlider mobile-homepage-slider">
     {% for block in entry.menuCover %}
@@ -48,14 +49,14 @@
 
       <div class="mobile-menu-card"  data-id="{{ loop.index0 }}">
         <div class="mobile-menu-cover" style="background-image: url( '{{ imageUrl }}' )" >  </div>
-        <h1>{{ block.menuTitle }}</h1>
+        <p class="menu-title">{{ block.menuTitle }}</p>
       </div>
     {% endfor %}
 
   </div>
 
 
-  <div class="royalSlider rsDefault menu-slider display-none will-fade-in">
+  <div class="royalSlider rsDefault menu-slider display-none ">
 
     {% for asset in entry.menu %}
       <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">

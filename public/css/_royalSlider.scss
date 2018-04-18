@@ -34,6 +34,7 @@
 	overflow: hidden;
 	float: left;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	background-color: #fff !important;
 }
 .rsVisibleNearbyWrap {
 	width: 100%;
@@ -269,7 +270,7 @@ img.rsImg {
 .rsDefault .rsSlide,
 .rsDefault .rsVideoFrameHolder,
 .rsDefault .rsThumbs {
-	background: #151515;
+	background: #FFF;
 	color: #FFF;
 }
 
@@ -582,8 +583,8 @@ img.rsImg {
 ****************/
 
 .rsDefault .rsFullscreenBtn {
-	right: 0;
-	top: 0;
+	right: 16px;
+	top: 22px;
 	width: 44px;
 	height: 44px;
 	z-index: 22;

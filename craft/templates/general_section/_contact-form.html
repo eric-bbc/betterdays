@@ -19,7 +19,7 @@
     <div class="small-up-one-half small-down-one-whole">
       <input type="hidden" name="action" value="contactForm/sendMessage">
 
-      <input class="contact-input proxima-bold" id="fromName" type="text" name="fromName" placeholder="NAME" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
+      <input class="contact-input proxima-bold" id="fromName" type="text" name="fromName" placeholder="Name" value="{% if message is defined %}{{ message.fromName }}{% endif %}">
       {{ message is defined and message ? errorList(message.getErrors('fromName')) }}
 
       <input class="contact-input proxima-bold" id="fromEmail" type="email" name="fromEmail" placeholder="Email Address" value="{% if message is defined %}{{ message.fromEmail }}{% endif %}">
@@ -29,7 +29,7 @@
       {{ message is defined and message ? errorList(message.getErrors('subject')) }}
 
       <div class="contact-submit-container">
-        <input class="contact-input proxima-bold contact-submit" type="submit" value="SUBMIT">
+        <input class="contact-input proxima-bold contact-submit" type="submit" value="Submit">
         <input type="image" src="{{ submitArrow.url }}" value="Subscribe" name="subscribe"  class="contact-submit-arrow">
 
       </div>

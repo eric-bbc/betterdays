@@ -17,7 +17,7 @@
   color: $color-black;
   .homepage-slider {
     width: 100% !important;
-    height: 80vh;
+    height: 74vh;
     background: $color-white;
     .rsOverflow {
       background: $color-white;
@@ -50,7 +50,7 @@
           background: url(../section_assets/images/icons/leftArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-left: 100px;
+          padding-left: 44px;
         }
       }
       .rsArrowRight{
@@ -59,7 +59,7 @@
           background: url(../section_assets/images/icons/rightArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-right: 21px;
+          padding-right: 75px;
           left: -27px;
         }
       }
