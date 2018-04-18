@@ -53,6 +53,7 @@
       flex-direction: row;
       justify-content: space-around;
       padding-right: unset;
+      font-size: 14x;
       @include screen('medium-down'){
         flex-direction: column;
       };

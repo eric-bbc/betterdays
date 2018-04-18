@@ -214,9 +214,26 @@
       }
       .event-input{
         width: 100%;
+        text-align: center;
         input{
           font-size: 12px;
         }
+      }
+    }
+    .mobile-submit-parent{
+      display: flex;
+      align-items: center;
+      input{
+        margin: unset;
+        margin-left: unset;
+      }
+      .event-submit{
+        width: 25%;
+      }
+      .contact-submit-arrow{
+        width: 23%;
+        height: 44px;
+        left: -6rem;
       }
     }
   }
@@ -234,6 +251,7 @@
   .event-form-header{
     padding: 0.8125rem;
     color: $color-grey;
+  @include screen('small-down'){};
   }
 }
 
@@ -283,8 +301,16 @@
 
   .submit-parent{
     display: flex;
-    margin-top: 8rem;
+    // margin-top: 8rem;
     margin-bottom: 13rem;
+
+    .contact-submit-arrow{
+      left: -22px;
+      top: -17px;
+      width: 101px;
+      height: 43px;
+      background-size: cover;
+    }
   }
 
   .event-submit{
@@ -293,17 +319,19 @@
     display: inline-flex;
     background-color: transparent;
     width: 92%;
-    text-align: left;
-    margin-left: 0;
+    // text-align: left;
+    // margin-left: 0;
+
 
     &::after{
       content: "";
-      background: url(../section_assets/images/icons/rightArrow.png);
+      // background: url(../section_assets/images/icons/rightArrow.png);
       background-repeat: no-repeat;
       background-size: 4rem;
       height: 1rem;
       display: inline-block;
       width: 50%;
+      visibility: hidden;
       background-position-y: 5px;
       background-position-x: 19px;
     }

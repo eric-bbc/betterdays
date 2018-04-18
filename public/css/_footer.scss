@@ -6,6 +6,7 @@
   position: absolute;
   bottom: 0;
   background: transparent;
+  padding: 1rem 0;
 }
 
 .icon-container{
@@ -27,7 +28,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-right: 1rem;
-
+  background-color: #fff;
   .footer-socials{
     margin: auto 0;
     a{

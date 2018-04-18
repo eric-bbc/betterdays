@@ -225,6 +225,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
      loop              : true,
      transitionType    : 'move',
      controlNavigation : 'none',
+     autoHeight        : false,
 
      fullscreen        : {
        enabled         : true
@@ -422,11 +423,10 @@ if (window.location.pathname.includes('events') && $('html').hasClass('toucheven
   })
 }
 
-if (window.location.pathname.includes('info')) {
+if ($('.contact-submit-container').length) {
   $('.contact-submit-container').on('mouseenter', function(){
   $(this).children().first().animate({right: '20px'},750).animate({right: '1px'},750,animated);
   $(this).children().last().animate({left: '20px'},750).animate({left: '1px'},750,animated);
-
   })
 }
 

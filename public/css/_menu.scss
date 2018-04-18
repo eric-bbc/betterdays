@@ -23,10 +23,15 @@
   height: 100% !important;
   @include transition(all 400ms);
   @extend .event-gallery-slider;
+  max-height: 100vh;
 
   @include screen('medium-down'){
     top: 0;
   };
+
+  .menu-image-big{
+    max-height: 90vh !important;
+  }
   .rsSlide {
     opacity: 1 !important;
   }
@@ -37,6 +42,12 @@
       bottom: 1px !important;
     };
   }
+}
+
+.menu-title-big{
+  text-align: center;
+  color: $color-grey;
+  font-size: 2rem;
 }
 
 .menu-header{
@@ -63,7 +74,7 @@
   .menu-card{
     width: 30%;
     text-align: center;
-    padding: 1rem;
+    padding: 1rem 0px;
     display: flex;
     flex-direction: column;
     cursor: pointer;
@@ -117,6 +128,15 @@
   .menu-title{
     font-size: 18px;
     text-align: center;
+  }
+  .menu-title-big{
+    text-align: left;
+    margin-top: 5rem;
+  }
+  .menu-image-big{
+    position: relative;
+    top: -1rem;
+    width: 100%;
   }
 }
 

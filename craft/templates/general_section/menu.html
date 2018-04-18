@@ -7,8 +7,15 @@
 
   <div class="royalSlider rsDefault menu-slider display-none large-menu-container will-fade-in">
 
-    {% for asset in entry.menu %}
-      <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
+
+
+    {% for block in entry.menu2 %}
+    {%set imageUrl = block.menuImage.first().url%}
+      <div class="big-menu-card">
+
+        <p class="menu-title-big">{{ block.menuTitle }}</p>
+        <img class="rsImg menu-image-big" src="{{ imageUrl }}" data-index="{{ loop.index }}">
+      </div>
     {% endfor %}
   </div>
 
@@ -58,8 +65,13 @@
 
   <div class="royalSlider rsDefault menu-slider display-none ">
 
-    {% for asset in entry.menu %}
-      <img class="rsImg" src="{{ asset.url }}" data-index="{{ loop.index }}">
+    {% for block in entry.menu2 %}
+    {%set imageUrl = block.menuImage.first().url%}
+      <div class="mobile-menu-card">
+
+        <p class="menu-title-big">{{ block.menuTitle }}</p>
+        <img class=" menu-image-big" src="{{ imageUrl }}" data-index="{{ loop.index }}">
+      </div>
     {% endfor %}
   </div>
 

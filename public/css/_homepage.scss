@@ -16,9 +16,10 @@
 .homepage-container {
   color: $color-black;
   .homepage-slider {
-    width: 100% !important;
+    width: 101% !important;
     height: 74vh;
     background: $color-white;
+    left: -4px;
     .rsOverflow {
       background: $color-white;
     }
@@ -59,7 +60,7 @@
           background: url(../section_assets/images/icons/rightArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-right: 75px;
+          padding-right: 55px;
           left: -27px;
         }
       }

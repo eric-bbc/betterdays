@@ -6,7 +6,7 @@
   align-items: center;
   text-align: center;
   padding-bottom: 1rem;
-  font-size: 22px;
+  font-size: 14px;
 
   .desktop-nav-link-container{
     display: flex;
@@ -61,6 +61,13 @@
 
   .header-newsletter-signup{
     margin-bottom: 1rem;
+    input{
+      @include input-placeholder{
+        color: $color-grey;
+        font-size: 14px;
+      };
+
+    }
   }
 
   .res-button{
@@ -91,6 +98,9 @@
 
   @include screen('medium-down'){
     width: 86%;
+    @include input-placeholder{
+      color: $color-grey;
+    };
   };
 }
 

@@ -51,8 +51,10 @@
             {% endif %}
           </div>
 
-          <div class="event-input">
+          <div class="event-input mobile-submit-parent">
             <button class="event-submit" type="submit">{% if formSettings.submitButtonText %}{{ formSettings.submitButtonText }}{% else %}Submit Message{% endif %}</button>
+            <input type="image" src="{{ submitArrow.url }}" value="Subscribe" name="subscribe"  class="contact-submit-arrow">
+
           </div>
 
           <!-- <p class='mobile-success-message display-none'>Thank you for your submission!</p> -->
