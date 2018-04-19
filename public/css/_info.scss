@@ -130,14 +130,11 @@
 
 
 .contact-input{
-
   text-transform: uppercase;
-  margin: 10px 0px;
-  padding: 0rem 1rem;
+  margin: 5px 0px;
+  padding: 1rem 1rem;
   width: 96%;
   height: 25%;
-  // display: flex;
-  // flex: auto;
   box-sizing: border-box;
   font-size: medium;
   text-align: left;
@@ -162,7 +159,7 @@
   color: $color-grey !important;
   margin: 0 auto;
   background-color: $color-white !important;
-  width: 47%;
+  width: 29%;
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize;
@@ -184,12 +181,11 @@
 
 .contact-textarea {
   text-transform: uppercase;
-  margin: 10px 0px;
+  margin: 3px 0px;
   padding: 1rem 1rem;
   width: 96%;
-  display: flex;
-  flex: auto;
   font-size: medium;
+  max-height: 11.1rem;
   &::-webkit-input-placeholder {
     color: $color-grey;
   }

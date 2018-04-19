@@ -136,7 +136,7 @@
 .mobile-nav{
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -145,12 +145,13 @@
   height: $navbar-nav-height-mobile;
 
   .burger{
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     background-image: url('../section_assets/images/icons/burger.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    margin-left: 14px;
   }
 
   .mobile-logo{
@@ -171,9 +172,9 @@
   background: $color-white;
   width: 100%;
   position: fixed;
-  top: 5rem;
+  top: 4.9rem;
   @include transition(transform 400ms);
-  transform: translateX(-100%);
+  transform: translateX(-103%);
 
   &.open{
     transform: translateX(-8px);

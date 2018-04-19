@@ -71,7 +71,8 @@ body {
   overflow-y: hidden; }
   @media only screen and (max-width: 991px) {
     body {
-      overflow-y: unset; } }
+      overflow-y: unset;
+      margin: 0; } }
 
 #content {
   min-height: Calc(100% - 143px); }
@@ -4118,8 +4119,8 @@ large-up-push-one-third
 
 .contact-input, .event-form input, .event-form .event-submit {
   text-transform: uppercase;
-  margin: 10px 0px;
-  padding: 0rem 1rem;
+  margin: 5px 0px;
+  padding: 1rem 1rem;
   width: 96%;
   height: 25%;
   box-sizing: border-box;
@@ -4144,7 +4145,7 @@ large-up-push-one-third
   color: #9b9b9b !important;
   margin: 0 auto;
   background-color: #fff !important;
-  width: 47%;
+  width: 29%;
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize; }
@@ -4163,12 +4164,11 @@ large-up-push-one-third
 
 .contact-textarea {
   text-transform: uppercase;
-  margin: 10px 0px;
+  margin: 3px 0px;
   padding: 1rem 1rem;
   width: 96%;
-  display: flex;
-  flex: auto;
-  font-size: medium; }
+  font-size: medium;
+  max-height: 11.1rem; }
   .contact-textarea::-webkit-input-placeholder {
     color: #9b9b9b; }
 
@@ -4492,13 +4492,13 @@ large-up-push-one-third
     margin-left: -5rem; }
 
 .mobile-gallery-container .royalSlider {
-  width: 100%; }
+  width: 100%;
+  left: -8px; }
   .mobile-gallery-container .royalSlider .rsOverflow {
     width: 100% !important;
     height: 100% !important; }
 
 .mobile-event-slide-image {
-  width: auto !important;
   height: 100% !important;
   margin-left: 0px !important; }
 
@@ -4515,7 +4515,7 @@ large-up-push-one-third
   @media only screen and (max-width: 991px) {
     .art-collection-grid {
       overflow-y: auto;
-      height: unset; } }
+      height: 82vh; } }
   .art-collection-grid .section-container {
     flex: 0 0 auto; }
   .art-collection-grid .row {
@@ -4644,8 +4644,24 @@ large-up-push-one-third
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 95%;
+  top: 92%;
   cursor: crosshair; }
+  @media only screen and (max-width: 991px) {
+    .art-collection-scroll-arrow {
+      display: none; } }
+
+.mobile-art-copy {
+  color: #9b9b9b;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly; }
+  .mobile-art-copy .mobile-art-span {
+    background: url(../section_assets/images/icons/rightArrow.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    width: 4rem;
+    line-height: 1rem;
+    background-size: 4rem; }
 
 /* v1.0.6 */
 /* Core RS CSS file. 95% of time you shouldn't change anything here. */
@@ -5209,16 +5225,13 @@ img.rsImg {
 .rsDefault .rsFullscreenIcn {
   display: block;
   margin: 6px;
-  width: 32px;
-  height: 32px;
+  width: 26px;
+  height: 30px;
   background: url(rs-default.png) 0 0;
   background-color: #000;
   background-color: rgba(0, 0, 0, 0.75);
   *background-color: #000;
   border-radius: 2px; }
-
-.rsDefault .rsFullscreenIcn:hover {
-  background-color: rgba(0, 0, 0, 0.9); }
 
 .rsDefault.rsFullscreen .rsFullscreenIcn {
   background-position: -32px 0; }
@@ -5366,17 +5379,27 @@ img.rsImg {
     padding-left: 0;
     cursor: pointer; }
   .room-toggles .active {
-    text-decoration: underline; }
+    position: relative; }
+    .room-toggles .active:after {
+      content: '';
+      width: 73%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-color: #9b9b9b;
+      border-width: 0 0 1px;
+      border-style: solid; }
   @media only screen and (max-width: 767px) {
     .room-toggles {
       display: none; } }
 
 .mobile-view-form-toggle, .mobile-view-gallery-toggle {
   color: #9b9b9b;
-  padding-left: 22px; }
+  padding-left: 14px; }
 
 .mobile-toggle-container {
-  padding-left: 22px; }
+  padding-left: 14px;
+  padding-bottom: 1rem; }
 
 .mobile-room-toggles .room-toggle {
   color: #9b9b9b;
@@ -5387,7 +5410,16 @@ img.rsImg {
   .mobile-room-toggles .room-toggle:first-child {
     padding-left: unset; }
   .mobile-room-toggles .room-toggle.active {
-    text-decoration: underline; }
+    position: relative; }
+    .mobile-room-toggles .room-toggle.active:after {
+      content: '';
+      width: 73%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-color: #9b9b9b;
+      border-width: 0 0 1px;
+      border-style: solid; }
 
 .event-gallery-slider, .menu-slider {
   z-index: 10;
@@ -5427,8 +5459,8 @@ img.rsImg {
     -webkit-transition: opacity 0.6s ease-in-out 0s;
     transition: opacity 0.6s ease-in-out 0s; }
   .event-gallery-slider .rsFullscreenIcn, .menu-slider .rsFullscreenIcn {
-    height: 32px;
-    width: 32px;
+    height: 26px;
+    width: 30px;
     background-image: url(../section_assets/images/icons/grey_close.png);
     background-repeat: no-repeat;
     background-position: 0px 0px !important;
@@ -5503,14 +5535,15 @@ img.rsImg {
       padding-left: 0; } }
   .event-form-subcontainer .event-form-header {
     padding: 0.8125rem;
-    color: #9b9b9b; }
+    color: #9b9b9b;
+    font-size: 24px; }
 
 .event-form {
   border: none;
   padding-top: 3rem; }
   .event-form .event-fieldset {
     border: none !important;
-    padding-left: 0; }
+    padding: 0; }
   .event-form input {
     padding: 1rem 1rem;
     font-family: inherit;
@@ -5531,10 +5564,10 @@ img.rsImg {
         height: 6.7rem; }
   .event-form .submit-parent {
     display: flex;
-    margin-bottom: 13rem; }
+    margin-bottom: 13rem;
+    width: 30%; }
     .event-form .submit-parent .contact-submit-arrow {
-      left: -22px;
-      top: -17px;
+      top: 0px;
       width: 101px;
       height: 43px;
       background-size: cover; }
@@ -5681,7 +5714,7 @@ img.rsImg {
 .mobile-nav {
   display: flex;
   justify-content: space-between;
-  padding: 0.8rem 0;
+  padding: 0.7rem 0;
   position: fixed;
   top: 0;
   z-index: 1;
@@ -5689,12 +5722,13 @@ img.rsImg {
   width: 100%;
   height: 55px; }
   .mobile-nav .burger {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     background-image: url("../section_assets/images/icons/burger.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center; }
+    background-position: center;
+    margin-left: 14px; }
   .mobile-nav .mobile-logo {
     max-width: 100px;
     margin-right: 1rem; }
@@ -5710,10 +5744,10 @@ img.rsImg {
   background: #fff;
   width: 100%;
   position: fixed;
-  top: 5rem;
+  top: 4.9rem;
   -webkit-transition: transform 400ms ease-in-out 0s;
   transition: transform 400ms ease-in-out 0s;
-  transform: translateX(-100%); }
+  transform: translateX(-103%); }
   .mobile-nav-link-container.open {
     transform: translateX(-8px); }
   .mobile-nav-link-container .mobile-nav-link {

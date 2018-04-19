@@ -55,7 +55,18 @@
   }
 
   .active{
-    text-decoration: underline;
+    // text-decoration: underline;
+    position: relative;
+    &:after{
+      content: '';
+      width: 73%;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      border-color: $color-grey;
+      border-width: 0 0 1px;
+      border-style: solid;
+    }
   }
   @include screen('small-down'){
     display: none;
@@ -64,11 +75,12 @@
 
 .mobile-view-form-toggle, .mobile-view-gallery-toggle{
   color: $color-grey;
-  padding-left: 22px;
+  padding-left: 14px;
 }
 
 .mobile-toggle-container{
-  padding-left: 22px;
+  padding-left: 14px;
+  padding-bottom: 1rem;
 }
 .mobile-room-toggles{
   .room-toggle{
@@ -81,7 +93,18 @@
     font-size: 16px;
     padding: 0 1rem;
     &.active{
-      text-decoration: underline;
+      // text-decoration: underline;
+      position: relative;
+      &:after{
+        content: '';
+        width: 73%;
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        border-color: $color-grey;
+        border-width: 0 0 1px;
+        border-style: solid;
+      }
     }
   }
 }
@@ -138,8 +161,8 @@
 
 
     .rsFullscreenIcn{
-      height: 32px;
-      width: 32px;
+      height: 26px;
+      width: 30px;
       background-image: url(../section_assets/images/icons/grey_close.png);
       background-repeat: no-repeat;
       background-position: 0px 0px !important;
@@ -251,14 +274,15 @@
   .event-form-header{
     padding: 0.8125rem;
     color: $color-grey;
-  @include screen('small-down'){};
+    font-size: 24px;
   }
 }
 
 .event-form{
   .event-fieldset{
     border: none !important;
-    padding-left: 0;
+    // padding-left: 0;
+    padding: 0;
   }
   // padding-left: 7rem;
   @extend .contact-form;
@@ -301,12 +325,10 @@
 
   .submit-parent{
     display: flex;
-    // margin-top: 8rem;
     margin-bottom: 13rem;
-
+    width: 30%;
     .contact-submit-arrow{
-      left: -22px;
-      top: -17px;
+      top: 0px;
       width: 101px;
       height: 43px;
       background-size: cover;

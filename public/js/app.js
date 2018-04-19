@@ -201,7 +201,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
 
     $('.mobile-event-gallery-slider').royalSlider({
       imageScaleMode    : 'fit',
-      imageAlignCenter  : true,
+      imageAlignCenter  : false,
       controlNavigation : 'none',
       navigateByClick   : true,
       arrowsNav         : true,
@@ -209,7 +209,13 @@ var homepageSlider = $('.homepage-slider').royalSlider({
       loop              : true,
       transitionType    : 'move',
       addActiveClass    : true,
-      autoHeight        : false
+      autoHeight        : false,
+      slidesSpacing     : 8,
+      visibleNearby     : {
+        enabled         :  true,
+        centerArea      : 0.9,
+        center          : false
+      }
      }).data('royalSlider');
 
 
@@ -342,6 +348,11 @@ $('.art-collection-scroll-arrow').on('click', function(){
   $('.art-collection-grid').animate({scrollLeft: leftPos + 600}, 800)
 })
 
+$('.mobile-art-span').on('click', function(){
+  var leftPos = $('.art-collection-grid').scrollLeft();
+  $('.art-collection-grid').animate({scrollLeft: leftPos + 600}, 800)
+})
+
 
  ///////////////////////////////////////////
  //        Modal Logic                   //
@@ -369,7 +380,7 @@ setTimeout(function(){
 
 
 function animated() {
-    $('.art-collection-scroll-arrow').animate({top: '95.6%',right: '1px'},750).animate({top: '95%', right: '20px'},750,animated);
+    $('.art-collection-scroll-arrow').animate({top: '93.6%',right: '1rem'},900).animate({top: '93%', right: '3rem'},900,animated);
 }
 
 // function addFades() {       FIX ME!!!!!!!

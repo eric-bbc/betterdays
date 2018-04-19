@@ -5,7 +5,8 @@ body {
   overflow-y: hidden;
   @include screen('medium-down'){
     overflow-y: unset;
-  };
+    margin: 0;
+  }
 }
 
 #content {

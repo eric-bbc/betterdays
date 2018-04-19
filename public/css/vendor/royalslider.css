@@ -592,8 +592,8 @@ img.rsImg {
 .rsDefault .rsFullscreenIcn {
 	display: block;
 	margin: 6px;
-	width: 32px;
-	height: 32px;
+	width: 26px;
+	height: 30px;
 
 	background: url(rs-default.png) 0 0;
 	background-color: #000;
@@ -603,7 +603,7 @@ img.rsImg {
 
 }
 .rsDefault .rsFullscreenIcn:hover {
-	background-color: rgba(0,0,0,0.9);
+	/* background-color: rgba(0,0,0,0.9); */
 }
 .rsDefault.rsFullscreen .rsFullscreenIcn {
 	background-position: -32px 0;

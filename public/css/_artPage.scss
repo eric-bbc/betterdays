@@ -12,7 +12,7 @@
   overflow-y: hidden;
   @include screen('medium-down'){
     overflow-y: auto;
-    height: unset;
+    height: 82vh;
   };
 
   .section-container{
@@ -201,6 +201,24 @@
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 95%;
+  top: 92%;
   cursor: crosshair;
+  @include screen('medium-down'){
+    display: none;
+  };
+}
+
+.mobile-art-copy{
+  color: $color-grey;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  .mobile-art-span{
+    background: url(../section_assets/images/icons/rightArrow.png);
+    background-repeat: no-repeat;
+    background-position: 0;
+    width: 4rem;
+    line-height: 1rem;
+    background-size: 4rem;
+  }
 }
