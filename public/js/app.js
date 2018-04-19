@@ -365,9 +365,6 @@ $button.on('click', function (){
 } )
 
 
-
-
-
 setTimeout(function(){
   if (!$.cookie('site_visited')) {
     $('.ot-modal').toggleClass('invisible visible');

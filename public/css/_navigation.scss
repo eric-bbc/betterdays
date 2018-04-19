@@ -172,12 +172,12 @@
   background: $color-white;
   width: 100%;
   position: fixed;
-  top: 4.9rem;
+  top: 4.8rem;
   @include transition(transform 400ms);
   transform: translateX(-103%);
 
   &.open{
-    transform: translateX(-8px);
+    transform: translateX(0px);
   }
 
 

@@ -3,10 +3,28 @@ body {
   font-family: 'Basis Grotesque';
   min-height: 100vh;
   overflow-y: hidden;
+  @include screen('medium-up'){
+    display: flex;
+    align-items: center;
+
+  };
+
   @include screen('medium-down'){
     overflow-y: unset;
     margin: 0;
   }
+}
+
+#header{
+  @include screen('medium-up'){
+    position: fixed;
+    top: 0;
+    width: 100%;
+  };
+}
+
+#container{
+  width: 100%;
 }
 
 #content {

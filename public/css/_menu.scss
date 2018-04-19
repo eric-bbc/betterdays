@@ -36,10 +36,17 @@
     opacity: 1 !important;
   }
 
+  .rsArrow{
+    .rsArrowIcn{
+      background-size: 76% !important;
+    }
+  }
+
   .rsArrowIcn{
     @include screen('small-down'){
       top: auto !important;
       bottom: 1px !important;
+      // background-size: 76% !important;
     };
   }
 }
@@ -132,6 +139,8 @@
   .menu-title-big{
     text-align: left;
     margin-top: 5rem;
+    font-size: 24px;
+    padding-left: 8px;
   }
   .menu-image-big{
     position: relative;

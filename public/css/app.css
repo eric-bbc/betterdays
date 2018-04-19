@@ -69,10 +69,23 @@ body {
   font-family: 'Basis Grotesque';
   min-height: 100vh;
   overflow-y: hidden; }
+  @media only screen and (min-width: 992px) {
+    body {
+      display: flex;
+      align-items: center; } }
   @media only screen and (max-width: 991px) {
     body {
       overflow-y: unset;
       margin: 0; } }
+
+@media only screen and (min-width: 992px) {
+  #header {
+    position: fixed;
+    top: 0;
+    width: 100%; } }
+
+#container {
+  width: 100%; }
 
 #content {
   min-height: Calc(100% - 143px); }
@@ -4225,6 +4238,8 @@ large-up-push-one-third
     max-height: 90vh !important; }
   .menu-slider .rsSlide {
     opacity: 1 !important; }
+  .menu-slider .rsArrow .rsArrowIcn {
+    background-size: 76% !important; }
   @media only screen and (max-width: 767px) {
     .menu-slider .rsArrowIcn {
       top: auto !important;
@@ -4286,7 +4301,9 @@ large-up-push-one-third
     text-align: center; }
   .mobile-menu-container .menu-title-big {
     text-align: left;
-    margin-top: 5rem; }
+    margin-top: 5rem;
+    font-size: 24px;
+    padding-left: 8px; }
   .mobile-menu-container .menu-image-big {
     position: relative;
     top: -1rem;
@@ -4312,9 +4329,9 @@ large-up-push-one-third
   width: 47%;
   max-height: 2rem; }
   .icon-container img {
-    height: 100%;
+    height: 72%;
     position: absolute;
-    bottom: 3px; }
+    bottom: 13px; }
 
 .footer-content {
   font-size: 12px;
@@ -4382,7 +4399,8 @@ large-up-push-one-third
       font-size: 14x; }
       @media only screen and (max-width: 991px) {
         .ot-modal .modal-newsletter-form #mc_embed_signup_scroll {
-          flex-direction: column; } }
+          flex-direction: column;
+          text-align: center; } }
       .ot-modal .modal-newsletter-form #mc_embed_signup_scroll h2 {
         font-weight: normal; }
     .ot-modal .modal-newsletter-form .left-side, .ot-modal .modal-newsletter-form .right-side {
@@ -4391,7 +4409,12 @@ large-up-push-one-third
         .ot-modal .modal-newsletter-form .left-side, .ot-modal .modal-newsletter-form .right-side {
           width: 100%; } }
     .ot-modal .modal-newsletter-form .right-side {
-      margin-top: 5rem; }
+      margin-top: 3.8rem; }
+      .ot-modal .modal-newsletter-form .right-side .news-checkbox-container {
+        padding-top: 1rem; }
+        @media only screen and (max-width: 991px) {
+          .ot-modal .modal-newsletter-form .right-side .news-checkbox-container {
+            text-align: left; } }
     .ot-modal .modal-newsletter-form .modal-newsletter-input {
       background-color: #f4f4f4;
       border: none;
@@ -4432,6 +4455,9 @@ large-up-push-one-third
       width: 18%;
       padding-right: 2rem;
       padding-left: 1rem; }
+      @media only screen and (max-width: 991px) {
+        .ot-modal .modal-newsletter-form .modal-newsletter-arrow {
+          margin-right: 2rem; } }
 
 .slider-container {
   width: 100vw; }
@@ -5213,8 +5239,8 @@ img.rsImg {
 *
 ****************/
 .rsDefault .rsFullscreenBtn {
-  right: 16px;
-  top: 22px;
+  right: -4px;
+  top: 4px;
   width: 44px;
   height: 44px;
   z-index: 22;
@@ -5358,7 +5384,8 @@ img.rsImg {
 
 .room-title {
   color: #9b9b9b;
-  padding: 0.8125rem; }
+  padding: 0.8125rem;
+  font-size: 24px; }
   @media only screen and (max-width: 767px) {
     .room-title {
       display: none;
@@ -5529,7 +5556,8 @@ img.rsImg {
 .event-form-subcontainer {
   display: flex;
   padding-left: 10%;
-  flex-direction: column; }
+  flex-direction: column;
+  min-height: 51vh; }
   @media only screen and (max-width: 767px) {
     .event-form-subcontainer {
       padding-left: 0; } }
@@ -5744,12 +5772,12 @@ img.rsImg {
   background: #fff;
   width: 100%;
   position: fixed;
-  top: 4.9rem;
+  top: 4.8rem;
   -webkit-transition: transform 400ms ease-in-out 0s;
   transition: transform 400ms ease-in-out 0s;
   transform: translateX(-103%); }
   .mobile-nav-link-container.open {
-    transform: translateX(-8px); }
+    transform: translateX(0px); }
   .mobile-nav-link-container .mobile-nav-link {
     width: 100%;
     font-size: 28px;
@@ -5802,7 +5830,7 @@ img.rsImg {
         background: url(../section_assets/images/icons/leftArrow.png);
         background-repeat: no-repeat;
         background-position: center;
-        padding-left: 44px; }
+        padding-left: 71px; }
     .homepage-container .homepage-slider .rsArrowRight {
       margin-right: 20px; }
       .homepage-container .homepage-slider .rsArrowRight .rsArrowIcn {
