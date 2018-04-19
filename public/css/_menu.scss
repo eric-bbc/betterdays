@@ -29,6 +29,14 @@
     top: 0;
   };
 
+  .rsFullscreenBtn{
+    right: -9px;
+    .rsFullscreenIcn{
+      height: 20px;
+      width: 20px;
+    }
+  }
+
   .menu-image-big{
     max-height: 90vh !important;
   }
@@ -41,12 +49,18 @@
       background-size: 76% !important;
     }
   }
+  .rsArrowRight{
+    .rsArrowIcn{
+      padding-right: 0 !important;
+      background-position: 0px 0px !important;
+      left: 11px !important;
+    }
+  }
 
   .rsArrowIcn{
     @include screen('small-down'){
       top: auto !important;
       bottom: 1px !important;
-      // background-size: 76% !important;
     };
   }
 }

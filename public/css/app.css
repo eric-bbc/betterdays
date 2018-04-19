@@ -94,7 +94,7 @@ body {
       padding-top: 75px; } }
 
 .page-container {
-  width: 90%;
+  width: 96%;
   margin: 0 auto; }
   @media only screen and (max-width: 767px) {
     .page-container {
@@ -4234,12 +4234,21 @@ large-up-push-one-third
   @media only screen and (max-width: 991px) {
     .menu-slider {
       top: 0; } }
+  .menu-slider .rsFullscreenBtn {
+    right: -9px; }
+    .menu-slider .rsFullscreenBtn .rsFullscreenIcn {
+      height: 20px;
+      width: 20px; }
   .menu-slider .menu-image-big {
     max-height: 90vh !important; }
   .menu-slider .rsSlide {
     opacity: 1 !important; }
   .menu-slider .rsArrow .rsArrowIcn {
     background-size: 76% !important; }
+  .menu-slider .rsArrowRight .rsArrowIcn {
+    padding-right: 0 !important;
+    background-position: 0px 0px !important;
+    left: 11px !important; }
   @media only screen and (max-width: 767px) {
     .menu-slider .rsArrowIcn {
       top: auto !important;
@@ -4531,6 +4540,10 @@ large-up-push-one-third
 .art-collection-container {
   max-height: 100vh;
   height: 100%; }
+  @media only screen and (min-width: 992px) {
+    .art-collection-container {
+      position: absolute;
+      top: 14%; } }
 
 .art-collection-grid {
   height: 95vh;
@@ -4670,7 +4683,7 @@ large-up-push-one-third
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 92%;
+  top: 82%;
   cursor: crosshair; }
   @media only screen and (max-width: 991px) {
     .art-collection-scroll-arrow {
@@ -5472,9 +5485,11 @@ img.rsImg {
     background: url(../section_assets/images/icons/rightArrow.png);
     background-repeat: no-repeat;
     background-color: transparent;
-    background-position: -24px 0px !important;
     padding-right: 21px;
     left: 0; }
+    @media only screen and (min-width: 992px) {
+      .event-gallery-slider .rsArrowRight .rsArrowIcn, .menu-slider .rsArrowRight .rsArrowIcn {
+        background-position: -24px 0px !important; } }
   
   .event-gallery-slider .rsSlide,
   .menu-slider .rsSlide {

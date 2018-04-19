@@ -2,6 +2,11 @@
 .art-collection-container{
   max-height: 100vh;
   height: 100%;
+  @include screen('medium-up'){
+    position: absolute;
+    top: 14%;
+  };
+
 }
 
 .art-collection-grid{
@@ -201,7 +206,7 @@
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 92%;
+  top: 82%;
   cursor: crosshair;
   @include screen('medium-down'){
     display: none;

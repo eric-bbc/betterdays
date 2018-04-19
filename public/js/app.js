@@ -377,7 +377,7 @@ setTimeout(function(){
 
 
 function animated() {
-    $('.art-collection-scroll-arrow').animate({top: '93.6%',right: '1rem'},900).animate({top: '93%', right: '3rem'},900,animated);
+    $('.art-collection-scroll-arrow').animate({top: '82.6%',right: '1rem'},900).animate({top: '82%', right: '3rem'},900,animated);
 }
 
 // function addFades() {       FIX ME!!!!!!!
