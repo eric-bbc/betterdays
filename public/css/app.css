@@ -4673,7 +4673,7 @@ large-up-push-one-third
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;
-  right: 0;
+  right: 12px;
   top: 50%; }
 
 .art-collection-scroll-arrow {
@@ -4684,7 +4684,7 @@ large-up-push-one-third
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 82%;
+  top: 78%;
   cursor: crosshair; }
   @media only screen and (max-width: 991px) {
     .art-collection-scroll-arrow {
@@ -5411,7 +5411,7 @@ img.rsImg {
   font-size: 27px; }
 
 .room-toggles {
-  padding: 0.8125rem; }
+  padding: 1.8125rem; }
   .room-toggles a {
     text-decoration: none;
     color: #9b9b9b;
@@ -5579,7 +5579,7 @@ img.rsImg {
     .event-form-subcontainer {
       padding-left: 0; } }
   .event-form-subcontainer .event-form-header {
-    padding: 0.8125rem;
+    padding: 1.8125rem;
     color: #9b9b9b;
     font-size: 24px; }
 
@@ -5758,7 +5758,8 @@ img.rsImg {
 .arrow-container {
   border-bottom: 1px solid #9b9b9b; }
   .arrow-container .nav-newsletter-submit {
-    padding-top: 8px; }
+    padding-top: 8px;
+    padding-left: 1rem; }
 
 .mobile-nav {
   display: flex;
@@ -5859,7 +5860,7 @@ img.rsImg {
         background-repeat: no-repeat;
         background-position: center;
         padding-right: 55px;
-        left: -27px; }
+        left: -39px; }
     .homepage-container .homepage-slider .visibleNearby .rsSlide img {
       opacity: 0.6; }
 
