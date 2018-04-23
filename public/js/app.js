@@ -366,28 +366,6 @@ function animated() {
     $('.art-collection-scroll-arrow').animate({top: '78.6%',right: '1rem'},900).animate({top: '78%', right: '3rem'},900,animated);
 }
 
-// function addFades() {       FIX ME!!!!!!!
-//   var $lazy = $(".will-fade-in");
-//   var activeClass = "will-fade-in--active";
-// var threshold = 3;
-//
-//   $(window).on("scroll", function(){
-//
-//     $lazy.each(function(index, item){
-//
-//         var pos = $(item).scrollLeft();
-//         var scrollLeft = $(window).scrollLeft();
-//         console.log(pos);
-//         console.log(scrollLeft);
-//
-//         if( (scrollLeft + threshold) >= pos && !$(item).hasClass(activeClass) ){
-//             $(item).addClass(activeClass)
-//         }
-//
-//     });
-//
-// });
-// }
 
 if (window.location.pathname == "/art-collection") {
   $('.top-item').each(function(i){

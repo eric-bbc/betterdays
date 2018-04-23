@@ -5411,7 +5411,8 @@ img.rsImg {
   font-size: 27px; }
 
 .room-toggles {
-  padding: 1.8125rem; }
+  padding: 1.8125rem;
+  padding-left: 0.8125rem; }
   .room-toggles a {
     text-decoration: none;
     color: #9b9b9b;
@@ -5580,6 +5581,7 @@ img.rsImg {
       padding-left: 0; } }
   .event-form-subcontainer .event-form-header {
     padding: 1.8125rem;
+    padding-left: 0;
     color: #9b9b9b;
     font-size: 24px; }
 
@@ -5754,6 +5756,8 @@ img.rsImg {
 .mobile-nav-newsletter-signup {
   position: relative;
   top: 2rem; }
+  .mobile-nav-newsletter-signup .nav-newsletter-submit {
+    padding-left: 0 !important; }
 
 .arrow-container {
   border-bottom: 1px solid #9b9b9b; }
