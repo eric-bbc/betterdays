@@ -10,11 +10,14 @@
  #}
 
 {% set submitArrow = icons.rightArrowGrey.first() %}
+{% set footerIcon = icons.footerIcon.first().url %}
+
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
 <head>
 	<meta charset="utf-8" />
-	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<!-- <title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title> -->
+	<title>Better Days</title>
 	<link rel="home" href="{{ siteUrl }}" />
 
 
@@ -22,6 +25,7 @@
   <link rel="stylesheet" href="/css/vendor/animate.css">
   <link rel="stylesheet" href="/css/vendor/aos.css">
   <link href="/css/app.css" rel="stylesheet" type="text/css"  media="all" />
+  <link rel="icon" href="{{ footerIcon }}" type="image/x-icon" />
 
 
   <script src="/js/vendor/modernizr-custom-min.js"></script>

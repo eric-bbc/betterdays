@@ -1,11 +1,11 @@
 
-{% set footerIcon = icons.footerIcon.first() %}
+{% set footerIcon = icons.footerIcon.first().url %}
 
 {% block content %}
 
 
 <div class="icon-container">
-  <img src="{{ footerIcon.url }}" alt="">
+  <img src="{{ footerIcon }}" alt="">
 </div>
 
 
