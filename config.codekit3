@@ -30392,6 +30392,13 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/35\/35b30e176baf6cd5c702e46e764d1b1ac77456863998808013ff6c09a7fa120c.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/35\/35e031a6f5a4f46b3a71ebbbae561202eddacb31c19f4de0a1a566443ca14a05.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/35\/35e031a6f5a4f46b3a71ebbbae561202eddacb31c19f4de0a1a566443ca14a05.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/37\/37fd616b7825fd5e6630b4cb6c94412686b97963e7d70b92f318655ca888a3d1.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -32942,7 +32949,7 @@
 		},
 	"\/public\/section_assets\/images\/icons\/BD_footer_icon.png": {
 		"ft": 32768,
-		"iS": 3630,
+		"iS": 809,
 		"oA": 0,
 		"oAP": "\/public\/section_assets\/images\/icons\/BD_footer_icon.png",
 		"oF": 0,
