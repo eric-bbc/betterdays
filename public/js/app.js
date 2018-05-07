@@ -363,7 +363,7 @@ setTimeout(function(){
 
 
 function animated() {
-    $('.art-collection-scroll-arrow').animate({top: '78.6%',right: '1rem'},900).animate({top: '78%', right: '3rem'},900,animated);
+    $('.art-collection-scroll-arrow').animate({top: '90.6%',right: '1rem'},900).animate({top: '90%', right: '3rem'},900,animated);
 }
 
 

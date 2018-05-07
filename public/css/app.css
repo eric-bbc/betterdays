@@ -4149,7 +4149,7 @@ large-up-push-one-third
 .contact-input, .event-form input, .event-form .event-submit {
   text-transform: uppercase;
   margin: 5px 0px;
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
   width: 96%;
   height: 25%;
   box-sizing: border-box;
@@ -4165,7 +4165,8 @@ large-up-push-one-third
   background-size: 4rem; }
 
 .contact-submit-container {
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  min-height: 9rem; }
 
 .contact-submit, .event-form .event-submit {
   position: relative;
@@ -4192,10 +4193,12 @@ large-up-push-one-third
 
 .contact-textarea {
   text-transform: uppercase;
-  margin: 3px 0px;
-  padding: 1rem 1rem;
+  margin: 5px 0px;
+  padding: 0rem 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   width: 96%;
-  max-height: 11.1rem; }
+  min-height: 9.9rem; }
   .contact-textarea::-webkit-input-placeholder {
     color: #9b9b9b; }
 
@@ -4696,7 +4699,7 @@ large-up-push-one-third
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 78%;
+  top: 90%;
   cursor: crosshair; }
   @media only screen and (max-width: 991px) {
     .art-collection-scroll-arrow {
@@ -4707,6 +4710,9 @@ large-up-push-one-third
   text-align: center;
   display: flex;
   justify-content: space-evenly; }
+  @media only screen and (min-width: 992px) {
+    .mobile-art-copy {
+      display: none; } }
   .mobile-art-copy .mobile-art-span {
     background: url(../section_assets/images/icons/rightArrow.png);
     background-repeat: no-repeat;

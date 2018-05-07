@@ -211,7 +211,7 @@
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 78%;
+  top: 90%;
   cursor: crosshair;
   @include screen('medium-down'){
     display: none;
@@ -219,6 +219,9 @@
 }
 
 .mobile-art-copy{
+  @include screen('medium-up'){
+    display: none;
+  };
   color: $color-grey;
   text-align: center;
   display: flex;

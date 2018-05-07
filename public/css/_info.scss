@@ -145,7 +145,7 @@
 .contact-input{
   text-transform: uppercase;
   margin: 5px 0px;
-  padding: 1rem 1rem;
+  padding: 0rem 1rem;
   width: 96%;
   height: 25%;
   box-sizing: border-box;
@@ -163,6 +163,7 @@
 }
 .contact-submit-container{
   padding-top: 1rem;
+  min-height: 9rem;
 }
 
 .contact-submit {
@@ -193,10 +194,13 @@
 
 .contact-textarea {
   text-transform: uppercase;
-  margin: 3px 0px;
-  padding: 1rem 1rem;
+  margin: 5px 0px;
+  padding: 0rem 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
   width: 96%;
-  max-height: 11.1rem;
+  min-height: 9.9rem;
+
   &::-webkit-input-placeholder {
     color: $color-grey;
   }
