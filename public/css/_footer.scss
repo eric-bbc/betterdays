@@ -3,9 +3,9 @@
   flex-direction: row;
   width: 100%;
   justify-content: flex-end;
-  position: absolute;
+  // position: absolute;
   bottom: 0;
-  background: transparent;
+  background: white;
   padding: 1rem 0;
 }
 
@@ -13,10 +13,7 @@
   width: 47%;
   max-height: 2rem;
   img{
-    height: 72%;
-    position: absolute;
-    bottom: 13px;
-
+    max-height: 100%;
   }
 }
 

@@ -3,8 +3,8 @@
   max-height: 100vh;
   height: 100%;
   @include screen('medium-up'){
-    position: absolute;
-    top: 14%;
+    // position: absolute;
+    // top: 14%;
   };
 
 }
@@ -40,6 +40,9 @@
     &.bottom{
       // margin-top: 5rem;
       // border: 2px solid red;
+    }
+    .bottom-item{
+      margin-top: 2rem;
     }
   }
 
@@ -127,6 +130,8 @@
   };
   .artwork-image{
     max-height: 50rem;
+    height: 80%;
+    width: 80%;
   }
 }
 
@@ -168,7 +173,7 @@
     }
   }
   .artist-info{
-    margin-left: unset;
+     margin: 0 1rem;
     p{
       padding-left: unset;
     }

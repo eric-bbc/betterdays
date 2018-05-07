@@ -2,22 +2,27 @@ body {
   background-color: #fff;
   font-family: 'Basis Grotesque';
   min-height: 100vh;
-  overflow-y: hidden;
+  // overflow-y: hidden;
   @include screen('medium-up'){
+    font-size: 12px;
     display: flex;
     align-items: center;
 
   };
 
   @include screen('medium-down'){
-    overflow-y: unset;
+    // overflow-y: unset;
     margin: 0;
+    font-size: 10px;
   }
+  @include screen('small-down'){
+    font-size: 12px;
+  };
 }
 
 #header{
   @include screen('medium-up'){
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
   };
@@ -25,16 +30,18 @@ body {
 
 #container{
   width: 100%;
+  top: 0;
+  // position: absolute;
 }
 
 #content {
-  min-height: Calc(100% - #{143px});
+  // margin-top: 6rem;
+  min-height: Calc(96vh - #{143px});
+  display: flex;
+  align-items: center;
   @include screen('medium-down'){
-    // padding-top:$navbar-nav-height-mobile
     padding-top:75px;
-    // text-align: center;
-
-
+    margin-top: 0rem;
   };
 }
 
@@ -42,6 +49,7 @@ body {
 .page-container {
   width: 96%;
   margin: 0 auto;
+  margin-top: 1rem;
   @include screen('small-down'){
     min-height: 100vh;
   };

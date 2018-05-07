@@ -18,9 +18,21 @@
 }
 
 .info-parent{
-  // max-width: 85%;
+  width: 80%;
   margin: 0 auto;
-  // margin-top: 5rem;
+  // font-size: 12px;
+  display: flex;
+  .info-left{
+    @include screen('small-up'){
+      width: 45%
+    };
+  }
+  .info-right{
+    @include screen('small-up'){
+      width: 45%
+    };
+  }
+
 }
 
 .info-body-container {
@@ -92,8 +104,9 @@
 
 
 .info-grid {
-  display: inline-table;
-  padding-left: 5rem;
+  display:flex;
+  flex-wrap: wrap;
+  padding-left: 3rem;
   border-left: 1px solid $color-grey;
   @include border-fix;
 
@@ -109,7 +122,7 @@
     padding-left: 2rem;
     box-sizing: border-box;
     color: $color-grey;
-    @include screen('small-down'){
+    @include screen('medium-down'){
       width: 100%;
       padding-left: 0rem;
     };
@@ -121,8 +134,8 @@
   }
   .info-detail{
     position: relative;
-    top: -10px;
-    line-height: 21px;
+    top: -5px;
+    // line-height: 21px;
   }
 }
 
@@ -136,7 +149,6 @@
   width: 96%;
   height: 25%;
   box-sizing: border-box;
-  font-size: medium;
   text-align: left;
   &::-webkit-input-placeholder {
     color: $color-grey;
@@ -159,7 +171,7 @@
   color: $color-grey !important;
   margin: 0 auto;
   background-color: $color-white !important;
-  width: 29%;
+  width: 50%;
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize;
@@ -184,7 +196,6 @@
   margin: 3px 0px;
   padding: 1rem 1rem;
   width: 96%;
-  font-size: medium;
   max-height: 11.1rem;
   &::-webkit-input-placeholder {
     color: $color-grey;
