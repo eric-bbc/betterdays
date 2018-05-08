@@ -22,6 +22,9 @@
   margin: 0 auto;
   // font-size: 12px;
   display: flex;
+  @include screen('medium-down'){
+    width: 96%;
+  };
   .info-left{
     @include screen('small-up'){
       width: 45%
@@ -60,9 +63,10 @@
   padding-top: 1rem;
   color: $color-grey;
   h3{
-    color: $color-grey;
+    color: $color-black;
     text-transform: capitalize ;
     font-weight: normal;
+    font-size: 24px;
   }
   @include screen('small-down'){
     display: none;
@@ -122,7 +126,7 @@
     padding-left: 2rem;
     box-sizing: border-box;
     color: $color-grey;
-    @include screen('medium-down'){
+    @include screen('large-down'){
       width: 100%;
       padding-left: 0rem;
     };
@@ -143,11 +147,12 @@
 
 
 .contact-input{
-  text-transform: uppercase;
+  text-transform: capitalize;
   margin: 5px 0px;
   padding: 0rem 1rem;
   width: 96%;
-  height: 25%;
+  // height: 25%;
+  height: 3rem;
   box-sizing: border-box;
   text-align: left;
   &::-webkit-input-placeholder {
@@ -164,42 +169,43 @@
 .contact-submit-container{
   padding-top: 1rem;
   min-height: 9rem;
+  width: 83%;
+  min-width: 11rem;
 }
 
 .contact-submit {
   position: relative;
   border: none !important;
-  color: $color-grey !important;
+  color: $color-black !important;
   margin: 0 auto;
   background-color: $color-white !important;
-  width: 50%;
+  width: 100%;
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize;
-  &:after{
-    content: '';
-    background: url(../section_assets/images/icons/rightArrow_black.png);
-    background-repeat: no-repeat;
-    background-position: calc(50% + 9rem) 50%;
-    line-height: 1rem;
-    background-size: 4rem;
-  }
+  background: url(../section_assets/images/icons/rightArrow_black.png);
+  background-repeat: no-repeat;
+  background-position: calc(50% + 2.7em) 50%;
+  line-height: 1rem;
+  background-size: 4rem;
+
 }
 
 .contact-submit-arrow{
   position: relative;
   background-color: #fff !important;
   width: 68px;
+  top: 1px;
 }
 
 .contact-textarea {
   text-transform: uppercase;
   margin: 5px 0px;
   padding: 0rem 1rem;
-  padding-top: 1.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   width: 96%;
-  min-height: 9.9rem;
+  min-height: 8.3rem;
 
   &::-webkit-input-placeholder {
     color: $color-grey;
@@ -214,7 +220,7 @@
     padding: 1rem;
   }
   .contact-submit{
-    width: 33%;
+    width: 66%;
   }
 }
 

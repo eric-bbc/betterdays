@@ -30,7 +30,7 @@
     width: 40%;
     color: $color-grey;
     position: fixed;
-    box-shadow: 0px 1px 4px rgba(0,0,0,0.3);
+    box-shadow: 0px 1px 4px rgba(0,0,0,0.1);
     @include screen('medium-down'){
       width: 74%;
     };
@@ -102,6 +102,9 @@
 
       li{
         padding: 6px 0;
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid;
       }
     }
 

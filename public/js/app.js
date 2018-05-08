@@ -395,12 +395,12 @@ if (window.location.pathname.includes('events') && $('html').hasClass('toucheven
   })
 }
 
-if ($('.contact-submit-container').length) {
-  $('.contact-submit-container').on('mouseenter', function(){
-  $(this).children().first().animate({right: '20px'},750).animate({right: '1px'},750,animated);
-  $(this).children().last().animate({left: '20px'},750).animate({left: '1px'},750,animated);
-  })
-}
+// if ($('.contact-submit-container').length) {
+//   $('.contact-submit-container').on('mouseenter', function(){
+//   $(this).children().first().animate({right: '20px'},750).animate({right: '1px'},750,animated);
+//   $(this).children().last().animate({left: '20px'},750).animate({left: '1px'},750,animated);
+//   })
+// }
 
 
 

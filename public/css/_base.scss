@@ -18,6 +18,10 @@ body {
   @include screen('small-down'){
     font-size: 12px;
   };
+
+  h1,h3{
+    color: $color-black;
+  }
 }
 
 #header{
