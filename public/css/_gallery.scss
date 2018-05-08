@@ -60,9 +60,11 @@
 
 .event-link {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 14px;
   width: 45%;
+  position: relative;
+  z-index: 1;
 
   @include screen('small-down'){
     width: 100%;

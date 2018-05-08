@@ -205,7 +205,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 96%;
-  min-height: 8.3rem;
+  max-height: 8.3rem;
 
   &::-webkit-input-placeholder {
     color: $color-grey;
@@ -221,6 +221,10 @@
   }
   .contact-submit{
     width: 66%;
+    @include screen('small-down'){
+      width: 50%;
+
+    };
   }
 }
 

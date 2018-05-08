@@ -94,7 +94,7 @@ body {
   top: 0; }
 
 #content {
-  margin-top: 4rem;
+  margin-top: 6rem;
   min-height: Calc(96vh - 143px);
   display: flex;
   align-items: center; }
@@ -4206,7 +4206,7 @@ large-up-push-one-third
   padding-top: 1rem;
   padding-bottom: 1rem;
   width: 96%;
-  min-height: 8.3rem; }
+  max-height: 8.3rem; }
   .contact-textarea::-webkit-input-placeholder {
     color: #9b9b9b; }
 
@@ -4219,6 +4219,9 @@ large-up-push-one-third
 
 .mobile-contact-form .contact-submit, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
   width: 66%; }
+  @media only screen and (max-width: 767px) {
+    .mobile-contact-form .contact-submit, .mobile-contact-form .event-form .event-submit, .event-form .mobile-contact-form .event-submit {
+      width: 50%; } }
 
 .mobile-contact-submit-arrow {
   background: #fff !important;
@@ -4356,7 +4359,9 @@ large-up-push-one-third
   flex-direction: row;
   width: 100%;
   justify-content: flex-end;
+  position: fixed;
   bottom: 0;
+  left: 0;
   background: white;
   padding: 1rem 0; }
 
@@ -4376,6 +4381,7 @@ large-up-push-one-third
   padding-right: 1rem;
   background-color: #fff; }
   .footer-content .footer-socials {
+    padding-right: 3rem;
     margin: auto 0; }
     .footer-content .footer-socials a {
       text-decoration: none;
@@ -4535,9 +4541,11 @@ large-up-push-one-third
 
 .event-link {
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   font-size: 14px;
-  width: 45%; }
+  width: 45%;
+  position: relative;
+  z-index: 1; }
   @media only screen and (max-width: 767px) {
     .event-link {
       width: 100%;
@@ -5606,7 +5614,7 @@ img.rsImg {
           margin: unset;
           margin-left: unset; }
         .mobile-event-form-container .mobile-submit-parent .event-submit {
-          width: 25%; }
+          width: 35%; }
         .mobile-event-form-container .mobile-submit-parent .contact-submit-arrow {
           width: 26%;
           height: 44px;
@@ -5692,7 +5700,7 @@ img.rsImg {
     justify-content: space-around;
     margin-bottom: 1rem;
     position: fixed;
-    left: 0;
+    left: 1rem;
     max-width: 30rem; }
   .header-nav .desktop-logo-container {
     position: fixed; }
@@ -5895,10 +5903,10 @@ img.rsImg {
   width: 100%;
   color: #000; }
   .homepage-container .homepage-slider {
-    width: 101% !important;
+    width: 102% !important;
     height: 74vh;
     background: #fff;
-    left: -4px; }
+    left: -8px; }
     .homepage-container .homepage-slider .rsOverflow {
       background: #fff; }
     .homepage-container .homepage-slider .rsSlide {
@@ -5926,7 +5934,7 @@ img.rsImg {
         background-repeat: no-repeat;
         background-position: center;
         padding-right: 55px;
-        left: 0px;
+        left: -11px;
         background-size: 4.5rem; }
     .homepage-container .homepage-slider .visibleNearby .rsSlide img {
       opacity: 0.6; }

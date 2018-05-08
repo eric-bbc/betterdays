@@ -17,10 +17,10 @@
   width: 100%;
   color: $color-black;
   .homepage-slider {
-    width: 101% !important;
+    width: 102% !important;
     height: 74vh;
     background: $color-white;
-    left: -4px;
+    left: -8px;
     .rsOverflow {
       background: $color-white;
     }
@@ -63,7 +63,7 @@
           background-repeat: no-repeat;
           background-position: center;
           padding-right: 55px;
-          left: 0px;
+          left: -11px;
           background-size: 4.5rem;
         }
       }

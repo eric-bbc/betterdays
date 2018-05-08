@@ -3,8 +3,9 @@
   flex-direction: row;
   width: 100%;
   justify-content: flex-end;
-  // position: absolute;
+  position: fixed;
   bottom: 0;
+  left: 0;
   background: white;
   padding: 1rem 0;
 }
@@ -27,6 +28,7 @@
   padding-right: 1rem;
   background-color: #fff;
   .footer-socials{
+    padding-right: 3rem;
     margin: auto 0;
     a{
       text-decoration: none;
