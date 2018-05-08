@@ -86,7 +86,7 @@ body {
 @media only screen and (min-width: 992px) {
   #header {
     position: relative;
-    top: 0;
+    top: 2rem;
     width: 100%; } }
 
 #container {
@@ -94,6 +94,7 @@ body {
   top: 0; }
 
 #content {
+  margin-top: 4rem;
   min-height: Calc(96vh - 143px);
   display: flex;
   align-items: center; }
@@ -4317,6 +4318,7 @@ large-up-push-one-third
       background-repeat: no-repeat; }
 
 .mobile-menu-container {
+  width: 100%;
   color: #9b9b9b; }
   .mobile-menu-container .menu-header {
     font-size: 24px;
@@ -4565,6 +4567,9 @@ large-up-push-one-third
 .art-collection-container {
   max-height: 100vh;
   height: 100%; }
+  @media only screen and (min-width: 992px) {
+    .art-collection-container {
+      margin-top: 2rem; } }
 
 .art-collection-grid {
   height: 95vh;
@@ -5685,7 +5690,12 @@ img.rsImg {
   .header-nav .desktop-nav-link-container {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    position: fixed;
+    left: 0;
+    max-width: 30rem; }
+  .header-nav .desktop-logo-container {
+    position: fixed; }
   .header-nav .desktop-nav-link {
     color: #9b9b9b;
     text-decoration: none;
@@ -5722,7 +5732,9 @@ img.rsImg {
     .header-nav .desktop-logo img {
       width: 100%; }
   .header-nav .header-newsletter-signup {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    position: fixed;
+    right: 0; }
     .header-nav .header-newsletter-signup input::-webkit-input-placeholder {
       color: #9b9b9b;
       font-size: 14px; }

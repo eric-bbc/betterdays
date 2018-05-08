@@ -11,7 +11,14 @@
   .desktop-nav-link-container{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    position:fixed;
+    left: 0;
+    max-width: 30rem;
+  }
+
+  .desktop-logo-container{
+    position: fixed;
   }
 
 
@@ -61,6 +68,8 @@
 
   .header-newsletter-signup{
     margin-bottom: 1rem;
+    position: fixed;
+    right: 0;
     input{
       @include input-placeholder{
         color: $color-grey;

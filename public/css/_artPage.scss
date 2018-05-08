@@ -3,8 +3,7 @@
   max-height: 100vh;
   height: 100%;
   @include screen('medium-up'){
-    // position: absolute;
-    // top: 14%;
+    margin-top: 2rem;
   };
 
 }

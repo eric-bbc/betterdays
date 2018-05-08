@@ -27,7 +27,7 @@ body {
 #header{
   @include screen('medium-up'){
     position: relative;
-    top: 0;
+    top: 2rem;
     width: 100%;
   };
 }
@@ -39,7 +39,7 @@ body {
 }
 
 #content {
-  // margin-top: 6rem;
+  margin-top: 4rem;
   min-height: Calc(96vh - #{143px});
   display: flex;
   align-items: center;
