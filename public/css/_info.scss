@@ -4,8 +4,10 @@
   display: none;
   color: $color-grey;
   @include screen('small-down'){
-    display: inline-flex;
-    width: 100%;
+    display: flex;
+    width: 98%;
+    padding-left: 7px;
+    justify-content: space-between;
   }
 
   .info-tab {
@@ -13,7 +15,7 @@
       cursor: pointer;
     }
     font-size: 1.5rem;
-    width: 50%;
+    // width: 50%;
   }
 }
 
@@ -126,7 +128,7 @@
     padding-left: 2rem;
     box-sizing: border-box;
     color: $color-grey;
-    @include screen('large-down'){
+    @include screen('medium-down'){
       width: 100%;
       padding-left: 0rem;
     };
@@ -179,7 +181,7 @@
   color: $color-black !important;
   margin: 0 auto;
   background-color: $color-white !important;
-  width: 100%;
+  width: 90%;
   font-weight: bold;
   cursor: pointer;
   text-transform: capitalize;

@@ -52,18 +52,24 @@
           background: url(../section_assets/images/icons/leftArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-left: 0px;
+          padding-left: 2.8rem;
           background-size: 4.5rem;
         }
       }
       .rsArrowRight{
-        margin-right: 20px;
+        margin-right: 2vw;
+        // @include screen('medium-down'){
+        //   margin-right: 24px;
+        // };
+        // @include screen('medium-up'){
+        //   margin-right: 34px;
+        // };
         .rsArrowIcn {
           background: url(../section_assets/images/icons/rightArrow.png);
           background-repeat: no-repeat;
           background-position: center;
-          padding-right: 55px;
-          left: -11px;
+          padding-right: 7px;
+          left: 0px;
           background-size: 4.5rem;
         }
       }

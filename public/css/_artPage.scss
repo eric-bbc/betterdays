@@ -56,6 +56,7 @@
     padding: 0 2rem;
     position: relative;
     cursor: crosshair;
+    padding-left: 14px;
 
 
     &:nth-child(2n){
@@ -210,11 +211,18 @@
   background-size: contain;
   position: absolute;
   right: 3rem;
-  top: 90%;
+  top: 94%;
   cursor: crosshair;
   @include screen('medium-down'){
     display: none;
   };
+}
+
+.art-collection-scroll-arrow-back{
+  @extend .art-collection-scroll-arrow;
+  left: 3rem;
+  @include transform(rotate(180deg));
+  @include transition(all 400ms);
 }
 
 .mobile-art-copy{
@@ -226,7 +234,7 @@
   display: flex;
   justify-content: space-evenly;
   .mobile-art-span{
-    background: url(../section_assets/images/icons/rightArrow.png);
+    background: url(../section_assets/images/icons/rightArrow_black.png);
     background-repeat: no-repeat;
     background-position: 0;
     width: 4rem;

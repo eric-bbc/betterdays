@@ -240,6 +240,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
 
    $('.menu-card').on('click', function(){
      //desktop
+     console.log("yoooo");
      if ( $('html').hasClass('no-touchevents') ) {
        var $this = $(this)
        var index = $this.data('id')
@@ -332,6 +333,13 @@ $('.artpage-grid-item').on('mouseenter mouseleave', function(){
 $('.art-collection-scroll-arrow').on('click', function(){
   var leftPos = $('.art-collection-grid').scrollLeft();
   $('.art-collection-grid').animate({scrollLeft: leftPos + 600}, 800)
+
+  $('.art-collection-scroll-arrow-back').removeClass('invisible').addClass('visible')
+
+})
+$('.art-collection-scroll-arrow-back').on('click', function(){
+  var leftPos = $('.art-collection-grid').scrollLeft();
+  $('.art-collection-grid').animate({scrollLeft: leftPos - 600}, 800)
 })
 
 $('.mobile-art-span').on('click', function(){
@@ -363,11 +371,15 @@ setTimeout(function(){
 
 
 function animated() {
-    $('.art-collection-scroll-arrow').animate({top: '90.6%',right: '1rem'},900).animate({top: '90%', right: '3rem'},900,animated);
+    // $('.art-collection-scroll-arrow').animate({top: '90.6%',right: '1rem'},900).animate({top: '90%', right: '3rem'},900,animated);
 }
 
 
 if (window.location.pathname == "/art-collection") {
+
+  $('body').css("overflow","auto")
+
+
   $('.top-item').each(function(i){
     var self = $(this)
     setTimeout(function(){
@@ -385,6 +397,10 @@ if (window.location.pathname == "/art-collection") {
   setTimeout(function(){
     animated()
   }, 1500)
+}
+
+if(window.location.pathname == "/info"){
+  $('body').css('overflow', 'scroll')
 }
 
 

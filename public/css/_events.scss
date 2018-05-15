@@ -40,7 +40,7 @@
 
 .title-mobile {
   display: block;
-  color: $color-grey;
+  color: $color-black;
   font-size: 27px;
 }
 
@@ -107,7 +107,7 @@
     &:nth-child(2){
       &.active{
         &:after{
-          width: 80%;
+          width: 73%;
         }
       }
     }
@@ -167,7 +167,7 @@
         background-repeat: no-repeat;
         background-color: rgba(0, 0, 0, 0.0);
         @include screen('medium-up'){
-          // background-position: -24px 0px !important;
+          background-position: -24px 0px !important;
         };
 
         padding-right: 21px;
@@ -284,7 +284,7 @@
         margin-left: unset;
       }
       .event-submit{
-        width: 35%;
+        width: 50%;
       }
       .contact-submit-arrow{
         width: 26%;
@@ -310,6 +310,9 @@
     padding-left: 13px;
     color: $color-black;
     font-size: 24px;
+    @include screen('small-down'){
+      padding-top: 5px;
+    };
   }
 }
 
