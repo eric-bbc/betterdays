@@ -6018,10 +6018,22 @@ img.rsImg {
     .event-gallery-image-section-container {
       margin: 0;
       width: 100%; } }
+  .event-gallery-image-section-container .desktop-event-gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
   .event-gallery-image-section-container .event-image {
     box-sizing: border-box;
     padding: 0.8125rem;
-    cursor: pointer; }
+    cursor: pointer;
+    object-fit: cover;
+    height: auto;
+    max-width: 16rem;
+    max-height: 16rem; }
+    @media only screen and (max-width: 1199px) {
+      .event-gallery-image-section-container .event-image {
+        max-width: 9rem;
+        max-height: 9rem; } }
   .event-gallery-image-section-container .floorplan-container {
     height: 16rem; }
 

@@ -14,33 +14,21 @@
 
   <div class="desktop-gallery-container">
 
-    <div class="grid main-room-grid js-room-gallery js-main will-fade-in will-fade-in--active">
+    <div class="grid main-room-grid desktop-event-gallery js-room-gallery js-main will-fade-in will-fade-in--active">
       {% for image in entry.mainRoomImages %}
-        {% if loop.index < 4 %}
-          <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
-        {% else %}
-          <img class="event-image col small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
-        {% endif %}
+          <img class="event-image  small-up-one-third" data-room="main" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="grid karaoke-room-grid js-room-gallery display-none js-karaoke will-fade-in">
+    <div class="grid karaoke-room-grid desktop-event-gallery js-room-gallery display-none-imp js-karaoke will-fade-in">
       {% for image in entry.karaokeImages %}
-              {% if loop.index < 4 %}
-                <img class="event-image col small-up-one-third" data-room="karaoke" src="{{ image.url }}" alt="">
-              {% else %}
-                <img class="event-image col small-up-one-third" data-room="karaoke" src="{{ image.url }}" alt="">
-              {% endif %}
+                <img class="event-image  small-up-one-third" data-room="karaoke" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="grid club-room-grid js-room-gallery display-none js-club will-fade-in">
+    <div class="grid club-room-grid desktop-event-gallery js-room-gallery display-none-imp js-club will-fade-in">
       {% for image in entry.clubRoomImages %}
-      {% if loop.index < 4 %}
-        <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
-      {% else %}
-        <img class="event-image col small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
-      {% endif %}
+        <img class="event-image  small-up-one-third" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
   </div>
@@ -64,13 +52,13 @@
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-karaoke-mobile will-fade-in ">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none-imp js-karaoke-mobile will-fade-in ">
       {% for image in entry.karaokeImages %}
         <img class="mobile-event-slide-image" data-room="karaoke"  src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none js-club-mobile will-fade-in">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none-imp js-club-mobile will-fade-in">
       {% for image in entry.clubRoomImages %}
       <img class="emobile-event-slide-image" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}

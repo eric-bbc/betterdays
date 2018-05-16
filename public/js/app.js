@@ -34,8 +34,8 @@ $('.room-toggle').on('click', function(){
 
 
 
-  $('.js-room-gallery').addClass('display-none')
-  $( '.js-' + $id ).removeClass('display-none')
+  $('.js-room-gallery').addClass('display-none-imp')
+  $( '.js-' + $id ).removeClass('display-none-imp')
   $( '.js-' + $id ).addClass('display-block')
   $( '.js-' + $id ).addClass('will-fade-in--active')
 })
@@ -238,9 +238,8 @@ var homepageSlider = $('.homepage-slider').royalSlider({
    }).data('royalSlider')
 
 
+   //desktop
    $('.menu-card').on('click', function(){
-     //desktop
-     console.log("yoooo");
      if ( $('html').hasClass('no-touchevents') ) {
        var $this = $(this)
        var index = $this.data('id')
@@ -252,8 +251,8 @@ var homepageSlider = $('.homepage-slider').royalSlider({
    })
 
 
+   //mobile
    $('.mobile-menu-card').on('click', function(){
-     //mobile
      if ( $('html').hasClass('touchevents') ) {
        var $this = $(this)
        var index = $this.data('id')
