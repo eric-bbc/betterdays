@@ -404,6 +404,13 @@ if(window.location.pathname == "/info"){
 
 
 if (window.location.pathname.includes('events') && $('html').hasClass('touchevents') ){
+  console.log("here");
+  setTimeout(function(){
+    // $('.js-karaoke-mobile').addClass('display-none-imp')
+    // $('.js-club-mobile').addClass('display-none-imp')
+    console.log("display toggled");
+  }, 2000
+)
 
   $('.event-form').on('submit', function(){
     $('.mobile-success-message').toggleClass("display-none display-block")

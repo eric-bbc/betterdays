@@ -4,7 +4,6 @@
 
 .event-gallery-container {
 
-
   .desktop-gallery-container {
     @include screen('small-down'){
       display: none;
@@ -13,6 +12,8 @@
 
   .mobile-gallery-container{
     // display: none;
+    max-height: 90vh;
+    overflow: hidden;
     @include screen('small-up'){
       display: none;
     };
@@ -30,7 +31,7 @@
 
 .room-title{
   color: $color-black;
-  padding: 0.8125rem;
+  padding: 1.8125rem;
   font-size: 24px;
   @include screen('small-down'){
     display: none;
@@ -45,7 +46,7 @@
 }
 
 .room-toggles{
-  padding: 1.8125rem;
+  padding: 0.8125rem;
   padding-left: 0.8125rem;
 
   a{
@@ -259,7 +260,7 @@
 
 }
 
-.mobile-gellery-toggle-container{
+.mobile-gallery-toggle-container{
   position: absolute;
   top: 5rem;
   z-index: 9;

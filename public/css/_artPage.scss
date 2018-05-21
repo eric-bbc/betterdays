@@ -51,7 +51,7 @@
   .artpage-grid-item{
 
     box-sizing: border-box;
-    height: 22em;
+    // height: 22em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,7 +231,7 @@
   @include screen('medium-up'){
     display: none;
   };
-  color: $color-grey;
+  color: $color-black;
   text-align: center;
   display: flex;
   justify-content: space-evenly;

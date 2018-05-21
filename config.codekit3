@@ -29980,6 +29980,13 @@
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/20\/207eda33f594c8cb98c47aae64f72cd7ed9cde4cf49f3e35943581fcd85025a5.php",
 		"oF": 0
 		},
+	"\/craft\/storage\/runtime\/compiled_templates\/21\/21fe1d8bf6065db5370eed4ca5d8e787aaaa8db0db580ba2794015dad8738cad.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/21\/21fe1d8bf6065db5370eed4ca5d8e787aaaa8db0db580ba2794015dad8738cad.php",
+		"oF": 0
+		},
 	"\/craft\/storage\/runtime\/compiled_templates\/24\/24bf08aad06976d9d7b3f4bb83d03cb3132cd5917075c31699e36308e27b91c7.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -30055,6 +30062,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/50\/501f1c06c0ca2f2d0f7b6eba7d6d7b67c7e7e6e988d82d30198ab6d0354a31f0.php",
+		"oF": 0
+		},
+	"\/craft\/storage\/runtime\/compiled_templates\/55\/550ad581b8bdf16dba383d98bb8a74b84c26e62fbaa23554a872c9521c726286.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/craft\/storage\/runtime\/compiled_templates\/55\/550ad581b8bdf16dba383d98bb8a74b84c26e62fbaa23554a872c9521c726286.php",
 		"oF": 0
 		},
 	"\/craft\/storage\/runtime\/compiled_templates\/58\/58efc7dd442faf0d159747dd24bad853f56257003b86fafdbdd4baa083d70b73.php": {
@@ -32187,7 +32201,7 @@
 		},
 	"\/public\/section_assets\/images\/icons\/BD_footer_icon.png": {
 		"ft": 32768,
-		"iS": 844,
+		"iS": 3630,
 		"oA": 0,
 		"oAP": "\/public\/section_assets\/images\/icons\/BD_footer_icon.png",
 		"oF": 0,

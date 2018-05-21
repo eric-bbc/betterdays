@@ -52,15 +52,15 @@
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none-imp js-karaoke-mobile will-fade-in ">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider  js-karaoke-mobile will-fade-in ">
       {% for image in entry.karaokeImages %}
         <img class="mobile-event-slide-image" data-room="karaoke"  src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 
-    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider display-none-imp js-club-mobile will-fade-in">
+    <div class="js-room-gallery  royalSlider  mobile-event-gallery-slider  js-club-mobile will-fade-in">
       {% for image in entry.clubRoomImages %}
-      <img class="emobile-event-slide-image" data-room="club" src="{{ image.url }}" alt="">
+      <img class="mobile-event-slide-image" data-room="club" src="{{ image.url }}" alt="">
       {% endfor %}
     </div>
 

@@ -5005,6 +5005,9 @@ large-up-push-one-third
     width: 100% !important;
     height: 100% !important; }
 
+.mobile-event-gallery-slider {
+  min-height: 80vh; }
+
 .mobile-event-slide-image {
   height: 100% !important;
   margin-left: 0px !important; }
@@ -5039,7 +5042,6 @@ large-up-push-one-third
       margin-top: 2rem; }
   .art-collection-grid .artpage-grid-item {
     box-sizing: border-box;
-    height: 22em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -5177,7 +5179,7 @@ large-up-push-one-third
   transition: all 400ms ease-in-out 0s; }
 
 .mobile-art-copy {
-  color: #9b9b9b;
+  color: #000;
   text-align: center;
   display: flex;
   justify-content: space-evenly; }
@@ -5872,9 +5874,12 @@ img.rsImg {
   .event-gallery-container .desktop-gallery-container {
     display: none; } }
 
-@media only screen and (min-width: 768px) {
-  .event-gallery-container .mobile-gallery-container {
-    display: none; } }
+.event-gallery-container .mobile-gallery-container {
+  max-height: 90vh;
+  overflow: hidden; }
+  @media only screen and (min-width: 768px) {
+    .event-gallery-container .mobile-gallery-container {
+      display: none; } }
 
 .event-gallery-container .js-rs-hide {
   width: 0;
@@ -5887,7 +5892,7 @@ img.rsImg {
 
 .room-title {
   color: #000;
-  padding: 0.8125rem;
+  padding: 1.8125rem;
   font-size: 24px; }
   @media only screen and (max-width: 767px) {
     .room-title {
@@ -5900,7 +5905,7 @@ img.rsImg {
   font-size: 27px; }
 
 .room-toggles {
-  padding: 1.8125rem;
+  padding: 0.8125rem;
   padding-left: 0.8125rem; }
   .room-toggles a {
     text-decoration: none;
@@ -6044,7 +6049,7 @@ img.rsImg {
     .event-form-container {
       border: none; } }
 
-.mobile-gellery-toggle-container {
+.mobile-gallery-toggle-container {
   position: absolute;
   top: 5rem;
   z-index: 9; }
@@ -6256,7 +6261,7 @@ img.rsImg {
     padding: 3px 0; }
   @media only screen and (max-width: 991px) {
     .nav-newsletter-input {
-      width: 86%; }
+      width: 80%; }
       .nav-newsletter-input::-webkit-input-placeholder {
         color: #9b9b9b; }
       .nav-newsletter-input:-moz-placeholder {
@@ -6287,6 +6292,9 @@ img.rsImg {
   top: 2rem; }
   .mobile-nav-newsletter-signup .nav-newsletter-submit {
     padding-left: 0 !important; }
+  .mobile-nav-newsletter-signup #mc_embed_signup_scroll {
+    display: flex;
+    justify-content: center; }
 
 @media only screen and (max-width: 991px) {
   .arrow-container {
