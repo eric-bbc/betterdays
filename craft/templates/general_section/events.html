@@ -14,19 +14,19 @@
     <a class="mobile-view-form-toggle js-event-form-toggle display-none" href="#"> Event Form</a>
   </div>
 
-<div class="event-gallery-slider main-room-rs royalSlider rsDefault invisible display-none">
+<div class="event-gallery-slider main-room-rs royalSlider rsDefault invisible display-none will-fade-in">
   {% for image in entry.mainRoomImages %}
     <img class="rsImg" src="{{ image.url }}" alt="">
   {% endfor %}
 </div>
 
-<div class="event-gallery-slider karaoke-room-rs royalSlider rsDefault invisible display-none">
+<div class="event-gallery-slider karaoke-room-rs royalSlider rsDefault invisible display-none will-fade-in">
   {% for image in entry.karaokeImages %}
     <img class="" src="{{ image.url }}" alt="">
   {% endfor %}
 </div>
 
-<div class="event-gallery-slider club-room-rs royalSlider rsDefault invisible display-none">
+<div class="event-gallery-slider club-room-rs royalSlider rsDefault invisible display-none will-fade-in">
   {% for image in entry.clubRoomImages %}
     <img class="rsImg" src="{{ image.url }}" alt="">
   {% endfor %}

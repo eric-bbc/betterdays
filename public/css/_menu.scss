@@ -24,8 +24,65 @@
   left: 0;
   z-index: 1000 !important;
   @include transition(all 400ms);
-  @extend .event-gallery-slider;
   max-height: 100vh;
+  z-index: 10;
+  position: absolute !important;
+  top: 0;
+  .rsOverflow,
+  .rsDefault,
+  .rsSlide {
+    background-color: $color-white !important;
+  }
+
+  .rsFullscreenIcn{
+    height: 26px;
+    width: 30px;
+    background-image: url(../section_assets/images/icons/grey_close.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 0px 0px !important;
+    background-color: transparent !important;
+    background-size: contain !important;
+  }
+
+
+
+  .rsArrow {
+    width: 80px !important;
+    .rsArrowIcn {
+      width: 100%;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+    .rsArrowLeft{
+      .rsArrowIcn {
+        background-image: url(../section_assets/images/icons/leftArrow.png);
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0);
+        background-position: 0px 0px !important;
+      }
+    }
+    .rsArrowRight{
+      .rsArrowIcn {
+        background: url(../section_assets/images/icons/rightArrow.png);
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.0);
+        @include screen('medium-up'){
+          background-position: unset !important;
+        };
+
+        padding-right: 21px;
+        left: 0;
+      }
+    }
+
+
+    .rsActiveSlide {
+      opacity: 1;
+      @include transition(opacity 0.6s)
+
+    }
 
   @include screen('medium-down'){
     top: 0;
@@ -54,8 +111,11 @@
   .rsArrowRight{
     .rsArrowIcn{
       padding-right: 0 !important;
-      background-position: 0px 0px !important;
+      background-position: 0px !important;
       left: 11px !important;
+      @include screen('medium-up'){
+        background-position: unset !important;
+      };
     }
   }
 

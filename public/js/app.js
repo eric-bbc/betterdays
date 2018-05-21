@@ -177,8 +177,7 @@ var homepageSlider = $('.homepage-slider').royalSlider({
         centerArea      : 0.4
       },
       fullscreen        : {
-        enabled         : true,
-        nativeFS        :true
+        enabled         : true
       }
     }).data('royalSlider');
 
@@ -186,18 +185,17 @@ var homepageSlider = $('.homepage-slider').royalSlider({
     $('.event-image').on('click', function() {
       var room = $(this).data('room')
       var $rs = $('.' + room + '-room-rs')
-      $rs.data('royalSlider').enterFullscreen()
-      $rs.toggleClass('invisible visible')
       $rs.toggleClass('display-none display-block')
-      $('')
+      $rs.toggleClass('invisible visible')
+      $rs.addClass('will-fade-in--active-fast')
     })
 
-    $('.rsFullscreenBtn').on('click', function(){
+    $('.event-gallery-slider').find('.rsFullscreenBtn').on('click', function(e){
       var $openSlider = $(this).parent().parent()
-      $openSlider.toggleClass('visible invisible')
       $openSlider.toggleClass('display-block display-none')
+      $openSlider.removeClass('will-fade-in--active-fast')
+      $openSlider.toggleClass('visible invisible')
     })
-
 
     $('.mobile-event-gallery-slider').royalSlider({
       imageScaleMode    : 'fit',

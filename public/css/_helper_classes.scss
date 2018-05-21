@@ -108,10 +108,12 @@ large-up-display-none-imp
 
 .invisible{
   @include invisible;
+  @include transition(all 400ms);
 }
 
 .visible{
   @include visible;
+  @include transition(all 400ms);
 }
 
 
